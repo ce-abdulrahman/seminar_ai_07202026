@@ -3,53 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ژیری دەستکرد — لە ژیانی ڕۆژانە و کاردا</title>
+  <title>ئەندازیار عبدالرحمن اسماعیل — پۆرتفۆلیۆ & سیمینارەکان</title>
   <link rel="stylesheet" href="index.css">
   <style>
-    /* Social Links Styling on Closing Slide */
-    .social-links-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 24px;
-      width: 100%;
-      max-width: 900px;
+    /* Large Quote Banner Styling */
+    .hero-quote-banner {
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      border-radius: var(--radius-l);
+      padding: 24px 36px;
+      margin-bottom: 32px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 35px rgba(6, 182, 212, 0.15);
+      overflow: hidden;
     }
-    
-    .social-btn {
+
+    .hero-quote-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #06B6D4, #8B5CF6, transparent);
+    }
+
+    .hero-quote-tag {
+      font-size: 13px;
+      color: #06B6D4;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .hero-quote-text {
+      font-size: 36px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFFFFF, #06B6D4, #A78BFA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin: 0;
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+    }
+
+    /* Contact Section Layout */
+    .contact-section {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      margin-bottom: 48px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .contact-card-item {
       display: flex;
       align-items: center;
-      gap: 12px;
-      background: rgba(17, 24, 39, 0.85);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(6, 182, 212, 0.3);
-      padding: 12px 24px;
-      border-radius: 100px;
+      gap: 14px;
+      background: rgba(11, 16, 32, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 20px;
+      border-radius: var(--radius-m);
       color: #FFFFFF;
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-    
-    .social-btn:hover {
-      background: rgba(37, 99, 235, 0.3);
+
+    .contact-card-item:hover {
+      background: rgba(37, 99, 235, 0.25);
       border-color: #06B6D4;
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
-      color: #06B6D4;
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.25);
     }
-    
-    .social-btn svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #06B6D4;
+      flex-shrink: 0;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .contact-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      color: var(--text-white);
+      font-weight: 700;
+      word-break: break-all;
     }
   </style>
 </head>
-<body>
+<body class="portfolio-page">
 
   <!-- Ambient Glowing Background Orbs -->
   <div class="bg-ambient">
@@ -58,1168 +132,252 @@
     <div class="ambient-orb orb-3"></div>
   </div>
 
-  <div class="presentation-container">
-    <!-- Header Bar -->
-    <header class="presenter-header">
-      <div class="brand-badge">
-        <span class="dot"></span>
-        <span>ژیری دەستکرد &bull; لە ژیانی ڕۆژانە و کاردا</span>
+  <!-- Portfolio Navigation Header -->
+  <header class="portfolio-header">
+    <a href="index.html" class="portfolio-logo">
+      <span class="dot"></span>
+      <span>ئەندازیار عبدالرحمن اسماعیل</span>
+    </a>
+    
+    <ul class="portfolio-nav-links">
+      <li><a href="index.html" class="portfolio-nav-link active">سەرەتا (پۆرتفۆلیۆ)</a></li>
+      <li><a href="general.html" class="portfolio-nav-link">سیمیناری گشتی (AI)</a></li>
+      <li><a href="seminar2.html" class="portfolio-nav-link">سیمیناری دووەم</a></li>
+      <li><a href="#contact" class="portfolio-nav-link btn-cta">پەیوەندی</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="portfolio-container">
+
+    <!-- Top Personal Quote Banner -->
+    <div class="hero-quote-banner">
+      <span class="hero-quote-tag">وتەی تایبەتی</span>
+      <h2 class="hero-quote-text">« پێت دروست دەکرێت؟!! »</h2>
+    </div>
+
+    <!-- Hero Profile Section -->
+    <section class="portfolio-hero-card">
+      <div class="portfolio-avatar-wrapper">
+        <img src="assets/image/agha.png" alt="ئەندازیار عبدالرحمن اسماعیل" class="portfolio-avatar-img">
+        <div class="portfolio-avatar-glow"></div>
       </div>
-      <div class="header-center-quote">
-        <span>« دەبێت کۆمپیوتەر بتوانێت بیربکاتەوە؟ »</span>
+      
+      <div class="portfolio-hero-info">
+        <div class="portfolio-tag">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          <span>IT Manager &bull; Web Developer &bull; AI Trainer</span>
+        </div>
+        
+        <h1 class="portfolio-title">ئەندازیار عبدالرحمن اسماعیل</h1>
+        
+        <p class="portfolio-subtitle">
+          ئەندازیاری سیستەمی زانیاری، بەڕێوەبەری IT، گەشەپێدەری وێب و ڕاهێنەری بواری ژیری دەستکرد. خاوەنی زیاتر لە <strong>٥ ساڵ ئەزموونی وانەوتنەوە</strong>، ڕاهێنەرایەتی و بەڕێوەبردنی سیستەم و پڕۆژە تەکنەلۆجییەکان لە کۆمپانیا و ڕێکخراوەکاندا.
+        </p>
+
+        <div class="portfolio-badges">
+          <span class="badge badge-blue">IT Manager</span>
+          <span class="badge badge-purple">Web Developer</span>
+          <span class="badge badge-cyan">Technical Trainer</span>
+          <span class="badge badge-blue">AI Expert</span>
+        </div>
       </div>
-      <div class="header-controls">
-        <button class="btn-icon" id="toggleNotesBtn" title="تێبینییەکانی پێشکەشکار (Key: N)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-          <span>تێبینی</span>
-        </button>
-        <button class="btn-icon" id="toggleThumbnailsBtn" title="هەموو سلایدەکان (Key: T / ESC)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          <span>سلایدەکان</span>
-        </button>
-        <button class="btn-icon" id="toggleFullscreenBtn" title="پاشاندانی ته‌واوی شاشه‌ (Key: F)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path></svg>
-        </button>
+    </section>
+
+    <!-- Seminars Hub Section -->
+    <section id="seminars">
+      <div class="portfolio-section-header">
+        <span class="portfolio-section-subtitle">سەکۆی پرێزێنتەیشنەکان</span>
+        <h2 class="portfolio-section-title">سیمینارەکان و خولەکانی ڕاهێنان</h2>
       </div>
-    </header>
 
-    <!-- Main Slide Viewport -->
-    <main class="slides-viewport" id="slidesViewport">
-
-<section class="slide active bg-hero-art" id="slide-1" data-notes="بەخێربێن بۆ کۆرسی ژیری دەستکرد. ئەمڕۆ تیشک دەخەینە سەر بەکارهێنانی کردارییانەی AI لە ژیانی ڕۆژانە و سەرجەم سێکتەرەکانی کاردا.">
-        <div class="slide-content-wrapper">
-          <div class="hero-wrapper">
-            <div class="hero-tag">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-              <span>کۆرسی ژیری دەستکرد &bull; ٢ کاتژمێر</span>
+      <div class="seminars-grid">
+        <!-- Seminar 1 Card (General Seminar) -->
+        <div class="seminar-card">
+          <div>
+            <span class="seminar-card-badge badge-active">سیمیناری ١ &bull; گشتی</span>
+            <h3 class="seminar-card-title">ژیری دەستکرد لە ژیانی ڕۆژانە و کاردا</h3>
+            <p class="seminar-card-desc">
+              ڕێنمایی گشتگیر و کرداری بۆ قوتابیان، مامۆستایان، کارمەند، بزنس و گەشەپێدەران. تێگەیشتن لە بنەماکانی AI، بەراوردکردنی مۆدێلەکان، ئەندازیاری پرۆمپت، دروستکردنی محتەوا و دیپ فەیک.
+            </p>
+          </div>
+          <div class="seminar-card-footer">
+            <div class="seminar-meta">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>١٢ بەش &bull; ٢ کاتژمێر</span>
             </div>
-            <h1 class="hero-title">ژیری دەستکرد</h1>
-            <p class="hero-subtitle">«ژیری دەستکرد لە ژیانی ڕۆژانە و کاردا» — ڕێنمایی گشتگیر بۆ قوتابی، مامۆستا، کارمەند، بزنس و گەشەپێدەران</p>
-            <div class="hero-presenter">
-              <div class="presenter-avatar">ع</div>
-              <div class="presenter-text">
-                <div class="presenter-name">پێشکەشکار: ئەندازیار عبدالرحمن اسماعیل</div>
-                <div class="presenter-role">شارەزای ژیری دەستکرد و ئۆتۆماتیکردنی بزنس</div>
-              </div>
-            </div>
+            <a href="general.html" class="seminar-btn">
+              <span>کردنەوەی سیمینارەکە</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5m7 7l-7-7 7-7"></path></svg>
+            </a>
           </div>
         </div>
-      </section>
 
-<section class="slide" id="slide-2" data-notes="دەربارەی پێشکەشکاری سیمینارەکە، ئەندازیار عبدالرحمن اسماعیل، پیشە، بڕوانامەکان و ئەزموونی کاری لە بواری تەکنەلۆجیادا.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">پێشەکی</span>
-            <h2 class="slide-title">دەربارەی پێشکەشکار (خۆناساندن)</h2>
+        <!-- Seminar 2 Card -->
+        <div class="seminar-card">
+          <div>
+            <span class="seminar-card-badge badge-active" style="background: rgba(124, 58, 237, 0.15); color: #C084FC; border-color: rgba(124, 58, 237, 0.3);">سیمیناری ٢ &bull; 1 / 8 / 2026</span>
+            <h3 class="seminar-card-title">زیرەکی دەستکرد AI</h3>
+            <p class="seminar-card-desc">
+              تیشکخستنە سەر تێگەیشتن لە بناغەکانی AI، قۆناغەکانی گەشەسەندن، کاریگەری لەسەر بازاڕی کار، بەکارهێنانی کردەیی لە کار و ئەخلاقیاتی ئاسایشی داتا.
+            </p>
           </div>
-          
-          <div class="profile-layout">
-            <!-- Profile Photo & Main Title Card -->
-            <div class="profile-card glass-card card-accent-blue">
-              <div class="profile-avatar-container">
-                <img src="assets/image/agha.png" alt="ئەندازیار عبدالرحمن اسماعیل" class="profile-img">
-                <div class="profile-avatar-glow"></div>
-              </div>
-              <h3 class="profile-name">ئەندازیار عبدالرحمن اسماعیل</h3>
-              <div class="profile-badges">
-                <span class="badge badge-blue">IT Manager</span>
-                <span class="badge badge-purple">Web Developer</span>
-                <span class="badge badge-cyan">Technical Trainer</span>
-              </div>
+          <div class="seminar-card-footer">
+            <div class="seminar-meta">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>1 / 8 / 2026 &bull; کاتژمێر 6:00</span>
             </div>
-
-            <!-- Profile Details (Education & Experience) -->
-            <div class="profile-details">
-              <div class="glass-card card-accent-purple details-card">
-                <h3 class="details-title">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479L12 21l-6.83-3.943a12.078 12.078 0 01.662-6.483L12 14z"></path></svg>
-                  بڕوانامەکان (Education)
-                </h3>
-                <ul class="details-list">
-                  <li>ئەندازیاری سیستەمی زانیاری</li>
-                  <li>تەکنەلۆجیای زانیاری (IT)</li>
-                </ul>
-              </div>
-
-              <div class="glass-card card-accent-cyan details-card">
-                <h3 class="details-title">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
-                  ئەزموونی کارکردن (Experience)
-                </h3>
-                <ul class="details-list">
-                  <li>زیاتر لە <strong>٥ ساڵ</strong> ئەزموونی وانەوتنەوە و ڕاهێنەرایەتی لە چەندین بواری جیاجیادا.</li>
-                  <li>بەڕێوەبەری پێشووی بەشی IT لە چەندین کۆمپانیا.</li>
-                  <li>ئەزموون لە بواری جیاوازی سەر بە IT.</li>
-                </ul>
-              </div>
-            </div>
+            <a href="seminar2.html" class="seminar-btn" style="background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">
+              <span>کردنەوەی سیمینارەکە</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5m7 7l-7-7 7-7"></path></svg>
+            </a>
           </div>
         </div>
-      </section>
-
-<section class="slide bg-analytics-art" id="slide-3" data-notes="خشتەی کۆرسەکە بە شێوازێک داڕێژراوە کە لە سادەترین بنەماوە دەستپێبکات تا عەمەلیترین دیزاین و کۆد.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">نەخشەی رێگای کۆرسەکە</span>
-            <h2 class="slide-title">بابەتە سەرەکیەکانی کۆرسەکە (١٢ بەش)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-number">بەشی ١ - ٣</div>
-              <h3 class="card-title">بنەما، مۆدێلەکان & پرۆمپت</h3>
-              <p class="card-body">ژیری دەستکرد چییە؟ جۆرەکانی مۆدێلەکان، و ئەندازیاری پرۆمپتی پیشەیی.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-number">بەشی ٤ - ٦</div>
-              <h3 class="card-title">قوتابی، مامۆستا & خاوەنکار</h3>
-              <p class="card-body">کورتکردنەوەی PDF، داڕشتنی پلان، فیدباک و ڕاپۆرتی ئۆتۆماتیک.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-number">بەشی ٧ - ٨</div>
-              <h3 class="card-title">بزنس & گەشەپێدەر</h3>
-              <p class="card-body">پرۆسەی کاری ١١ هەنگاوی بزنس و گەشەپێدانی کۆد بە AI.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-number">☕ پشوو</div>
-              <h3 class="card-title">کۆفی برێک (١٥ خولەک)</h3>
-              <p class="card-body">پشوو پاش تەواوبوونی وانەکانی خۆکارکردن، بزنس و گەشەپێدان.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-number">بەشی ٩ - ١٠</div>
-              <h3 class="card-title">دیزاینەر & سنوورەکانی AI</h3>
-              <p class="card-body">دروستکردنی وێنە و ڤیدیۆ، و تێگەیشتن لە هەڵەکان و دیپ فەیک.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-number">بەشی ١١ - ١٢</div>
-              <h3 class="card-title">نموونەی ڕاستەوخۆ & داهاتوو</h3>
-              <p class="card-body">تەماشاکردنی دێمۆی ڕاستەوخۆ و داڕشتنی پاشەرۆژی ئەی ئای.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-4" data-notes="ئامانجی سەرەکی ئەم بەشە ئەوەیە بەشداربووان تێبگەن AI جادوو نییە، بەڵکو تەکنەلۆجیایەکی شیکارییە.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ١ (١٠ - ١٥ خولەک)</span>
-            <h2 class="slide-title">ژیری دەستکرد چییە؟ (تێگەیشتن لە بنەماکان)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></div>
-              <h3 class="card-title">١. ژیری دەستکرد چییە؟</h3>
-              <p class="card-body">سیستەمێک کە بیرکاری و داتا بەکاردێنێت بۆ شیکردنەوە و بڕیاردان وەک مرۆڤ.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"></path><path d="M12 6v6l4 2"></path></svg></div>
-              <h3 class="card-title">٢. لە کوێ دەبینین؟</h3>
-              <p class="card-body">لە تەلیفۆن، گووگڵ، فەیسبووک، سیستەمی پزیشکی و ئۆتۆمبێلی خۆڕەودا.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-4.96.44L7 19.5a2.5 2.5 0 01-2.5-2.5V7A2.5 2.5 0 017 4.5h2.5z"></path></svg></div>
-              <h3 class="card-title">٣. چۆن بیر دەکات؟</h3>
-              <p class="card-body">بە شیکردنەوەی ملیارەها نەخش و داتا لە ڕێگەی تۆڕە دەمارییەکانەوە (Neural Networks).</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 6;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg></div>
-              <h3 class="card-title">٤. مۆدێلی زمانی چییە؟</h3>
-              <p class="card-body">مۆدێلی زمانی گەورە (Large Language Model) کە لە دەق تێدەگات و نووسین شیدەکاتەوە.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 6;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path></svg></div>
-              <h3 class="card-title">٥. چۆن فێر دەبێت؟</h3>
-              <p class="card-body">لە ڕێگەی ڕاهێنان (Training) لەسەر تێکست و زانیاری ڕابردوو؛ <strong>«ڕاهێنان و بیرکارییە!»</strong></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-5" data-notes="بۆ هر ئەرکێک ئامرازێکی گونجاو هەیە؛ بەکارهێنانی ئامرازی ڕاست خێرایی کارەکان دەقات دەکاتەوە.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٢ (١٥ خولەک)</span>
-            <h2 class="slide-title">جۆرەکانی ئامرازی ژیری دەستکرد و بەکارهێنانیان</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-number">چات جیپیتی (ChatGPT)</div>
-              <h3 class="card-title">نووسین، کۆد و پلان</h3>
-              <p class="card-body">باشترین بۆ: نووسینی دەق، شیکاری، کۆدکردن، و داڕشتنی پلانی گشتی.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-number">کلۆد (Claude)</div>
-              <h3 class="card-title">PDF، ڕاپۆرت و نووسین</h3>
-              <p class="card-body">باشترین بۆ: خوێندنەوەی فایلی PDF ی درێژ، نووسینی فەرمی و ڕاپۆرتی زانستی.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-number">جێمینای (Gemini)</div>
-              <h3 class="card-title">گووگڵ، Docs & Gmail</h3>
-              <p class="card-body">باشترین بۆ: بەستنەوە بە بەڵگەنامەکانی گووگڵ، گەڕان و خزمەتگوزارییەکان.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-number">پێرپلێکسیتی (Perplexity)</div>
-              <h3 class="card-title">توێژینەوە و سەرچاوەکان</h3>
-              <p class="card-body">باشترین بۆ: لێکۆڵینەوەی ئەکادیمی، بەڵگە و هێنانی لینک و سەرچاوەی ڕاستەقینە.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-number">کۆپایڵۆت (Copilot)</div>
-              <h3 class="card-title">ماڵپەڕەکانی مایکرۆسۆفت</h3>
-              <p class="card-body">باشترین بۆ: ئۆتۆماتیکردنی Excel، Word، و دروستکردنی پرێزێنتەیشن لە PowerPoint.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-number">گرۆک (Grok)</div>
-              <h3 class="card-title">تۆڕی ئێکس (Twitter)</h3>
-              <p class="card-body">باشترین بۆ: زانیارییەکانی ڕووداوە زۆر تازەکان لە سۆشیال میدیاوە.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-6" data-notes="ئەم بەشە گرنگترین بەشی کۆرسەکەیە! فێربوونی دروستکردنی پرۆمپت کۆنتڕۆڵی تەواوت دەداتێ.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٣ (٢٥ خولەک)</span>
-            <h2 class="slide-title">ئەندازیاری پرۆمپت — ئاستەکانی نووسینی پرۆمپت</h2>
-          </div>
-          <div class="comparison-container">
-            <div class="comparison-card weak">
-              <div class="comparison-badge">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                <span>پرۆمپتی لاواز</span>
-              </div>
-              <div class="prompt-code-box">«بابەتێکم بۆ بنووسە.»</div>
-              <p class="card-body" style="color: #FCA5A5;">گشتییە و دەرئەنجامێکی لاواز دەدات کە پێویستی بە سەرلەنوێ نووسینەوە هەیە.</p>
-            </div>
-
-            <div class="comparison-card strong">
-              <div class="comparison-badge">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>پرۆمپتی زۆر باش (پێشکەوتوو)</span>
-              </div>
-              <div class="prompt-code-box">«تۆ مامۆستای ژیری دەستکردیت. بابەتێکی ٥٠٠ وشەی فەرمی بنووسە بۆ قوتابی زانکۆ، بە زمانی کوردی، بە سەرناو، نموونە، و کۆتایی، و ٥ پرسیاری تاقیکردنەوە لە کۆتایی زیاد بکە.»</div>
-              <p class="card-body" style="color: #6EE7B7;">ڕۆڵ، ئۆدیانس، فۆرمات، زمانی دیاریکراو و ئەرکی تەواو دەدات بە AI.</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openPromptLibraryBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی بانک و نموونەکانی پرۆمپت (لاواز، ناوەند، زۆر باش)</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-7" data-notes="داڕشتنی پرۆمپت بەم ٥ بەشە دڵنیایی سەدا سەد دەدات لە وەرگرتنی وەڵامی دروست.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">داڕشتنی پرۆمپت</span>
-            <h2 class="slide-title">پێکهاتەی زێڕینی پرۆمپت (ڕۆڵ، ئەرک، پاشبنەما، فۆرمات، تۆنی دەنگ)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-              <h3 class="card-title">١. ڕۆڵ (Role)</h3>
-              <p class="card-body" style="line-height: 1.6;"><strong>«وەک شارەزایەک بجوڵێوە»</strong><br>ئەزموون و لێهاتوویی مۆدێلەکە دیاری دەکات بۆ ئەوەی وەڵامەکە بەپێی پسپۆڕییەکە شیکاری بکات.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path></svg></div>
-              <h3 class="card-title">٢. ئەرک (Task)</h3>
-              <p class="card-body" style="line-height: 1.6;"><strong>«دەمەوێت ئەمەم بۆ بکەیت»</strong><br>ئامانجی کارەکە بە وردی دەنووسێت (وەک نووسینی نامە، شیتاڵکردنی داتا یان کورتکردنەوەی دەق).</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></div>
-              <h3 class="card-title">٣. پاشبنەما (Context)</h3>
-              <p class="card-body" style="line-height: 1.6;"><strong>«ئەم زانیارییانەت پێویستە»</strong><br>کێ ئۆدیانسە، بۆچی دەتەوێت و هەر وردەکارییەکی پێشوو کە وەڵامەکە زیاتر لۆکاڵ و گونجاو دەکات.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 6;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg></div>
-              <h3 class="card-title">٤. فۆرمات (Format)</h3>
-              <p class="card-body" style="line-height: 1.6;"><strong>«شێوازی پیشاندانی دەرئەنجام»</strong><br>دیاریکردنی شێوازی داڕشتنی دەقەکە، وەک خشتە (Table)، لیستی خاڵبەندی (Bullet points)، یان پاراگرافی کورت.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 6;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"></polygon></svg></div>
-              <h3 class="card-title">٥. تۆنی دەنگ & سنووردارکردن</h3>
-              <p class="card-body" style="line-height: 1.6;"><strong>«شێوازی دەربڕین و هێڵە سوورەکان»</strong><br>بەکارهێنانی تۆنی فەرمی، هاوڕێیانە یان سادە، لەگەڵ سنووردارکردنی ژمارەی وشەکان و زمانەکە (کوردی سۆرانی).</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-workflow-art" id="slide-8" data-notes="قوتابیان دەتوانن کاتی خوێندنەوەکەیان نیوە بکەنەوە و باشتر تێبگەن بەم workflow ە.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٤</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ قوتابی (پرۆسەی کاری قوتابی)</h2>
-          </div>
-          <div class="workflow-diagram">
-            <div class="workflow-node">
-              <div class="node-step">١</div>
-              <h3 class="card-title" style="font-size: 16px;">فایلی PDF / دەق</h3>
-              <p class="card-body" style="font-size: 14px;">داخڵکردنی فایلی وانەکە</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٢</div>
-              <h3 class="card-title" style="font-size: 16px;">کورتکردنەوە</h3>
-              <p class="card-body" style="font-size: 14px;">پوختەی وانەکە بە خاڵ</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٣</div>
-              <h3 class="card-title" style="font-size: 16px;">نەخشەی مێشک & پرسیار</h3>
-              <p class="card-body" style="font-size: 14px;">Mind Map و تاقیکردنەوە</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node" style="border-color: var(--color-success);">
-              <div class="node-step" style="background: var(--color-success);">٤</div>
-              <h3 class="card-title" style="font-size: 16px;">ئامادەکاری تاقیکردنەوە</h3>
-              <p class="card-body" style="font-size: 14px;">فلاش کارد و پێداچوونەوە</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openStudentPromptBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی نموونەی پرۆمپتی قوتابیان</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-workflow-art" id="slide-9" data-notes="مامۆستایان دەتوانن پرۆسەی ئامادەکردنی وانە و تاقیکردنەوەکان زۆر ئاسانتر بکەن.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٥</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ مامۆستا (پرۆسەی کاری مامۆستا)</h2>
-          </div>
-          <div class="workflow-diagram">
-            <div class="workflow-node">
-              <div class="node-step">١</div>
-              <h3 class="card-title" style="font-size: 16px;">پلانی وانە</h3>
-              <p class="card-body" style="font-size: 14px;">داڕشتنی پلانی وانە (Lesson Plan)</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٢</div>
-              <h3 class="card-title" style="font-size: 16px;">سڵایدەکانی پرێزێنتەیشن</h3>
-              <p class="card-body" style="font-size: 14px;">دروستکردنی سڵایدەکان</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٣</div>
-              <h3 class="card-title" style="font-size: 16px;">پرسیار & پێوەرەکان</h3>
-              <p class="card-body" style="font-size: 14px;">پرسیار و پێوەری هەڵسەنگاندن</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node" style="border-color: var(--color-success);">
-              <div class="node-step" style="background: var(--color-success);">٤</div>
-              <h3 class="card-title" style="font-size: 16px;">وەڵامی نموونەیی</h3>
-              <p class="card-body" style="font-size: 14px;">وەڵامی ڕاستی تاقیکردنەوە</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openTeacherPromptBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی نموونەی پرۆمپتی مامۆستایان</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-workflow-art" id="slide-10" data-notes="خاوەنکاران دەتوانن کاتی چاودێری و بەڕێوەبردن کەم بکەنەوە و بە خێرایی بڕیاری ستراتیژی بدەن بەم workflow ە.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٦</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ خاوەنکار (پرۆسەی کاری خاوەنکار)</h2>
-          </div>
-          <div class="workflow-diagram">
-            <div class="workflow-node">
-              <div class="node-step">١</div>
-              <h3 class="card-title" style="font-size: 16px;">داڕشتنی ئەرکەکان</h3>
-              <p class="card-body" style="font-size: 14px;">دابەشکردن و ڕوونکردنەوەی ئەرکەکان بە AI</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٢</div>
-              <h3 class="card-title" style="font-size: 16px;">شیتاڵکردنی ڕاپۆرتەکان</h3>
-              <p class="card-body" style="font-size: 14px;">شیکردنەوەی داتای دارایی و فرۆشتن</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٣</div>
-              <h3 class="card-title" style="font-size: 16px;">پێوەری هەڵسەنگاندن</h3>
-              <p class="card-body" style="font-size: 14px;">دروستکردنی پێوەر بۆ ئەدای کارمەندان</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node" style="border-color: var(--color-success);">
-              <div class="node-step" style="background: var(--color-success);">٤</div>
-              <h3 class="card-title" style="font-size: 16px;">پێدانی فیدباکی بەهێز</h3>
-              <p class="card-body" style="font-size: 14px;">نووسینی وەڵام و فیدباکی ڕێنمایی</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openEmployerPromptBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی نموونەی پرۆمپتی خاوەنکاران</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-analytics-art" id="slide-11" data-notes="ئەم بەشە زۆر سەرنجڕاکێشە چونکە خاوەن بزنسەکان فێردەبن چۆن تەواوی مارکێتینگ و پرۆسەکانیان ئۆتۆماتیک بکەن.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٧ (بزنس)</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ بزنس (پرۆسەی کاری بزنس)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <h3 class="card-title">بیرۆکە & پلانی بزنس</h3>
-              <p class="card-body">پلانی بازرگانی، وەرگرتنی ناو و لۆگۆ.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <h3 class="card-title">مینۆ & ناسنامە</h3>
-              <p class="card-body">داڕشتنی کاڵا، مینۆ و براندینگ.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <h3 class="card-title">سۆشیال میدیا & ڕیکلام</h3>
-              <p class="card-body">نووسینی دەقی ڕیکلام و دروستکردنی وێنە/ڤیدیۆ.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 6;">
-              <h3 class="card-title">وەڵامدانی کڕیار</h3>
-              <p class="card-body">ئۆتۆماتیکردنی وەڵامی کڕیاران و پێداچوونەوە.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 6;">
-              <h3 class="card-title">پلانی گەشەپێدان</h3>
-              <p class="card-body">شیکاری دارایی و ڕاپۆرتی گەشەپێدان.</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openBusinessPromptBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی نموونەی پرۆمپتی بزنس و بازرگانی</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-workflow-art" id="slide-12" data-notes="گەشەپێدەران دەتوانن خێرایی کۆدنووسین و چاککردنی هەڵەکان بە ڕێژەی 3x زیاد بکەن.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٨</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ گەشەپێدەر (پرۆسەی کاری گەشەپێدەر)</h2>
-          </div>
-          <div class="workflow-diagram">
-            <div class="workflow-node">
-              <div class="node-step">١</div>
-              <h3 class="card-title" style="font-size: 16px;">بیرۆکە & پرۆمپت</h3>
-              <p class="card-body" style="font-size: 14px;">داواکاری سیستەمەکە</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٢</div>
-              <h3 class="card-title" style="font-size: 16px;">کۆدکردن بە AI</h3>
-              <p class="card-body" style="font-size: 14px;">Flutter, Laravel, Python</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٣</div>
-              <h3 class="card-title" style="font-size: 16px;">چاککردنی هەڵەکان</h3>
-              <p class="card-body" style="font-size: 14px;">Debug & Refactor</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node" style="border-color: var(--color-success);">
-              <div class="node-step" style="background: var(--color-success);">٤</div>
-              <h3 class="card-title" style="font-size: 16px;">بڵاوکردنەوە & بەڵگەنامە</h3>
-              <p class="card-body" style="font-size: 14px;">Deploy & Docs</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-hero-art" id="slide-13" data-notes="کاتی پشوو و گۆڕینەوەی بیرۆکەکان. پاش گەڕانەوە دێینە سەر بەشە کردارییەکان.">
-        <div class="slide-content-wrapper">
-          <div class="hero-wrapper">
-            <div class="hero-tag" style="border-color: var(--cyan-accent); color: var(--cyan-accent);">
-              ☕ <span>کۆفی برێک &bull; کاتی پشوو</span>
-            </div>
-            <h1 class="hero-title" style="font-size: 64px;">١٥ خولەک پشوو</h1>
-            <p class="hero-subtitle">پاش گەڕانەوە دەست دەکەین بە بەکارهێنانی AI بۆ دیزاینەر، تێگەیشتن لە مەترسییەکان و پێشاندانی دێمۆی ڕاستەوخۆ.</p>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-14" data-notes="ئامرازەکانی دیزاین بە AI دەرفەت دەدەن کەمپینی بێ وێنە بە کاتێکی کەم دروست بکرێت.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ٩</span>
-            <h2 class="slide-title">ژیری دەستکرد بۆ دیزاینەر (ئامرازەکانی دیزاین و وێنەکان)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <h3 class="card-title">میدجۆرنی / چات جیپیتی</h3>
-              <p class="card-body">دروستکردنی بیرۆکە و وێنەی گرافیکی بەرز.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <h3 class="card-title">ئیمەیجن / ڤیۆ (Imagen / Veo)</h3>
-              <p class="card-body">دروستکردنی وێنەی واقیعی و ڤیدیۆ بە AI.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <h3 class="card-title">کانڤا (Canva AI)</h3>
-              <p class="card-body">دیزاینی پۆستەر و سۆشیال میدیا بە خێرایی.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 6;">
-              <h3 class="card-title">دەنگی دەستکرد (AI Voice)</h3>
-              <p class="card-body">دروستکردنی دەنگی سروشتی بۆ ڕیکلام.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 6;">
-              <h3 class="card-title">لۆگۆ & براندینگ</h3>
-              <p class="card-body">دیزاینی ڕەمزی بازرگانی و پۆستەر.</p>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: center; margin-top: 24px;">
-            <button class="action-btn" id="openDesignerPromptBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
-              <span>بینینی بانک و نموونەکانی پرۆمپتی دیزاین و ڤیدیۆ</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-<section class="slide" id="slide-15" data-notes="گرنگە بەشداران بزانن AI هەمیشە ڕاست نییە و پێویستی بە پشکنین و بەرپرسیارییەتی هەیە.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ١٠</span>
-            <h2 class="slide-title">کاریگەری و سنوورەکانی AI (مەترسی و ڕەوشتەکان)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <h3 class="card-title">دروستکردنی وەهم (Hallucination)</h3>
-              <p class="card-body">AI هەندێک جار زانیاری هەڵە دروست دەکات بە زاهیرێکی ڕاست!</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <h3 class="card-title">مافی کۆپی (Copyright)</h3>
-              <p class="card-body">خاوەندارێتی داتا و وێنە دروستکراوەکان بە AI.</p>
-            </div>
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <h3 class="card-title">تایبەتمەندی (Privacy)</h3>
-              <p class="card-body">پاراستنی داتای هەستیار و زانیاری کڕیار لە مۆدێلەکان.</p>
-            </div>
-            <div class="glass-card card-accent-blue" style="grid-column: span 6;">
-              <h3 class="card-title">دیپ فەیک & هەواڵی ساختە</h3>
-              <p class="card-body">ڤیدیۆ و دەنگی ساختە، و ناسینەوەی زانیاری هەڵە.</p>
-            </div>
-            <div class="glass-card card-accent-purple" style="grid-column: span 6;">
-              <h3 class="card-title">پشکنینی مرۆڤ</h3>
-              <p class="card-body">هەمیشە دەبێت مرۆڤ پێداچوونەوە بۆ دەرئەنجامەکانی AI بکات.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-analytics-art" id="slide-16" data-notes="دێمۆی ڕاستەوخۆ بەشداران بە چاوی خۆیان کارایی ئامرازەکان دەبینن.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">بەشی ١١</span>
-            <h2 class="slide-title">نموونەی ڕاستەوخۆ (Live Demos)</h2>
-          </div>
-          <div class="grid-12">
-            <div class="glass-card card-accent-blue clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی کورتکردنەوەی PDF"
-                 data-demo-prompt="«تۆ شیکەرەوەی داتای فایلی پی دی ئێفیت. ئەم فایلە داخڵکراوە بە تەواوی بخوێنەرەوە و کورت بکەرەوە بە شێوازی پێنج خاڵی سەرەکی، دواتر لیستێک لە سێ کارامەیی یان پرسیاری گرنگ دەربکە کە لە ناو تێکستەکەدایە بە زمانی کوردی سۆرانی.»"
-                 data-demo-desc="ئەم دێمۆیە بەکاردێت بۆ پیشاندانی توانای مۆدێلە زمانییەکان لە خوێندنەوە، تێگەیشتن، و کورتکردنەوەی خێرای پەڕتووک و بەڵگەنامە گەورەکان تەنها لە چەند چرکەیەکدا.">
-              <div class="card-number">کورتکردنەوەی PDF</div>
-              <h3 class="card-title">کورتکردنەوەی فایلی درێژ</h3>
-              <p class="card-body">دێمۆی خوێندنەوەی PDF لە چەند چركەیەکدا.</p>
-            </div>
-            <div class="glass-card card-accent-purple clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی نووسینی ئیمەیلی فەرمی"
-                 data-demo-prompt="«تۆ نووسەری ئیمەیلی فەرمی و پیشەیی کۆمپانیاکانیت. نامەیەکی فەرمی بە زمانی کوردی سۆرانی بۆ [ناوی لایەنی بەرامبەر] بنووسە بۆ دواخستنی کاتی کۆبوونەوەی سبەینێ لە کاتژمێر ١٠ بۆ کاتژمێر ٢، لەگەڵ پێشکەشکردنی داوای لێبوردن و ڕوونکردنەوەی هۆکاری دواکەوتنەکە بە کورتی.»"
-                 data-demo-desc="نیشاندانی توانای نووسینی ئۆتۆماتیکی ئیمەیل و نامە بە تۆنێکی فەرمی و بە زمانی کوردی، کە یارمەتیدەرە بۆ پەیوەندییە کارگێڕییەکان.">
-              <div class="card-number">ئیمەیلی فەرمی</div>
-              <h3 class="card-title">ئیمەیلی فەرمی</h3>
-              <p class="card-body">نووسینی ئیمەیل بە تۆنی گونجاو.</p>
-            </div>
-            <div class="glass-card card-accent-cyan clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی دروستکردنی سڵاید و پاوەرپۆینت"
-                 data-demo-prompt="«تۆ شارەزای دیزاین و ڕێکخستنی سڵایدەکانیت. بابەتێکی [ناوی بابەت بنووسە] کورت بکەرەوە بۆ نووسینی کۆدی VBA یان دەقی داڕشتنی ٥ سڵاید بۆ مایکرۆسۆفت پاوەرپۆینت. بۆ هەر سڵایدێک: ناونیشان و دوو دەقی کورت بنووسە بە زمانی کوردی.»"
-                 data-demo-desc="ئۆتۆماتیکردنی پرۆسەی دروستکردنی فایلی پاوەرپۆینت لە دەقێکی سادەوە، کە دەبێتە هۆی پاشەکەوتکردنی کاتێکی زۆر لە وانەوتنەوە یان پێشکەشکردندا.">
-              <div class="card-number">پاوەرپۆینت</div>
-              <h3 class="card-title">سڵایدی خۆکار</h3>
-              <p class="card-body">دروستکردنی پرێزێنتەیشن لە دەقەوە.</p>
-            </div>
-            <div class="glass-card card-accent-blue clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی داڕشتنی پلانی بزنس"
-                 data-demo-prompt="«تۆ ڕاوێژکار و داڕێژەری پلانی ستراتیژی بازرگانیت. بیرۆکەی پرۆژەی [ناوی پرۆژە بنووسە] شیتاڵ بکە بۆ دروستکردنی پلانی سەرەتایی کار کە پێکبێت لە: کڕیاری ئامانج، تێچووی سەرەتایی خەمڵێنراو، شێوازی ڕیکلامکردن و ڕکابەرەکانی نێو بازاڕ بە کوردی.»"
-                 data-demo-desc="شیکردنەوەی خێرای بیرۆکەکانی بازرگانی و ڕێکخستنی پلانە دارایی و ستراتیژییەکان بۆ دەستپێکردنی بزنسی نوێ.">
-              <div class="card-number">پلانی بزنس</div>
-              <h3 class="card-title">مارکێتینگ و پلانی بزنس</h3>
-              <p class="card-body">داڕشتنی کەمپینی فرۆشتن.</p>
-            </div>
-            <div class="glass-card card-accent-purple clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی نووسینی کۆدی ئەپڵیکەیشن"
-                 data-demo-prompt="«تۆ گەشەپێدەرێکی لێهاتووی Flutterیت. کۆدێکی پاک و کارا دروستبکە بۆ پەڕەیەک کە لایەنێکی مۆدێرن و گونجاوی هەبێت و لیستێک لە بابەتەکان نیشان بدات بە بەکارهێنانی ListView.builder و لە کاتی کلیکدا پەڕەیەکی تر بکاتەوە.»"
-                 data-demo-desc="نیشاندانی چۆنیەتی دروستکردنی کۆد بۆ بەرنامەکان یان مۆدێلەکانی Flutter/HTML بە هاوکاری AI بۆ خێراکردنی پرۆسەی پەرەپێدان.">
-              <div class="card-number">کۆدی ئەپڵیکەیشن</div>
-              <h3 class="card-title">کۆدی ئەپڵیکەیشن</h3>
-              <p class="card-body">نووسین و دەپلووی کۆد بە Flutter.</p>
-            </div>
-            <div class="glass-card card-accent-cyan clickable-card" style="grid-column: span 4; cursor: pointer;"
-                 data-demo-title="دێمۆی دروستکردنی وێنە و ڤیدیۆ"
-                 data-demo-prompt="«A cinematic shot of a futuristic classroom in Kurdistan, students interacting with 3D holograms of stars and planets, high tech, warm lighting, Unreal Engine 5 render, photorealistic --ar 16:9»"
-                 data-demo-desc="پیشاندانی چۆنیەتی نووسینی پرۆمپت بۆ دروستکردنی وێنە و ئەنیمەیشنی کوالیتی بەرز بۆ مەبەستی جیاوازی خوێندن، گرافیک دیزاین، یان مارکێتینگ.">
-              <div class="card-number">وێنە & ڤیدیۆ</div>
-              <h3 class="card-title">دروستکردنی میدیا</h3>
-              <p class="card-body">وێنە و ڤیدیۆ بە پرۆمپت.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-workflow-art" id="slide-17" data-notes="ئەم سلایدە کورتکراوەی کۆرسەکەیە: پێش قسەکردن لەگەڵ AI دەبێت بیرۆکەت هەبێت، گۆشەنیگاکەت لە ئاستی پسپۆڕییەکەت دیاریبکەیت، پرۆمپتی زێڕین دابڕێژیت، پاشان پرۆسەی گفتوگۆ و دەستکاریکردن دەستپێبکەیت.">
-        <div class="slide-content-wrapper">
-          <div class="slide-header">
-            <span class="slide-category">دەرئەنجامی فێربوون</span>
-            <h2 class="slide-title">دەرئەنجام — ئێستا دەبێت چی فێربووبین؟ (پێش گفتوگۆ لەگەڵ AI)</h2>
-          </div>
-          <div class="workflow-diagram">
-            <div class="workflow-node">
-              <div class="node-step">١</div>
-              <h3 class="card-title" style="font-size: 16px;"> بیرۆکە</h3>
-              <p class="card-body" style="font-size: 13px;">پێش قسەکردن لەگەڵ AI، دەبێت بیرۆکە و ئامانجی ڕوونت هەبێت.</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٢</div>
-              <h3 class="card-title" style="font-size: 16px;">پسپۆڕی</h3>
-              <p class="card-body" style="font-size: 13px;">قوتابی 🎓، مامۆستا 👨‍🏫، بزنس 💼، ئەندازیار 💻، دکتۆر 🩺</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node">
-              <div class="node-step">٣</div>
-              <h3 class="card-title" style="font-size: 16px;">نووسینی پرۆمپت</h3>
-              <p class="card-body" style="font-size: 13px;">دانانی Role + Task + Context + Format + Tone</p>
-            </div>
-            <div class="workflow-arrow">&larr;</div>
-            <div class="workflow-node" style="border-color: var(--color-success);">
-              <div class="node-step" style="background: var(--color-success);">٤</div>
-              <h3 class="card-title" style="font-size: 16px;">گفتوگۆ & دەستکاری</h3>
-              <p class="card-body" style="font-size: 13px;">ناردنی پرۆمپت، پشکنینی مرۆیی و باشکردنی وەڵامەکە</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="slide bg-hero-art" id="slide-18" data-notes="بەشی کۆتایی: سوپاسگوزاری, تێبینی کۆتایی، و پێدانی لینکەکانی پەیوەندی تێلیگرام، چەناڵ و وەتس ئاپ.">
-        <div class="slide-content-wrapper">
-          <div class="hero-wrapper">
-            <div class="hero-tag" style="border-color: var(--color-success); color: #6EE7B7;">
-              ✨ <span>داهاتووی ژیری دەستکرد &bull; پەیوەندی</span>
-            </div>
-            <h1 class="hero-title" style="font-size: 50px;">سوپاس بۆ بەشداریتان</h1>
-            <p class="hero-subtitle" style="font-size: 20px;">«ژیری دەستکرد لە ژیانی ڕۆژانە و کاردا»</p>
-            
-            <div class="hero-presenter" style="margin-top: var(--space-s);">
-              <div class="presenter-avatar">ع</div>
-              <div class="presenter-text">
-                <div class="presenter-name">ئەندازیار عبدالرحمن اسماعیل</div>
-                <div class="presenter-role">سوپاس بۆ کات و سەرنجتان</div>
-              </div>
-            </div>
-
-            <!-- Social Media Buttons -->
-            <div class="social-links-container">
-              <a href="https://t.me/Agha_ACE" target="_blank" class="social-btn">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .54-1.42.53-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.05-.75 4.12-1.79 6.87-2.97 8.25-3.55 3.93-1.65 4.74-1.94 5.27-1.95.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.35z"/></svg>
-                <span>تێلیگرام: Aghay Andazyar (@Agha_ACE)</span>
-              </a>
-              <a href="https://t.me/+W32ycoG8-lZlODc6" target="_blank" class="social-btn">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .54-1.42.53-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.05-.75 4.12-1.79 6.87-2.97 8.25-3.55 3.93-1.65 4.74-1.94 5.27-1.95.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.35z"/></svg>
-                <span>چەناڵی تێلیگرام: داهاتووی تەکنەلۆجیا</span>
-              </a>
-              <a href="https://wa.me/9647504342452" target="_blank" class="social-btn">
-                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.84 9.84 0 0012.04 2zm5.8 14.15c-.24.67-1.2 1.22-1.95 1.38-.52.11-1.19.2-3.48-.75-2.92-1.21-4.8-4.18-4.95-4.38-.14-.19-1.2-1.6-1.2-3.05 0-1.45.76-2.17 1.03-2.46.27-.29.59-.36.79-.36.2 0 .39.01.56.01.18 0 .43-.07.67.51.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.48-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.77 1.27 1.66 2.06 1.14 1.01 2.1 1.33 2.4 1.48.3.15.48.13.66-.08.18-.21.77-.9.98-1.21.21-.31.43-.26.72-.15.29.11 1.84.87 2.15 1.02.31.15.52.23.59.36.08.13.08.76-.16 1.43z"/></svg>
-                <span>وەتس ئاپ: 07504342452</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer Bar -->
-    <footer class="presenter-footer">
-      <div class="footer-progress-bar" id="progressBar" style="width: 5.88%;"></div>
-      <div>
-        <span>کۆرسی ژیری دەستکرد</span> &bull; 
-        <span id="currentSectionName" style="color: var(--cyan-accent);">لە ژیانی ڕۆژانە و کاردا</span>
       </div>
-      <div>
-        <span>سلاید <strong id="currentSlideNum" style="color: white;">1</strong> لە <strong id="totalSlidesNum">18</strong></span>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="portfolio-section-header">
+        <span class="portfolio-section-subtitle">شارەزایی و تەکنەلۆجیا</span>
+        <h2 class="portfolio-section-title">بواری پسپۆڕییەکانم</h2>
       </div>
+
+      <div class="skills-grid">
+        <!-- Skill 1 -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"></path><path d="M12 6v6l4 2"></path></svg>
+          </div>
+          <h3 class="skill-title">ژیری دەستکرد (AI)</h3>
+          <p class="skill-desc">ماستەربوون لە ChatGPT, Claude, Gemini, Copilot, Midjourney و ئەندازیاری پرۆمپت (Prompt Engineering).</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-card">
+          <div class="skill-icon" style="background: rgba(124, 58, 237, 0.1); border-color: rgba(124, 58, 237, 0.2); color: #8B5CF6;">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3 class="skill-title">بەڕێوەبردنی IT</h3>
+          <p class="skill-desc">بەڕێوەبردنی سیستەمی زانیاری، بەشی IT، داڕشتنی ڕێنمایی ئاسایش و پشتیوانی تەکنیکی لە کۆمپانیاکاندا.</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-card">
+          <div class="skill-icon" style="background: rgba(37, 99, 235, 0.1); border-color: rgba(37, 99, 235, 0.2); color: #3B82F6;">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="skill-title">گەشەپێدانی وێب</h3>
+          <p class="skill-desc">دروستکردن و پەرەپێدانی ماڵپەڕ و بەرهەمی دیجیتاڵی بەنوێترین تەکنەلۆجیاکانی وێب و دیزاینی سەردەمیانە.</p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-card">
+          <div class="skill-icon" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: #10B981;">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479L12 21l-6.83-3.943a12.078 12.078 0 01.662-6.483L12 14z"></path></svg>
+          </div>
+          <h3 class="skill-title">ڕاهێنەرایەتی & Technical Training</h3>
+          <p class="skill-desc">پێشکەشکردنی سیمینار، وۆرکشۆپ و کۆرسی تەکنەلۆجی بە ئەزموونی زیاتر لە ٥ ساڵ لە وانەوتنەوە.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="portfolio-section-header" style="text-align: center;">
+        <span class="portfolio-section-subtitle">پەیوەندی</span>
+        <h2 class="portfolio-section-title">زانیارییەکانی پەیوەندیکردن</h2>
+      </div>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 24px; text-align: center;">
+        بۆ داواکاری سیمینار، خولی ڕاهێنان، یان ڕاهێنەرایەتی تەکنەلۆجی دەتوانیت لە ڕێگەی ئامرازەکانی خوارەوە پەیوەندیم پێوە بکەیت:
+      </p>
+
+      <div class="contact-grid">
+        <!-- Mobile Phone -->
+        <a href="tel:+9647504342452" class="contact-card-item">
+          <div class="contact-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">ژمارەی مۆبایل</span>
+            <span class="contact-value" style="direction: ltr; text-align: right;">0750 434 2452</span>
+          </div>
+        </a>
+
+        <!-- Telegram Personal -->
+        <a href="https://t.me/Agha_ACE" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(6, 182, 212, 0.15); color: #06B6D4;">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.462-.169.584-.385.78-.593.798-.452.042-.796-.299-1.234-.586-.687-.45-1.076-.73-1.742-1.168-.77-.507-.271-.785.168-1.24.115-.119 2.111-1.936 2.15-2.101.005-.021.01-.099-.037-.14-.047-.041-.117-.027-.168-.016-.072.016-1.22.776-3.444 2.278-.326.224-.621.334-.886.328-.492-.011-1.439-.278-2.143-.507-.864-.282-1.551-.432-1.491-.912.031-.25.385-.506 1.062-.767 4.159-1.811 6.934-3.007 8.326-3.587 3.956-1.646 4.777-1.932 5.313-1.942.118-.002.382.028.553.167.144.118.184.277.203.394.019.117.043.383.024.591z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">تێلیگرام (Aghay Andazy)</span>
+            <span class="contact-value" style="direction: ltr; text-align: right;">@Agha_ACE</span>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/9647504342452" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.758zm6.657-4.471l.379.225c1.472.873 3.166 1.334 4.89 1.335 5.239 0 9.502-4.263 9.505-9.504.001-2.538-.987-4.922-2.784-6.719-1.797-1.797-4.18-2.787-6.719-2.787-5.24 0-9.504 4.264-9.507 9.505-.001 2.05.656 4.025 1.898 5.643l.247.324-1.003 3.663 3.753-.984zm11.238-7.067c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">WhatsApp (Aghay Andazy)</span>
+            <span class="contact-value" style="direction: ltr; text-align: right;">+964 750 434 2452</span>
+          </div>
+        </a>
+
+        <!-- Telegram Group -->
+        <a href="https://t.me/feature_technology" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(124, 58, 237, 0.15); color: #8B5CF6;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">گرووپی تێلیگرام</span>
+            <span class="contact-value">داهاتووی تەکنەلۆجیا</span>
+          </div>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/AghaAS7421" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(37, 99, 235, 0.15); color: #3B82F6;">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">فەیسبووک</span>
+            <span class="contact-value">Agha Abdulrahman Sktany</span>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/agha_ace" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(236, 72, 153, 0.15); color: #EC4899;">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">ئینستاگرام (Aghay Andazy)</span>
+            <span class="contact-value" style="direction: ltr; text-align: right;">@agha_ace</span>
+          </div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://tiktok.com/@agha_ace" target="_blank" class="contact-card-item">
+          <div class="contact-icon" style="background: rgba(255, 255, 255, 0.12); color: #FFFFFF;">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.98-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.57-1.31 1.56-1.3 2.56.01.8.37 1.59.97 2.11.83.71 2.03.87 3.03.47.88-.34 1.52-1.1 1.76-2.03.11-.47.16-.96.15-1.44.01-4.52 0-9.04.01-13.56z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-label">تیک تۆک (Aghay Andazy)</span>
+            <span class="contact-value" style="direction: ltr; text-align: right;">@agha_ace</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Note -->
+    <footer style="text-align: center; color: var(--text-muted); font-size: 14px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);">
+      &copy; 2026 ئەندازیار عبدالرحمن اسماعیل &bull; سەرجەم مافەکانی پارێزراوە.
     </footer>
-  </div>
 
-  <!-- Speaker Notes Drawer -->
-  <div class="speaker-notes-drawer" id="speakerNotesDrawer">
-    <div class="notes-header">
-      <span>تێبینییەکانی پێشکەشکار (Speaker Notes)</span>
-      <button class="btn-icon" id="closeNotesBtn" style="padding: 4px 10px;">داخستن &times;</button>
-    </div>
-    <div class="notes-content" id="notesTextContainer">
-      بەخێربێن بۆ کۆرسی ژیری دەستکرد...
-    </div>
-  </div>
+  </main>
 
-  <!-- Slide Thumbnails Drawer Overlay -->
-  <div class="thumbnails-overlay" id="thumbnailsOverlay">
-    <div class="thumbnails-header">
-      <h2 style="color: var(--text-white); font-size: 24px;">پێشبینینی هەموو سلایدەکان (18 Slides)</h2>
-      <button class="btn-icon" id="closeThumbnailsBtn" style="padding: 8px 16px;">داخستن &times;</button>
-    </div>
-    <div class="thumbnails-grid" id="thumbnailsGrid">
-      <!-- Dynamically filled by app.js -->
-    </div>
-  </div>
-
-  <!-- PROMPT LIBRARY MODAL -->
-  <div class="prompt-modal" id="promptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی نموونەکانی پرۆمپت (لاواز، ناوەند، زۆر باش)</h2>
-        <button class="close-modal-btn" id="closePromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-education">فێرکاری & مامۆستا</button>
-          <button class="tab-btn" data-tab="tab-study">خوێندن & قوتابی</button>
-          <button class="tab-btn" data-tab="tab-business">بزنس & خاوەنکار</button>
-          <button class="tab-btn" data-tab="tab-coding">پڕۆگرامسازی & کۆد</button>
-        </div>
-        
-        <!-- TAB 1: EDUCATION -->
-        <div class="tab-content active" id="tab-education">
-          <div class="prompt-comparison">
-            <div class="comparison-level weak-lvl">
-              <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
-              <div class="level-box">«تاقیکردنەوەیەکم بۆ دروستبکە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> مۆدێلەکە بابەتەکە نازانێت، بۆ چ قۆناغێکە، چەند پرسیارە، یان چی پیشان بدات. وەڵامەکە زۆر ناڕوون و گشتی دەبێت.</div>
-            </div>
-            <div class="comparison-level medium-lvl">
-              <div class="level-header">🟡 پرۆمپتی ناوەند (Medium Prompt)</div>
-              <div class="level-box">«تاقیکردنەوەیەکی بیرکاری بۆ پۆلی ١٢ دروستبکە بە پێنج پرسیار.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> هەرچەندە بابەت و پۆلەکە دیارە، بەڵام جۆری پرسیارەکان (فرەبژاردە یان نووسین) و وەڵامەکانی دیارینەکراوە.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی زۆر باش (Very Good Prompt)</div>
-              <div class="level-box">«تۆ مامۆستایەکی بیرکاری لێهاتووی پۆلی ١٢. تاقیکردنەوەیەکی هەڵبژارند لەسەر داتاشراو دروستبکە بە ٥ پرسیار و خاڵبەندی دیاریبکە، لەگەڵ هێنانەوەی وەڵامە ڕاستەکان لە کۆتایی بە جیا.»</div>
-              <div class="level-desc"><strong>خاڵی بەهێز:</strong> ڕۆڵەکە دیارە (مامۆستا)، بابەتەکە جێگیرە (داتاشراو)، فۆرماتی پرسیارەکان دیاریکراوە (هەڵبژاردن)، و وەڵامەکان لە کۆتایی جیاکراونەتەوە.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: STUDY -->
-        <div class="tab-content" id="tab-study">
-          <div class="prompt-comparison">
-            <div class="comparison-level weak-lvl">
-              <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
-              <div class="level-box">«ئەم بابەتەم بۆ ڕوونبکەرەوە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> مۆدێلەکە نازانێت باسی چ بابەتێک دەکەیت، و وەڵامێکی زۆر درێژ یان کورت و ناپێویست دەداتەوە.</div>
-            </div>
-            <div class="comparison-level medium-lvl">
-              <div class="level-header">🟡 پرۆمپتی ناوەند (Medium Prompt)</div>
-              <div class="level-box">«بیرکاری پۆلی ١٢ بۆ من کورت بکەرەوە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> کورتکردنەوەیەکی ئاسایی دەدات بەڵام ڕەنگە بۆ ئاستی تۆ گونجاو نەبێت یان وشەی گران و تەکنیکی زۆری تێدابێت.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی زۆر باش (Very Good Prompt)</div>
-              <div class="level-box">«تۆ مامۆستایەکی بیرکاری لێهاتووی پۆلی ١٢. بەندی [ژمارەی بەندی بنووسە] لە بابەتی [بابەتەکەت بنووسە] کورت بکەرەوە بە کوردی بە کەمتر لە ٢٠٠ وشە.»</div>
-              <div class="level-desc"><strong>خاڵی بەهێز:</strong> ڕۆڵی مۆدێلەکە دیاریکراوە، زمان و شێوازی دەربڕینەکە (سادە و بە نموونە) دیارە، و سنوورداری وشەکانی تێدایە.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: BUSINESS -->
-        <div class="tab-content" id="tab-business">
-          <div class="prompt-comparison">
-            <div class="comparison-level weak-lvl">
-              <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
-              <div class="level-box">«نامەیەکی ڕیکلامیم بۆ بنووسە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> دیار نییە چ کاڵایەکە، کڕیار کێیە و لە چ سۆشیال میدیایەک بڵاودەکرێتەوە. دەرئەنجامەکەی بێ سوودە.</div>
-            </div>
-            <div class="comparison-level medium-lvl">
-              <div class="level-header">🟡 پرۆمپتی ناوەند (Medium Prompt)</div>
-              <div class="level-box">«پۆستێکی فەیسبووک بنووسە بۆ فرۆشتنی مۆبایلی ئایفۆن بە کوردی.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> پۆستەکە دروست دەکات بەڵام زۆر سەرنجڕاکێش نییە، بێ ڕێکخستنی خاڵە گرنگەکان و بەبێ جۆری کڕیاری ئامانج.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی زۆر باش (Very Good Prompt)</div>
-              <div class="level-box">«تۆ پسپۆڕی مارکێتینگیت. پۆستێکی سەرنجڕاکێش بنووسە بۆ فەیسبووک بۆ فرۆشتنی مۆبایلی ئایفۆن. ئێمۆجی بەکاربێنە، بە کوردی سۆرانی بێت، ڕێنمایی کڕین (CTA) و سوودە گرنگەکانی مۆبایلەکە بە خاڵ دیاری بکە.»</div>
-              <div class="level-desc"><strong>خاڵی بەهێز:</strong> پسپۆڕی دیاریکراوە، شوێنی بڵاوکردنەوە ڕوونە (فەیسبووک)، تۆنەکە مارکێتینگە و بەکارهێنانی ئێمۆجی و جۆری زمانەکەی دیاریکراوە.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 4: CODING -->
-        <div class="tab-content" id="tab-coding">
-          <div class="prompt-comparison">
-            <div class="comparison-level weak-lvl">
-              <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
-              <div class="level-box">«کۆدێکی HTMLم بۆ دروستبکە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> تەنها داڕشتنێکی یەکجار سادەی بێ ستایل یان نیشاندانی شتێکی بەسوود دەدات.</div>
-            </div>
-            <div class="comparison-level medium-lvl">
-              <div class="level-header">🟡 پرۆمپتی ناوەند (Medium Prompt)</div>
-              <div class="level-box">«دوگمەیەکی جوانی HTML و CSS دروستبکە.»</div>
-              <div class="level-desc"><strong>کێشە:</strong> دوگمەیەکی ئاسایی بە هەندێک ڕەنگ دروست دەکات، بەڵام بێ فۆرمات یان لایەنە سەرنجڕاکێش و ئەنیمەیشنەکانی.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی زۆر باش (Very Good Prompt)</div>
-              <div class="level-box">«تۆ گەشەپێدەرێکی لێهاتووی وێبیت. کۆدێکی پاکی HTML و CSS دروستبکە بۆ دوگمەیەکی 'Glassmorphic' کە لە کاتی hoverدا ئەنیمەیشنێکی نەرمی هەبێت و لە ناوەڕاستی لاپەڕەکەدا بێت.»</div>
-              <div class="level-desc"><strong>خاڵی بەهێز:</strong> ستایلی دیاریکراوە (Glassmorphism)، تایبەتمەندی hover ئەنیمەیشنی هەیە و شێوازی ڕێکخستنی کۆدەکەی لە ناوەڕاستدا بە تەواوی ڕوونە.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STUDENT PROMPTS MODAL -->
-  <div class="prompt-modal" id="studentPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی پرۆمپت بۆ قوتابیان (پۆلی ١٢، زانکۆ و فێربوونی زمان)</h2>
-        <button class="close-modal-btn" id="closeStudentPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-student-grade12">پۆلی ١٢ی ئامادەیی</button>
-          <button class="tab-btn" data-tab="tab-student-uni">خوێندکاری زانکۆ</button>
-          <button class="tab-btn" data-tab="tab-student-lang">فێربوونی زمان</button>
-        </div>
-        
-        <!-- TAB 1: GRADE 12 -->
-        <div class="tab-content active" id="tab-student-grade12">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی گونجاو بۆ پۆلی ١٢ی ئامادەیی</div>
-              <div class="level-box">«تۆ مامۆستایەکی زیندەوەر زانی لێهاتووی پۆلی ١٢ی ئامادەییت. بەندی سێیەم (دڵ) لە بابەتی زیندەوەرزانی بە کوردی کورت بکەرەوە. پێناسە سەرەکییەکان و سێ نموونەی ڕوونم بۆ بنووسە بە شێوازی هەنگاو بە هەنگاو کە تێگەیشتنی ئاسان بێت.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتی قوتابی پۆلی ١٢ دەدات بابەتە قورسەکانی وەک زیندەوەر زانی بە ڕوونکردنەوە و نموونەی ئاسان بە زمانی کوردی وەربگرێت بۆ پێداچوونەوە و تێگەیشتنی خێرا.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: UNIVERSITY -->
-        <div class="tab-content" id="tab-student-uni">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی گونجاو بۆ خوێندکاری زانکۆ</div>
-              <div class="level-box">«تۆ خوێندکاری زانکۆیت لە بەشی زانستی کۆمپیوتەر. پوختەیەکی چڕوپڕ و زانستی بۆ توێژینەوەی 'Deep Learning' بە زمانی کوردی بنووسە کە پێکبێت لە کورتە، مێتۆدۆلۆژی، و گرنگترین ئەنجامەکان بە خاڵ بۆ بەکارهێنانی لە سڵایدی پرێزێنتەیشندا.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتی خوێندکاری زانکۆ دەدات کە لە کاتی پێویستدا کورتەی توێژینەوە زانستییەکان بە شێوازێکی پڕۆفیشناڵ وەربگرێت بۆ نووسینی ڕاپۆرت یان دروستکردنی سڵاید.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: LANGUAGE LEARNING -->
-        <div class="tab-content" id="tab-student-lang">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی گونجاو بۆ فێربوونی زمان</div>
-              <div class="level-box">«تۆ مامۆستایەکی زمانی ئینگلیزیت بۆ ئاستی مامناوەند (B1). لیستێک لە ١٠ دەربڕین و فۆرمۆڵی گرنگی گفتوگۆ لەسەر گەشتکردن و فڕینی فڕۆکە بنووسە بە ئینگلیزی، لەگەڵ مانا و ڕوونکردنەوەی کوردی بۆ هەر دانەیەکیان، و تەمسیلی گفتوگۆیەکی کورتم بۆ دروستبکە.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتی خوێنکاری فێربوونی زمان دەدات گفتوگۆی دروست و زاراوە بەکارھاتووەکان لەگەڵ مانا و گفتوگۆیەکی نموونەییدا بەدەست بهێنێت بۆ مەشقکردن.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TEACHER PROMPTS MODAL -->
-  <div class="prompt-modal" id="teacherPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی پرۆمپت بۆ مامۆستایان (دروستکردنی پلان، ڕێگەکانی وانەوتنەوە و هەڵسەنگاندن)</h2>
-        <button class="close-modal-btn" id="closeTeacherPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-teacher-prep">دروستکردنی پلان & وانە</button>
-          <button class="tab-btn" data-tab="tab-teacher-methods">ڕێگەکانی وانەوتنەوە</button>
-          <button class="tab-btn" data-tab="tab-teacher-eval">هەڵسەنگاندن & پرسیار</button>
-        </div>
-        
-        <!-- TAB 1: LESSON PREP -->
-        <div class="tab-content active" id="tab-teacher-prep">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی پلان و ئامادەکردنی وانە</div>
-              <div class="level-box">«تۆ شارەزایەکی داڕشتنی مەنهەج و وانەوتناوەیت لە وەزارەتی پەروەردەی هەرێمی کوردستان. پلانێکی وانەی تەواو بۆ بابەتی [ناوی بابەت بنووسە، وەک زیندەوەرزانی پۆلی ١٢ یان بیرکاری پۆلی ٩] بنووسە بۆ یەک وانەی ٤٥ خولەکی. پلانەکە پێکبێت لە: ئامانجی وانە، پێداویستییەکان، دابەشکردنی خولەکەکان (پێشەکی، ناوەڕۆک، پرسیار و وەڵام)، و لە کۆتاییدا ئەرکی ماڵەوە (homework).»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتی مامۆستایانی هەرێم دەدات کە پلان و ڕێڕەوی وانەکانیان بە پێی ستانداردەکانی وەزارەت بە کوردییەکی ڕوون و لە چەند چرکەیەکدا ئامادە بکەن.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: TEACHING METHODS -->
-        <div class="tab-content" id="tab-teacher-methods">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ڕێگە و شێوازەکانی وانەوتنەوە</div>
-              <div class="level-box">«تۆ ڕاهێنەرێکی گەشەپێدانی مامۆستایانیت لە کوردستان. پێشنیاری ٣ ڕێگای مۆدێرن و کارلێکەر (وەک فێربوونی بە گروپ، گفتوگۆی چالاک، یان پێچەوانەکردنەوەی پۆل) بکە بۆ شەرحکردنی بابەتی [بابەتەکە بنووسە] بە شێوازێک کە قوتابی کەمتر بێزار بێت و زیاتر تێبگات، لەگەڵ پێدانی ڕێنمایی چۆنێتی جێبەجێکردنی لە پۆلدا.»</div>
-              <div class="level-desc"><strong>سوود:</strong> یارمەتی مامۆستا دەدات شێوازەکانی خۆی نوێ بکاتەوە و چالاکی کارلێکەر دروست بکات کە وا دەکات قوتابی سەرنجی لەسەر وانەکە بێت.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: ASSESSMENT -->
-        <div class="tab-content" id="tab-teacher-eval">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی پرسیاری تاقیکردنەوە و هەڵسەنگاندن</div>
-              <div class="level-box">«تۆ پسپۆڕی ئامادەکردنی پرسیاری وزاری و تاقیکردنەوەکانی لە هەرێمی کوردستان. پێنج پرسیاری جیاواز و فیکری بیرکاری پۆلی ١٢ (یان زیندەوەرزانی پۆلی ١٢) لەسەر بەندی [ناوی بەند بنووسە] دروستبکە. پرسیارەکان بەپێی ئاستی زانستی قوتابیان دابەش بکە (٢ ئاسان، ٢ مامناوەند، ١ فیکری/گران)، لەگەڵ نووسینی وەڵامی نموونەیی هەر یەکێکیان.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە وا دەکات تاقیکردنەوەی خولی و پێداچوونەوەکان بە پرسیاری کوالیتی بەرز و دابەشکراو بەسەر فیکری و سادەدا بەبێ کات بەفیڕۆدان ئامادە ببن.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EMPLOYER PROMPTS MODAL -->
-  <div class="prompt-modal" id="employerPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی پرۆمپت بۆ خاوەنکاران (داڕشتنی ئەرک، شیکردنەوەی داتا و فیدباک)</h2>
-        <button class="close-modal-btn" id="closeEmployerPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-employer-task">داڕشتنی ئەرکەکان</button>
-          <button class="tab-btn" data-tab="tab-employer-data">شیکردنەوەی داتا</button>
-          <button class="tab-btn" data-tab="tab-employer-feedback">فیدباکی کارمەند</button>
-        </div>
-        
-        <!-- TAB 1: TASK DELEGATION -->
-        <div class="tab-content active" id="tab-employer-task">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی دابەشکردن و ڕوونکردنەوەی ئەرکەکان</div>
-              <div class="level-box">«تۆ بەڕێوبەرێکی لێهاتووی تیمی کارکردنیت. دەمەوێت ئەرکی [ناوی ئەرک بنووسە، بۆ نموونە: ئامادەکردنی ڕاپۆرتی فرۆشتنی مانگانە] ڕوون بکەیتەوە بۆ کارمەندێکی تیمەکەم. ئەرکەکە بە زمانی کوردییەکی سادە و فەرمی بنووسە، بەم شێوازە: کورتەی ئەرکەکە، کارامەیی پێویست، هەنگاوەکانی ڕاپەڕاندنی بە زنجیرە، کاتی ڕادەستکردن (deadline)، و پێوەرەکانی پەسەندکردنی کارەکە.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتی خاوەنکار دەدات کە پەیامی ڕوون و دابەشکراوی ئەرکەکان بنووسێت بۆ تیمەکەی بێ ئەوەی هیچ ناڕوونییەک و تێگەیشتنی هەڵە دروست ببێت.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: DATA ANALYSIS -->
-        <div class="tab-content" id="tab-employer-data">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی شیکردنەوەی داتا و فرۆشتن</div>
-              <div class="level-box">«تۆ ڕاوێژکارێکی ستراتیژی بزنس و شیکەرەوەی داتای فۆرماتەکەی. ئەم داتایەی خوارەوەم بۆ شیکار بکە [داتا داراییەکان یان فرۆشتنی لێرە دابنێ]. گرنگترین ٣ خاڵی بەهێز، ٣ کێشە، و ٣ پێشنیاری کرداری کورت بۆ مانگی داهاتوو دەربکە بۆ گەشەپێدانی فرۆشتن بە کوردی.»</div>
-              <div class="level-desc"><strong>سوود:</strong> یارمەتی خاوەنکار دەدات بڕیاری خێرا و گرنگ بدات لەسەر گەشەپێدانی بزنسەکەی بە شیکردنەوەی خێرای داتای فرۆشتن.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: FEEDBACK -->
-        <div class="tab-content" id="tab-employer-feedback">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی فیدباک و هەڵسەنگاندنی ئەدا</div>
-              <div class="level-box">«تۆ بەڕێوبەری سەرچاوە مرۆییەکان (HR)یت. فیدباکێکی پڕۆفیشناڵ و فەرمی بۆ کارمەندێک بنووسە بە زمانی کوردی سۆرانی. کارمەندەکە کێشەی هەیە لە [کێشەکە بنووسە]. فیدباکەکە بە شێوازی 'ساندویچ' بێت (ستایش، باسی کێشەکە، و هاندانی کۆتایی بۆ باشتربوون).»</div>
-              <div class="level-desc"><strong>سوود:</strong> ناردنی پەیامی فیدباک بە شێوازێکی زۆر پڕۆفیشناڵ و بونیاتنەر کە یارمەتی کارمەندەکە دەدات گەشە بکات و هەست بە باشتربوون بکات.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BUSINESS PROMPTS MODAL -->
-  <div class="prompt-modal" id="businessPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی پرۆمپت بۆ بزنس و بازرگانی (پلاندانان، ڕیکلام و پشتگیری)</h2>
-        <button class="close-modal-btn" id="closeBusinessPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-business-plan">داڕشتنی پلان & ناو</button>
-          <button class="tab-btn" data-tab="tab-business-ad">نووسینی ڕیکلام</button>
-          <button class="tab-btn" data-tab="tab-business-support">پشتگیری کڕیاران</button>
-        </div>
-        
-        <!-- TAB 1: BUSINESS PLAN -->
-        <div class="tab-content active" id="tab-business-plan">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی پلان و دۆزینەوەی ناوی بازرگانی</div>
-              <div class="level-box">«تۆ ڕاوێژکارێکی داهێنەری بزنس و مارکێتینگیت. دەمەوێت بزنسێکی نوێی [جۆری بزنس، بۆ نموونە: چێشتخانەیەک یان فێرگەیەکی تەکنەلۆجی] لە شاری [سلێمانی یان هەولێر] دابمەزرێنم. پێشنیاری ٥ ناوی کوردی و مۆدێرن، دروشمێکی بازرگانی (Slogan) و لیستێک لە ٣ کێشە و چۆنیەتی چارەسەرکردنیان لە بازاڕدا بۆ من بنووسە.»</div>
-              <div class="level-desc"><strong>سوود:</strong> ئەم پرۆمپتە یارمەتیت دەدات بۆ دۆزینەوەی بیرۆکە و ناوی بێ وێنە و ناوازە بۆ دەستپێکردنی کارەکەت.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: AD COPYWRITING -->
-        <div class="tab-content" id="tab-business-ad">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی نووسینی دەقی ڕیکلام (Copywriting)</div>
-              <div class="level-box">«تۆ کۆپیرایتەرێکی لێهاتووی ڕیکلامیت. دەقێکی ڕیکلامی سەرنجڕاکێش بە زمانی کوردی بنووسە بۆ فەیسبووک و ئینستاگرام بۆ ڕیکلامکردنی کاڵایەک کە بریتییە لە [ناوی کاڵا یان خزمەتگوزاری]. دەقەکە سەرەتا سەرنجی خوێنەر ڕابکێشێت بە پرسیارێک، پاشان باسی چارەسەر و سوودەکانی کاڵاکە بکات، و لە کۆتاییدا بانگەوازێک بۆ کڕین (CTA) لەگەڵ ئێمۆجی گونجاو زیاد بکە.»</div>
-              <div class="level-desc"><strong>سوود:</strong> نووسینی دەقی ڕیکلامی زۆر بەهێز بۆ سۆشیال میدیا کە سەرنجی کڕیار ڕادەکێشێت و ڕێژەی فرۆشتن بەرز دەکاتەوە.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: CUSTOMER SUPPORT -->
-        <div class="tab-content" id="tab-business-support">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی وەڵامدانەوە و پشتگیری کڕیاران</div>
-              <div class="level-box">«تۆ نوێنەری پشتگیری کڕیارانی لە کۆمپانیایەکی پیشەیی. وەڵامێکی ئامادەکراو و زۆر ڕێزدارانە بە زمانی کوردی سۆرانی بنووسە بۆ کڕیارێک کە سکاڵای هەیە لەسەر [کێشەکە، بۆ نموونە: دواکەوتنی گەیاندنی کاڵاکەی]. نامەکە دڵنەوایی کڕیارەکە بدات، داوای لێبوردنی فەرمی تێدابێت، چارەسەر پێشنیار بکات و دیارییەکی قەرەبووکردنەوە (وەک دیسکۆنت)ی پێشکەش بکات.»</div>
-              <div class="level-desc"><strong>سوود:</strong> یارمەتیدەرە بۆ بەڕێوەبردنی کێشەی کڕیاران بە شێوازێکی زۆر شارەزایانە و پیشەیی بۆ پاراستنی براندی بزنسەکەت.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DESIGNER PROMPTS MODAL -->
-  <div class="prompt-modal" id="designerPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی پرۆمپت بۆ دیزاین و دروستکردنی میدیا (وێنە و ڤیدیۆی دڵ)</h2>
-        <button class="close-modal-btn" id="closeDesignerPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-design-image">١. دروستکردنی وێنە (٥ نموونە)</button>
-          <button class="tab-btn" data-tab="tab-design-video">٢. گۆڕین بۆ ڤیدیۆ (٥ نموونە)</button>
-          <button class="tab-btn" data-tab="tab-design-layout">٣. دیزاین و پۆستەر (٥ نموونە)</button>
-        </div>
-        
-        <!-- TAB 1: IMAGE GENERATION -->
-        <div class="tab-content active" id="tab-design-image">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ١: پێکهاتەی گشتی دڵ (Human Heart 3D Render)</div>
-              <div class="level-box">«A highly detailed medical illustration of the human heart, showing the chambers (atria and ventricles), aorta, and vena cava. Scientifically accurate, 3D render, realistic textures, cross-section view, labeled, clean dark background, 8k resolution --ar 16:9»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> دروستکردنی وێنەیەکی سێ دووری زۆر ورد بۆ تێگەیشتن لە بەشەکانی دڵ لە مەنهەجی زیندەوەرزانی پۆلی ١٢.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٢: جوڵەی خوێنی ئۆکسجیندار و بێ ئۆکسجین (Oxygenated/Deoxygenated Blood Flow)</div>
-              <div class="level-box">«A scientific diagram of the human heart illustrating the flow of oxygenated blood in red and deoxygenated blood in blue. Clear arrows showing the pathways of circulation, high contrast, education style --ar 16:9»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> پیشاندانی گەشتی خوێن لە نێوان سییەکان و دڵ بە دوو ڕەنگی جیاواز بۆ کارئاسانی وانەوتنەوە.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٣: نەخشەسازی سادەی دڵ بۆ ناو پۆل (Simple Classroom Diagram)</div>
-              <div class="level-box">«A stylized and simplified vector illustration of the human heart for high school biology, clear chambers, vibrant colors, isolated on a white background, minimalist clean graphic --ar 4:3»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> وێنەیەکی سادە و ڕوون بە شێوازی ڤێکتەر گونجاو بۆ تاقیکردنەوەکان و پۆلی ١٢.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٤: مایکرۆسکۆپی شانەی ماسولکەی دڵ (Cardiac Muscle Tissue Microscope View)</div>
-              <div class="level-box">«A realistic microscopic rendering of cardiac muscle tissue showing intercalated discs and branching fibers, vivid staining colors, biology textbook illustration style, 8k --ar 16:9»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> پیشاندانی شێوازی شانەکانی دڵ لە ژێر مایکرۆسکۆپدا بە شێوازێکی پزیشکی بەرز.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٥: هۆلۆگرامی کارەبایی دڵ (Holographic Heart Scan)</div>
-              <div class="level-box">«A futuristic holographic visualization of a beating human heart, glowing neon arteries and veins, translucent medical scan look, cyber technology style --ar 16:9»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> پیشاندانی سیستمە کارەباییەکەی دڵ بە شێوازێکی هۆلۆگرام و مۆدێرن.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 2: IMAGE-TO-VIDEO -->
-        <div class="tab-content" id="tab-design-video">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ١: لێدانی سروشتی دڵ (Natural Beating Motion)</div>
-              <div class="level-box">«Medically accurate animation of a human heart beating rhythmically in slow motion, camera panning slowly around the chambers, highly detailed CGI, 60fps»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بۆ لایڤ ئەنیمەیشنی جوڵەی دڵ لە کاتی لێداندا لەسەر شاشە.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٢: جوڵەی دەرچوونی خوێن بۆ خوێنبەرەکان (Blood Pumping Animation)</div>
-              <div class="level-box">«A close-up shot showing red blood cells pulsing and rushing through the translucent aorta and pulmonary arteries of a beating heart, realistic fluid dynamics, slow motion»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بۆ جوڵاندنی دەنکۆڵەکانی خوێن لە ناو خوێنبەرە سەرەکییەکاندا بە مایکرۆسکۆپ.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٣: کارکردنی زمانەکانی دڵ (Heart Valves Opening/Closing)</div>
-              <div class="level-box">«An inside view of the heart showing the bicuspid and tricuspid valves opening and closing in sync with the heartbeat, realistic tissue movement, scientific visualization»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> پیشاندانی جوڵەی زمانەکانی نێوان گوێچکە و زەینەکان بە ڕوونی.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٤: کارەباییبوونی گرژبوونی دڵ (Cardiac Conduction System)</div>
-              <div class="level-box">«A glowing pulse of yellow electrical energy traveling through the SA node and AV node of the heart, showing the conduction pathway, medical animation, cinematic lighting»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> گۆڕینی وێنەی کارەبایی دڵ بۆ ڤیدیۆیەکی جوڵاوی ڕووناک کەرەوە.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٥: خولی خوێنی دڵ و سییەکان پێکەوە (Cardiopulmonary Circulation)</div>
-              <div class="level-box">«A macro view of the cardiopulmonary system showing blood circulating between the beating heart and the lungs, smooth animated flow, textbook biology graphic style»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> پیشاندانی گەشتە تەواوەکەی خوێن لە نێوان دڵ و سییەکاندا.</div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- TAB 3: LAYOUT & DESIGN -->
-        <div class="tab-content" id="tab-design-layout">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ١: پۆستەری ڕوونکردنەوەی دڵ بۆ پۆل (Biology Educational Poster)</div>
-              <div class="level-box">«A modern educational poster layout for a high school biology class about the cardiovascular system. Minimalist design, clean typography, space for kurdish text, sleek grid, vector icons --ar 3:4»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بۆ دروستکردنی بیرۆکەی دیزاینی پۆستەری گەورە بۆ هۆڵی پۆل و فێرکاری.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٢: بەرگی کتێبی زیندەوەرزانی پۆلی ١٢ (Biology Textbook Cover)</div>
-              <div class="level-box">«A modern textbook cover design for Grade 12 Biology class in Kurdistan, minimal graphic of a heart, elegant styling, professional composition, space for titles --ar 3:4»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بیرۆکەی دیزاینکردنی بەرگی کتێب بە شێوازێکی زۆر مۆدێرن.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٣: دروستکردنی لۆگۆی پزیشکی دڵ (Cardiology Medical Logo)</div>
-              <div class="level-box">«A minimalist medical logo of a human heart combined with a stethoscope, clean line art, professional layout, vector, white background --ar 1:1»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> دروستکردنی ناسنامەی براند یان لۆگۆ بۆ پزیشک یان کۆرسەکە.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٤: کارتی زانیاری خێرا (Inspirational Biology Flashcard)</div>
-              <div class="level-box">«A layout for a biology flashcard showing the blood flow, with clean blank boxes for definitions, premium graphic design, educational look --ar 3:2»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بۆ دیزاینکردنی کارتی یارمەتیدەری خوێندنی پۆلی ١٢.</div>
-            </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی ٥: دیزاینی سڵایدی دەربارەی دڵ (Presentation Slide Template)</div>
-              <div class="level-box">«A clean layout of a presentation slide about the heart anatomy, spaces for text on the left, medical rendering on the right, dark futuristic tech theme --ar 16:9»</div>
-              <div class="level-desc"><strong>بۆچی بەکاردێت:</strong> بۆ دروستکردنی قاڵبی سڵاید بە یارمەتی ژیری دەستکرد.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DYNAMIC DEMO MODAL -->
-  <div class="prompt-modal" id="demoPromptModal">
-    <div class="prompt-modal-content">
-      <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;" id="demoModalTitle">پرۆمپتی دێمۆی ڕاستەوخۆ</h2>
-        <button class="close-modal-btn" id="closeDemoPromptModalBtn">&times;</button>
-      </div>
-      <div class="prompt-modal-body">
-        <div class="prompt-comparison" style="margin-top: 0;">
-          <div class="comparison-level strong-lvl" style="border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0;">
-            <div class="level-header" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);">🟢 پرۆمپتی پێشنیارکراو بۆ دێمۆ</div>
-            <div class="level-box" id="demoModalPrompt" style="user-select: all; cursor: pointer; background: rgba(0, 0, 0, 0.3); font-family: monospace; font-size: 15px; direction: ltr; text-align: left; padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 12px;" title="کلیک بکە بۆ کۆپیکردن">...</div>
-            <div style="display: flex; justify-content: flex-end; margin-bottom: 12px; margin-top: -4px;">
-              <button class="action-btn" id="copyDemoPromptBtn" style="padding: 6px 14px; font-size: 12px; height: 32px;">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>کۆپیکردنی پرۆمپتەکە</span>
-              </button>
-            </div>
-            <div class="level-desc" id="demoModalDesc" style="font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); text-align: right; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

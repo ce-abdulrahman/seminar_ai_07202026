@@ -8,16 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progressBar');
   const currentSectionNameEl = document.getElementById('currentSectionName');
   
-  const notesDrawer = document.getElementById('speakerNotesDrawer');
-  const notesTextContainer = document.getElementById('notesTextContainer');
+  const notesDrawer = document.getElementById('speakerNotesDrawer') || document.getElementById('notesDrawer');
+  const notesTextContainer = document.getElementById('notesTextContainer') || document.getElementById('notesContent');
   const toggleNotesBtn = document.getElementById('toggleNotesBtn');
   const closeNotesBtn = document.getElementById('closeNotesBtn');
   
-  const thumbnailsOverlay = document.getElementById('thumbnailsOverlay');
+  const thumbnailsOverlay = document.getElementById('thumbnailsOverlay') || document.getElementById('thumbnailsModal');
   const toggleThumbnailsBtn = document.getElementById('toggleThumbnailsBtn');
   const closeThumbnailsBtn = document.getElementById('closeThumbnailsBtn');
   const thumbnailsGrid = document.getElementById('thumbnailsGrid');
   const toggleFullscreenBtn = document.getElementById('toggleFullscreenBtn');
+
+  const nextSlideBtnEl = document.getElementById('nextSlideBtn');
+  const prevSlideBtnEl = document.getElementById('prevSlideBtn');
 
   if (totalSlidesNumEl) totalSlidesNumEl.textContent = totalSlides;
 
@@ -123,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Event Listeners
+  if (nextSlideBtnEl) nextSlideBtnEl.addEventListener('click', nextSlide);
+  if (prevSlideBtnEl) prevSlideBtnEl.addEventListener('click', prevSlide);
   if (toggleNotesBtn) toggleNotesBtn.addEventListener('click', toggleNotes);
   if (closeNotesBtn) closeNotesBtn.addEventListener('click', () => notesDrawer.classList.remove('open'));
   if (toggleThumbnailsBtn) toggleThumbnailsBtn.addEventListener('click', openThumbnails);
@@ -487,14 +492,41 @@ document.addEventListener('DOMContentLoaded', () => {
         tabContents.forEach(c => c.classList.remove('active'));
 
         btn.classList.add('active');
-        const targetTabId = btn.dataset.tab;
-        const targetContent = modal.querySelector(`#${targetTabId}`);
-        if (targetContent) {
-          targetContent.classList.add('active');
+        const targetTabId = btn.dataset.tab || (btn.getAttribute('onclick') ? btn.getAttribute('onclick').match(/'([^']+)'/)?.[1] : null);
+        if (targetTabId) {
+          const targetContent = modal.querySelector(`#${targetTabId}`);
+          if (targetContent) {
+            targetContent.classList.add('active');
+          }
         }
       });
     });
   });
+
+  // Global switchTab helper
+  window.switchTab = function(tabId) {
+    const promptModal = document.getElementById('promptModal');
+    if (!promptModal) return;
+    const tabBtns = promptModal.querySelectorAll('.tab-btn');
+    const tabContents = promptModal.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(b => {
+      const bTab = b.dataset.tab || (b.getAttribute('onclick') ? b.getAttribute('onclick').match(/'([^']+)'/)?.[1] : null);
+      if (bTab === tabId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    tabContents.forEach(c => {
+      if (c.id === tabId) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+  };
 
   // Initialize View
   updateSlideView();
