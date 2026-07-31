@@ -1959,3 +1959,24 @@ body.portfolio-page {
     width: 100%;
   }
 }
+
+/* Animated Gradient Text Shimmer */
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(90deg, #F59E0B, #FDE047, #38BDF8, #A855F7, #EC4899, #F59E0B);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 5s ease infinite;
+}

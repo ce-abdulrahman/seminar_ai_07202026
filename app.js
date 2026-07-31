@@ -528,6 +528,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Coffee Break 15-Minute Countdown Timer
+  let coffeeTimerInterval = null;
+  let coffeeSecondsLeft = 15 * 60; // 900 seconds
+
+  window.toggleCoffeeTimer = function() {
+    const display = document.getElementById('coffeeTimerDisplay');
+    const btnSpan = document.querySelector('#startCoffeeTimerBtn span');
+
+    if (coffeeTimerInterval) {
+      clearInterval(coffeeTimerInterval);
+      coffeeTimerInterval = null;
+      if (btnSpan) btnSpan.textContent = 'بەردەوامبوون ▶';
+    } else {
+      if (coffeeSecondsLeft <= 0) coffeeSecondsLeft = 15 * 60;
+      if (btnSpan) btnSpan.textContent = 'ڕاوەستان ⏸';
+
+      coffeeTimerInterval = setInterval(() => {
+        coffeeSecondsLeft--;
+        if (coffeeSecondsLeft <= 0) {
+          clearInterval(coffeeTimerInterval);
+          coffeeTimerInterval = null;
+          if (display) display.textContent = "00:00 - کاتی پشوو تەواو بوو! 🔔";
+          if (btnSpan) btnSpan.textContent = 'دەستپێکردنەوە ▶';
+          return;
+        }
+        const mins = Math.floor(coffeeSecondsLeft / 60).toString().padStart(2, '0');
+        const secs = (coffeeSecondsLeft % 60).toString().padStart(2, '0');
+        if (display) display.textContent = `${mins}:${secs}`;
+      }, 1000);
+    }
+  };
+
+  window.resetCoffeeTimer = function() {
+    if (coffeeTimerInterval) {
+      clearInterval(coffeeTimerInterval);
+      coffeeTimerInterval = null;
+    }
+    coffeeSecondsLeft = 15 * 60;
+    const display = document.getElementById('coffeeTimerDisplay');
+    const btnSpan = document.querySelector('#startCoffeeTimerBtn span');
+    if (display) display.textContent = "15:00";
+    if (btnSpan) btnSpan.textContent = 'دەستپێکردنی کاتژمێر ▶';
+  };
+
   // Initialize View
   updateSlideView();
 });

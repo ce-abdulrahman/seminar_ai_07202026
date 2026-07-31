@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کتێبچەی ڕێنمایی و پرۆمپتەکانی زیرەکی دەستکرد — ئەندازیار عبدالرحمن اسماعیل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #2563EB;
+      --purple: #7C3AED;
+      --cyan: #0891B2;
+      --dark: #020617;
+      --light: #F8FAFC;
+      --border: #CBD5E1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: #F1F5F9;
+      color: #1E293B;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    .book-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .cover-page {
+      background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #030712 100%);
+      color: #FFFFFF;
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      background: rgba(37, 99, 235, 0.25);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #60A5FA;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .cover-title {
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #FFFFFF, #93C5FD, #C084FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cover-subtitle {
+      font-size: 18px;
+      color: #94A3B8;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    .author-box {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .author-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+
+    .author-title {
+      font-size: 13px;
+      color: #38BDF8;
+    }
+
+    .quote-banner {
+      background: rgba(124, 58, 237, 0.2);
+      border: 1px dashed rgba(168, 85, 247, 0.5);
+      color: #E9D5FF;
+      padding: 14px 20px;
+      border-radius: 12px;
+      margin-top: 28px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .page-content {
+      padding: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 8px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .card-h {
+      font-weight: 700;
+      font-size: 16px;
+      color: #0F172A;
+      margin-bottom: 6px;
+    }
+
+    .card-p {
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .prompt-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 12px 0 20px;
+      border-right: 4px solid #3B82F6;
+      direction: rtl;
+    }
+
+    .cmd-badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: #2563EB;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-left: 6px;
+    }
+
+    .rule-box {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      border-right: 5px solid #EF4444;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .rule-title {
+      font-weight: 700;
+      color: #991B1B;
+      font-size: 15px;
+    }
+
+    .rule-desc {
+      font-size: 13px;
+      color: #7F1D1D;
+    }
+
+    .footer-bar {
+      background: #0F172A;
+      color: #94A3B8;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      border-top: 1px solid #1E293B;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .book-container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print" style="text-align: center; margin-bottom: 20px;">
+    <button onclick="window.print()" style="background: #2563EB; color: white; border: none; padding: 12px 28px; font-size: 16px; font-weight: 700; border-radius: 8px; cursor: pointer; font-family: inherit; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
+      🖨️ چاپکردنی کتێبەکە / ڕزگارکردن وەک PDF (Save as PDF)
+    </button>
+  </div>
+
+  <div class="book-container">
+    
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+      <div style="font-size: 30px; font-weight: 700; color: #F59E0B; margin-bottom: 4px; font-family: 'Amiri', 'Traditional Arabic', serif;">
+        بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+      </div>
+      <div style="font-size: 20px; font-weight: 700; color: #38BDF8; margin-bottom: 20px; font-family: 'Amiri', 'Traditional Arabic', serif;">
+        ﷺ  اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ  ﷺ
+      </div>
+      <span class="cover-badge">ڕێنمایی بەکرداریی ٢٠٢٦</span>
+      <h1 class="cover-title">کتێبی پرۆمپتەکان & ئامرازەکانی زیرەکی دەستکرد</h1>
+      <p class="cover-subtitle">ڕێنمایی گشتگیر بۆ بەکارهێنانی ChatGPT, Claude, DeepSeek و ئامرازە جیهانییەکان</p>
+      
+      <div class="author-box">
+        <div>
+          <div class="author-name" style="font-size: 34px !important; font-weight: 900 !important;">ئەندازیار عبدالرحمن اسماعیل</div>
+          <div class="author-title" style="font-size: 16px !important; ">IT Manager • AI Trainer • Info System Engineer</div>
+        </div>
+      </div>
+
+      <div class="quote-banner">
+        <span style="color: #06B6D4;float: right !important;">وتەی ئەندازیار عبدالرحمن</span>
+        <br>
+        « پێت دروست دەکرێت؟!! »
+      </div>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div class="page-content">
+
+      <!-- SECTION 1 -->
+      <h2 class="section-title">📌 ٠١. پێشەکی و مۆدێلە سەرەکییەکان</h2>
+      <p>زیرەکی دەستکرد (AI) تەنها ئامرازێکی تەکنەلۆجی نییە، بەڵکو یاریدەدەرێکی ژیرە بۆ بەرزکردنەوەی خێرایی و کوالێتی ئیشوکارەکانت. لەم بەشەدا ٥ مۆدێلە سەرەکییەکەی جیهان ئاشکرا دەکەین:</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-h">✳️ ChatGPT (OpenAI)</div>
+          <div class="card-p">باوترین ئامراز بۆ نووسین، مێشکبەکارخستن، داڕشتنی سکرێپت و دروستکردنی بوتی تایبەت (Custom GPTs).</div>
+        </div>
+        <div class="card">
+          <div class="card-h">✴️ Claude (Anthropic)</div>
+          <div class="card-p">زۆر بەهێز لە نووسینی فەرمی، خوێندنەوە و کورتکردنەوەی فایلی PDF ی زۆر درێژ و شیکاریی ئەکادیمی.</div>
+        </div>
+        <div class="card">
+          <div class="card-h">🐋 DeepSeek</div>
+          <div class="card-p">مۆدێلی نوێی کراوە، زۆر سەرکەوتوو لە کۆدکردن، شیکاریی زمانی ئاڵۆز و شیکردنەوەی تەکنیكی.</div>
+        </div>
+        <div class="card">
+          <div class="card-h">✨ Gemini (Google)</div>
+          <div class="card-p">ژیری دەستکردی گووگڵ بەستراوەتەوە بە Google Docs, Gmail, Drive و گەڕانی سەر زەوی.</div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <h2 class="section-title">🎯 ٠٢. فۆرمولەی زێڕینی ئەندازیاری پرۆمپت</h2>
+      <p>بۆ ئەوەی باشترین وەڵام لە AI وەرگریت، هەمیشە پرۆمپتەکەت بەم ٥ هەنگاوە دابڕێژە:</p>
+
+      <div class="card" style="background: #EFF6FF; border-color: #BFDBFE; margin-bottom: 16px;">
+        <strong>فۆرمولە: [Role 🎭] + [Task 🎯] + [Context 📚] + [Format 📝] + [Language 🗣️]</strong>
+      </div>
+
+      <p><strong>نموونەی پرۆمپتی زێڕین:</strong></p>
+      <div class="prompt-code-box prompt-box">
+        «تۆ مامۆستایەکی زانکۆیت (Role). کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە (Format) بۆ خوێندکارانی بەشی کۆمپیوتەر (Context) دەربارەی سوودەکانی زیرەکی دەستکرد لە نووسینی ڕاپۆرتدا (Task)، بە زمانی کوردی سۆرانی بە خاڵ و سەرناو (Language).»
+      </div>
+
+      <!-- SECTION 3 -->
+      <h2 class="section-title">⚡ ٠٣. فەرمانە خێراکان (Prompt Slash Commands)</h2>
+
+      <h3>💻 1. Coding / Tech Commands</h3>
+      <div class="prompt-box">
+        <span class="cmd-badge">/security</span> — پشکنینی پڕۆتۆکۆڵەکانی ئاسایش و دۆزینەوەی کەلەبەرەکان لەم کۆدەدا.<br>
+        <span class="cmd-badge">/debug</span> — دۆزینەوەی سەرچاوەی هەڵە و چاککردنی کۆدەکە.<br>
+        <span class="cmd-badge">/optimizecode</span> — زیادکردنی خێرایی و بەرزکردنەوەی کوالێتی کۆدەکە.<br>
+        <span class="cmd-badge">/api</span> — داڕشتنی دۆکیومێنتار و فۆرماتی API Endpoints.
+      </div>
+
+      <h3>💼 2. Career / Job Help Commands</h3>
+      <div class="prompt-box">
+        <span class="cmd-badge">/resume</span> — داڕشتنی CV پێشکەوتوو بە زمانی ئینگلیزی بەپێی ستانداردەکانی ATS.<br>
+        <span class="cmd-badge">/interview</span> — ئەنجامدانی تاقیکردنەوەی چاوپێکەوتنی کار لەگەڵمدا و پێدانی فیدباک.<br>
+        <span class="cmd-badge">/hr</span> — ئامادەکردنی پرسیارەکانی بەشی HR و داڕشتنی وەڵامی دروست.<br>
+        <span class="cmd-badge">/skills</span> — شیکردنەوەی ئاستی کارامەییەکان و داڕشتنی پلانی ٦ مانگی.
+      </div>
+
+      <h3>✍️ 3. Content Creation Commands</h3>
+      <div class="prompt-box">
+        <span class="cmd-badge">/linkedin</span> — نووسینی پۆستی فەرمی و پیشەیی بۆ لینکدین بە فۆرماتێکی سەرنجڕاکێش.<br>
+        <span class="cmd-badge">/script</span> — داڕشتنی سکرێپتی ڤیدیۆی کورت (Reels / TikTok) بە Hookی بەهێز.<br>
+        <span class="cmd-badge">/captions</span> — دروستکردنی کەپشنی سەرنجڕاکێش بە ئێمۆجی و هاشتاگ.
+      </div>
+
+      <h3>📚 4. Learning & Productivity Commands</h3>
+      <div class="prompt-box">
+        <span class="cmd-badge">/learn</span> — فێرکردنی چەمکێکی ئاڵۆز لە سەرەتاوە بە زمانێکی سادە.<br>
+        <span class="cmd-badge">/summary</span> — کورتکردنەوەی بەڵگەنامە و توێژینەوەی درێژ بۆ خاڵە سەرەکییەکان.<br>
+        <span class="cmd-badge">/quiz</span> — دروستکردنی تاقیکردنەوەی ۱۰ پرسیاری بە وەڵامی ڕاستەوە.<br>
+        <span class="cmd-badge">/automate</span> — دیاریکردنی پرۆسەی کارکردن و دروستکردنی فەرمانی AI.
+      </div>
+
+      <!-- SECTION 4 -->
+      <h2 class="section-title">🔒 ٠٤. ٥ یاسای زێڕینی ئاسایشی داتا</h2>
+      
+      <div class="rule-box">
+        <div class="rule-title">١. 🔒 پاسوۆرد و داتای هەستیار مەنوسە</div>
+        <div class="rule-desc">هەرگیز پاسوۆرد، ژمارەی کارت، یان زانیاری تایبەتی چوونەژوورەوە مەخەرە ناو چاتە گشتییەکان.</div>
+      </div>
+
+      <div class="rule-box">
+        <div class="rule-title">٢. 📄 نەبوونی ناسنامە و پاسپۆرت</div>
+        <div class="rule-desc">لە کاتی ئاپلۆدکردنی فایلی PDF، زانیاری کەسی و پاسپۆرت پێشوەختە نادیار (Redact) بکە.</div>
+      </div>
+
+      <div class="rule-box">
+        <div class="rule-title">٣. 🏢 پاراستنی نهێنییەکانی کۆمپانیا</div>
+        <div class="rule-desc">داتای دارایی ناوخۆیی یان سۆرس کۆدی تایبەتی کۆمپانیاکان لە چاتی بێبەرامبەر بەکارمەهێنە.</div>
+      </div>
+
+      <div class="rule-box" style="background: #ECFDF5; border-color: #A7F3D0; border-right-color: #10B981;">
+        <div class="rule-title" style="color: #065F46;">٤. 🔍 پشکنینی دەرئەنجامەکان (Verify AI Hallucinations)</div>
+        <div class="rule-desc" style="color: #047857;">متمانەی کوێرانە بە وەڵامەکان مەکە؛ هەردەم زانیارییە زانستی و مێژووییەکان بپشکنەوە.</div>
+      </div>
+
+      <!-- SECTION 5 -->
+      <h2 class="section-title">🚀 ٠٥. پەیوەندی و خولی درێژخایەن</h2>
+      <p>بۆ بەشداریکردن لە <strong>خولی بەکرداریی ژیری دەستکرد (AI Masterclass)</strong> یان داگرتنی دوایین کەرەستەکان، پەیوەندیمان پێوە بکەن:</p>
+
+      <div class="card" style="background: #F0FDF4; border-color: #BBF7D0;">
+        <p><strong>📞 پەیوەندی:</strong> 0750 434 2452</p>
+        <p><strong>📢 گرووپی تێلیگرام:</strong> داهاتووی تەکنەلۆجیا (<a href="https://t.me/feature_technology" target="_blank">t.me/feature_technology</a>)</p>
+        <p><strong>🌐 پۆرتفۆلیۆی فەرمی:</strong> ئەندازیار عبدالرحمن اسماعیل (<a href="https://t.me/Agha_ACE" target="_blank">@Agha_ACE</a>)</p>
+      </div>
+
+    </div>
+
+    <!-- FOOTER BAR -->
+    <div class="footer-bar">
+      کتێبچەی ڕێنمایی و پرۆمپتەکانی زیرەکی دەستکرد &bull; ئامادەکردنی: ئەندازیار عبدالرحمن اسماعیل &bull; ٢٠٢٦
+    </div>
+
+  </div>
+
+</body>
+</html>
