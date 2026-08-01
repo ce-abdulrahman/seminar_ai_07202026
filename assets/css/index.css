@@ -2102,3 +2102,192 @@ body.portfolio-page {
   -webkit-text-fill-color: transparent;
   animation: textShimmer 5s ease infinite;
 }
+
+/* ==========================================================================
+   FULL RESPONSIVE SYSTEM (Laptops, Tablets, Mobiles)
+   ========================================================================== */
+
+/* 1. Laptop / Desktop Screens (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .slide {
+    padding: 65px 36px 65px 36px;
+  }
+}
+
+/* 2. Tablet Screens (769px - 1024px) */
+@media (max-width: 1024px) {
+  .slide {
+    padding: 60px 24px 65px 24px;
+    overflow-y: auto;
+  }
+
+  .slide-title {
+    font-size: 24px !important;
+  }
+
+  .grid-12 > div[style*="span 4"],
+  .grid-12 > div[style*="span 3"] {
+    grid-column: span 6 !important;
+  }
+
+  .presenter-header {
+    padding: 0 16px;
+  }
+
+  .header-center-quote {
+    font-size: 13px !important;
+  }
+
+  .header-center-quote span:first-child {
+    font-size: 10px !important;
+  }
+
+  .prompt-modal-box,
+  .prompt-modal-content {
+    width: 90vw !important;
+    max-width: 650px !important;
+  }
+}
+
+/* 3. Mobile Screens (Up to 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .presentation-container {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* Slide Viewport Scrolling on Mobile */
+  .slides-viewport {
+    overflow-y: auto;
+  }
+
+  .slide {
+    position: absolute;
+    padding: 65px 16px 70px 16px;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  .slide-content-wrapper {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .slide-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+
+  .slide-category {
+    font-size: 11px !important;
+    padding: 3px 10px !important;
+  }
+
+  /* Grid Collapse to 1 Column on Mobile */
+  .grid-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .grid-12 > div {
+    grid-column: span 12 !important;
+    width: 100% !important;
+  }
+
+  /* Header Mobile Optimization */
+  .presenter-header {
+    padding: 0 12px !important;
+    height: 54px !important;
+  }
+
+  .brand-badge {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+
+  .header-center-quote {
+    display: none !important;
+  }
+
+  .btn-icon {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* Timeline adjustment for mobile */
+  div[style*="direction: ltr"] {
+    flex-direction: column !important;
+  }
+
+  div[style*="direction: ltr"] > .glass-card {
+    border-radius: 12px !important;
+    border-right: 1px solid rgba(255,255,255,0.1) !important;
+    margin-bottom: 8px;
+  }
+
+  /* Footer Mobile */
+  .presenter-footer {
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    height: 54px !important;
+  }
+
+  .presenter-footer span {
+    font-size: 12px !important;
+  }
+
+  /* Modals Mobile */
+  .prompt-modal-box,
+  .prompt-modal-content {
+    width: 95vw !important;
+    padding: 20px 14px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  .prompt-modal-title {
+    font-size: 16px !important;
+  }
+
+  .prompt-modal-textarea {
+    min-height: 90px !important;
+    font-size: 13px !important;
+  }
+
+  /* Certificate Mobile */
+  #certificateCard {
+    padding: 20px 16px !important;
+  }
+
+  #certNameInput {
+    font-size: 18px !important;
+  }
+}
+
+/* 4. Small Phones (< 480px) */
+@media (max-width: 480px) {
+  .brand-badge span:not(.dot) {
+    font-size: 10px !important;
+  }
+
+  .btn-icon span {
+    font-size: 11px !important;
+  }
+
+  .glass-card {
+    padding: 16px !important;
+  }
+
+  .card-title {
+    font-size: 15px !important;
+  }
+
+  .card-body {
+    font-size: 12px !important;
+  }
+}
