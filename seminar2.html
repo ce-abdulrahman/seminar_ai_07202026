@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>زیرەکی دەستکرد AI — سیمیناری دووەم | ئەندازیار عبدالرحمن اسماعیل</title>
+  <title>ژیری دەستکرد AI — سیمیناری دووەم | ئەندازیار عبدالرحمن اسماعیل</title>
   <link rel="stylesheet" href="index.css">
   <style>
     .event-info-box {
@@ -192,21 +192,34 @@
     <header class="presenter-header">
       <div class="brand-badge">
         <span class="dot" style="background: #8B5CF6; box-shadow: 0 0 10px #8B5CF6;"></span>
-        <span>زیرەکی دەستکرد AI &bull; سیمیناری دووەم</span>
+        <span>ژیری دەستکرد AI &bull; سیمیناری دووەم</span>
       </div>
       <div class="header-center-quote" style="text-align: center;">
         <span style="color: #06B6D4; font-size: 11px; display: block;">وتەی ئەندازیار عبدالرحمن</span>
         <span style="font-weight: 800;">« پێت دروست دەکرێت؟!! »</span>
       </div>
       <div class="header-controls">
-        <a href="index.html" class="btn-icon" style="text-decoration: none;" title="گەڕانەوە بۆ سەرەتا / پۆرتفۆلیۆ">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          <span>پۆرتفۆلیۆ</span>
-        </a>
-        <a href="general.html" class="btn-icon" style="text-decoration: none;" title="سیمیناری گشتی (بەشی ١)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          <span>سیمیناری گشتی</span>
-        </a>
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" style="position: relative; display: inline-block;">
+          <button class="btn-icon" onclick="document.getElementById('navDropdownMenu').classList.toggle('show')" title="لیستی بەشەکان و بەستەرەکان">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <span>مێنیوو ☰</span>
+          </button>
+          <div class="dropdown-menu-box" id="navDropdownMenu">
+            <a href="index.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+              <span>🏠 پۆرتفۆلیۆ و سەرەتا</span>
+            </a>
+            <a href="general.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              <span>📘 سیمیناری یەکەم (گشتی)</span>
+            </a>
+            <a href="ai_handbook.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <span>📖 کتێبی پرۆمپتەکان</span>
+            </a>
+          </div>
+        </div>
         <button class="btn-icon" id="toggleNotesBtn" title="تێبینییەکانی پێشکەشکار (Key: N)">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
           <span>تێبینی</span>
@@ -226,6 +239,9 @@
         <button class="btn-icon" id="toggleFullscreenBtn" title="پاشاندانی ته‌واوی شاشه‌ (Key: F)">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path></svg>
         </button>
+        <button class="btn-icon" id="toggleThemeBtn" title="گۆڕینی دۆخی ڕووناک/تاریک (Light/Dark Mode)" onclick="toggleThemeMode()">
+          <span id="themeBtnIcon">☀️</span>
+        </button>
       </div>
     </header>
 
@@ -233,7 +249,7 @@
     <main class="slides-viewport" id="slidesViewport">
 
       <!-- Slide 1: Welcome & Hero Banner -->
-      <section class="slide active bg-hero-art" id="slide-1" data-notes="بەخێربێن بۆ سیمیناری زیرەکی دەستکرد AI بە پێشکەشکاری ئەندازیار عبدالرحمن اسماعیل. ئامانجمان تێگەیشتن لە بناغەکانی AI و بەکار‌هێنانیەتی بۆ بەرزکردنەوەی پیشەکەمان.">
+      <section class="slide active bg-hero-art" id="slide-1" data-notes="بەخێربێن بۆ سیمیناری ژیری دەستکرد AI بە پێشکەشکاری ئەندازیار عبدالرحمن اسماعیل. ئامانجمان تێگەیشتن لە بناغەکانی AI و بەکار‌هێنانیەتی بۆ بەرزکردنەوەی پیشەکەمان.">
         <div class="slide-content-wrapper">
           <div class="hero-wrapper">
             <div class="animated-gradient-text" style="font-size: 28px; font-weight: 700; font-family: 'Amiri', 'Traditional Arabic', 'Vazirmatn', serif; margin-bottom: 4px; line-height: 1.4;">
@@ -246,8 +262,8 @@
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
               <span>سیمیناری تایبەتی &bull; 1 / 8 / 2026</span>
             </div>
-            <h1 class="hero-title">زیرەکی دەستکرد AI</h1>
-            <p class="hero-subtitle">«لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، زیرەکی دەستکرد بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا»</p>
+            <h1 class="hero-title">ژیری دەستکرد AI</h1>
+            <p class="hero-subtitle">«لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا»</p>
 
             <div class="hero-presenter">
               <img src="assets/image/agha.png" alt="ئەندازیار عبدالرحمن اسماعیل" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid #06B6D4;">
@@ -296,7 +312,7 @@
 
           <div class="glass-card card-accent-purple" style="padding: 32px; margin-bottom: 24px;">
             <p style="font-size: 18px; line-height: 1.8; color: var(--text-white);">
-              « لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، زیرەکی دەستکرد (AI) بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا. ئەم سیمینارە تیشک دەخاتە سەر تێگەیشتن لە بناغەکانی AI، و چۆنیەتی سوودوەرگرتن لێی بۆ بەرزکردنەوەی پیشەکەمان. »
+              « لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد (AI) بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا. ئەم سیمینارە تیشک دەخاتە سەر تێگەیشتن لە بناغەکانی AI، و چۆنیەتی سوودوەرگرتن لێی بۆ بەرزکردنەوەی پیشەکەمان. »
             </p>
           </div>
 
@@ -328,7 +344,7 @@
           <div class="grid-12">
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
               <div class="card-number">تەوەرەی ١</div>
-              <h3 class="card-title">ناساندنی زیرەکی دەستکرد</h3>
+              <h3 class="card-title">ناساندنی ژیری دەستکرد</h3>
               <p class="card-body">چییە و چۆن کار دەکات؟ بنەما زانستی و فکرییەکان.</p>
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
@@ -668,7 +684,7 @@
       </section>
 
       <!-- Slide: AI Apps Pyramid 2026 -->
-      <section class="slide" id="slide-pyramid-2026" data-notes="پیرامیدی باشترین ئەپەکانی زیرەکی دەستکرد بۆ ساڵی 2026: دابەشکاری ٦ ئاستی سەرەکی بۆ ئامرازەکان لە لووتکەوە تا بنەمای ئۆتۆماتیکردن.">
+      <section class="slide" id="slide-pyramid-2026" data-notes="پیرامیدی باشترین ئەپەکانی ژیری دەستکرد بۆ ساڵی 2026: دابەشکاری ٦ ئاستی سەرەکی بۆ ئامرازەکان لە لووتکەوە تا بنەمای ئۆتۆماتیکردن.">
         <div class="slide-content-wrapper" style="max-width: 1000px;">
           <div class="slide-header" style="text-align: center; margin-bottom: 16px;">
             <span class="slide-category" style="background: rgba(168, 85, 247, 0.2); color: #C084FC; border-color: rgba(168, 85, 247, 0.4);">پیرامیدی تەکنەلۆجیا 2026</span>
@@ -778,8 +794,8 @@
                 <span>پرۆمپتی لاواز (Weak Prompt)</span>
               </div>
               <div class="prompt-code-box">
-                «بابەتێکم بۆ بنووسە دەربارەی زیرەکی دەستکرد.»
-                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('بابەتێکم بۆ بنووسە دەربارەی زیرەکی دەستکرد.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                «بابەتێکم بۆ بنووسە دەربارەی ژیری دەستکرد.»
+                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('بابەتێکم بۆ بنووسە دەربارەی ژیری دەستکرد.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
                   <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                   <span>کۆپی</span>
                 </button>
@@ -793,8 +809,8 @@
                 <span>پرۆمپتی بەهێز (Strong Prompt)</span>
               </div>
               <div class="prompt-code-box">
-                «تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی زیرەکی دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.»
-                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی زیرەکی دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                «تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.»
+                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
                   <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                   <span>کۆپی</span>
                 </button>
@@ -920,6 +936,8 @@
             </div>
           </div>
         </div>
+      </section>
+
       <!-- Slide: Coffee Break (کاتی پشوو - 15 خولەک) -->
       <section class="slide" id="slide-coffee-break" data-notes="کاتی پشوودانی ١٥ خولەکی بەشداربووان، قاوە خواردنەوە و ئەنجامدانی گفتوگۆی ئازاد (Networking).">
         <div class="slide-content-wrapper" style="text-align: center;">
@@ -1159,7 +1177,7 @@
               <h3 class="card-title">💻 Devin (Cognition)</h3>
               <p class="card-body">یەکەمین ئەیجێنتی بهای ئەندازیارانە: پڕۆژەی کامل لە سەرەتا تا کۆتایی بە سەربەخۆی دەزانێت.</p>
             </div>
-
+ 
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
               <h3 class="card-title">🖥️ Claude Computer Use</h3>
               <p class="card-body">بکردنەوەی بەرنامەکان، کلیک کردن، نووسین و کاری لەسەر کۆمپیوتەر — وەک مرۆڤی ڕاستەوخۆ.</p>
@@ -1239,7 +1257,7 @@
 
             <div class="glass-card card-accent-purple" style="grid-column: span 12;">
               <h3 class="card-title" style="margin-bottom: 10px;">⚡ نموونەی پرۆمپت بۆ ElevenLabs</h3>
-              <div style="background: #0F172A; border: 1px solid rgba(6,182,212,0.3); border-right: 4px solid #8B5CF6; border-radius: 10px; padding: 14px 18px; font-size: 14px; color: #E2E8F0; direction: rtl;">«دەنگەکەم کلۆن بکە و ئەم دەقە بخوێنەوە بە کوردی سۆرانی بە شێوازی فەرمی: بەخێربێن بۆ سیمیناری زیرەکی دەستکرد.»</div>
+              <div style="background: #0F172A; border: 1px solid rgba(6,182,212,0.3); border-right: 4px solid #8B5CF6; border-radius: 10px; padding: 14px 18px; font-size: 14px; color: #E2E8F0; direction: rtl;">«دەنگەکەم کلۆن بکە و ئەم دەقە بخوێنەوە بە کوردی سۆرانی بە شێوازی فەرمی: بەخێربێن بۆ سیمیناری ژیری دەستکرد.»</div>
             </div>
 
           </div>
@@ -1285,7 +1303,7 @@
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
               <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
               <h3 class="card-title">١. بەرزکردنەوەی هۆشیاری</h3>
-              <p class="card-body">بەرزکردنەوەی هۆشیاری بەشداربووان دەربارەی گرنگی و بەهای زیرەکی دەستکرد لە ئێستادا.</p>
+              <p class="card-body">بەرزکردنەوەی هۆشیاری بەشداربووان دەربارەی گرنگی و بەهای ژیری دەستکرد لە ئێستادا.</p>
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path></svg></div>
@@ -1329,39 +1347,6 @@
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <h3 class="card-title">🎨 پسپۆڕانی بەڕێوەبردن و دیزاین</h3>
               <p class="card-body">بۆ زانینی چۆنیەتی سوودوەرگرتن لە ئامرازەکانی AI بۆ بەرزکردنەوەی کوالێتی کارەکانیان.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide: Free Gift & QR Code -->
-      <section class="slide" id="slide-free-gift" data-notes="دیاریی سیمینار: سکانکردنی QR Code بۆ وەرگرتنی کتێبی پرۆمپتەکان و چوونەناو چەناڵی تێلیگرامی داهاتووی تەکنەلۆجیا.">
-        <div class="slide-content-wrapper" style="text-align: center;">
-          <div class="slide-header">
-            <span class="slide-category" style="background: rgba(16, 185, 129, 0.2); color: #34D399; border-color: rgba(16, 185, 129, 0.4);">دیاریی بێبەرامبەر</span>
-            <h2 class="slide-title">🎁 دیاریی سیمینار: کتێبچەی پرۆمپتەکان & کەرەستەکان</h2>
-          </div>
-
-          <div class="glass-card card-accent-cyan" style="max-width: 750px; margin: 0 auto; padding: 36px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-            <p style="font-size: 18px; color: var(--text-white); margin: 0; line-height: 1.6;">
-              « کامێرای مۆبایلەکەت بکەرەوە و ئەم <strong>QR Code</strong> ـە سکان بکە بۆ وەرگرتنی کتێبچەی <strong>PDFی پرۆمپتە بەهێزەکان</strong> و پەیوەندیکردن بە چەناڵی تێلیگرامی <strong>داهاتووی تەکنەلۆجیا</strong> »
-            </p>
-
-            <div style="background: white; padding: 16px; border-radius: 20px; box-shadow: 0 0 35px rgba(6, 182, 212, 0.4); display: flex; align-items: center; justify-content: center; width: 200px; height: 200px;">
-              <svg width="170" height="170" viewBox="0 0 29 29" fill="none">
-                <rect width="29" height="29" fill="white"/>
-                <path d="M1 1h7v7H1zM2 2v5h5V2zM3 3h3v3H3zM21 1h7v7h-7zM22 2v5h5V2zM23 3h3v3h-3zM1 21h7v7H1zM2 22v5h5v-5zM3 23h3v3H3z" fill="#0F172A"/>
-                <path d="M10 2h2v2h-2zM14 1h1v3h-1zM17 2h2v2h-2zM11 5h3v1h-3zM16 5h2v2h-2zM9 8h2v2H9zM13 8h2v3h-2zM17 9h3v1h-3zM2 10h3v2H2zM6 13h2v2H6zM10 12h4v1h-4zM16 12h2v2h-2zM20 12h3v1h-3zM25 10h2v3h-2zM1 15h3v2H1zM5 16h2v2H5zM9 15h2v3H9zM13 16h3v1h-3zM18 15h2v2h-2zM22 15h3v2h-3zM26 15h2v3h-2zM10 19h3v2h-3zM15 19h2v2h-2zM19 19h3v1h-3zM24 19h2v2h-2zM12 22h2v3h-2zM16 23h3v2h-3zM21 22h2v2h-2zM25 23h3v2h-3zM9 25h2v3H9zM14 26h2v2h-2zM18 26h3v1h-3zM23 26h2v2h-2z" fill="#0F172A"/>
-              </svg>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 10px;">
-              <a href="ai_handbook.html" target="_blank" class="seminar-btn" style="padding: 10px 24px; font-size: 15px; background: rgba(37, 99, 235, 0.25); border-color: rgba(59, 130, 246, 0.5); color: #60A5FA;">
-                <span>📖 کردنەوە و چاپکردنی کتێبچەکە (PDF)</span>
-              </a>
-              <a href="https://t.me/feature_technology" target="_blank" class="seminar-btn" style="padding: 10px 24px; font-size: 15px;">
-                <span>داگرتن لە گرووپی تێلیگرام 🚀</span>
-              </a>
             </div>
           </div>
         </div>
@@ -1467,9 +1452,9 @@
               <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
             </div>
 
-            <h3 style="font-size: 26px; color: var(--text-white); margin-bottom: 16px;">مایکی کراوە بۆ بەشداربووانی بەڕێز</h3>
+            <h3 style="font-size: 26px; color: var(--text-white); margin-bottom: 16px;">گفتوگۆی کراوە بۆ بەشداربووانی بەڕێز</h3>
             <p style="font-size: 16px; color: var(--text-light); line-height: 1.8; margin-bottom: 28px;">
-              « خۆشحالین بە وەڵامدانەوەی سەرجەم پرسیارەکانتان دەربارەی زیرەکی دەستکرد، ئامرازەکان، پرۆمپتەکان، و ئایندەی پیشەکان »
+              « خۆشحالین بە وەڵامدانەوەی سەرجەم پرسیارەکانتان دەربارەی ژیری دەستکرد، ئامرازەکان، پرۆمپتەکان، و ئایندەی پیشەکان »
             </p>
 
             <div class="grid-12">
@@ -1552,7 +1537,7 @@
 
           <div class="hero-wrapper" style="text-align: center;">
             <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto 28px; font-size: 18px;">
-              « چاوەڕێی ئامادەبوونی هەموو لایەکین بۆ گفتوگۆیەکی بەسوود و سەرنجڕاکێش لەگەڵ زیرەکی دەستکرد »
+              « چاوەڕێی ئامادەبوونی هەموو لایەکین بۆ گفتوگۆیەکی بەسوود و سەرنجڕاکێش لەگەڵ ژیری دەستکرد »
             </p>
 
             <div class="social-links-container">
@@ -1587,9 +1572,9 @@
         </button>
       </div>
       <div style="text-align: center;">
-        <span>زیرەکی دەستکرد AI</span> &bull; 
+        <span>ژیری دەستکرد AI</span> &bull; 
         <span id="currentSectionName" style="color: var(--cyan-accent);">پێشەکی</span> &bull;
-        <span>سلاید <strong id="currentSlideNum" style="color: white;">1</strong> لە <strong id="totalSlidesNum">29</strong></span>
+        <span>سلاید <strong id="currentSlideNum" style="color: white;">1</strong> لە <strong id="totalSlidesNum">28</strong></span>
       </div>
       <div style="display: flex; align-items: center; gap: 8px;">
         <button class="btn-icon" id="nextSlideBtn" title="سلایدی داهاتوو (Right Arrow / Space / PageDown)">
@@ -2028,7 +2013,7 @@
 
       <select id="promptScenario" style="width: 100%; background: #1E293B; color: #F8FAFC; border: 1px solid rgba(6,182,212,0.3); border-radius: 10px; padding: 10px 14px; font-family: 'Vazirmatn', sans-serif; font-size: 14px; margin-bottom: 12px; direction: rtl; outline: none;">
         <option value="">📝 یان لە ئەم پرۆمپتانە هەڵبژێرە (نموونەکان)...</option>
-        <option value="تۆ مامۆستایەکی زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بنەماکانی زیرەکی دەستکرد بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی.">🎓 مامۆستا: دروستکردنی پرسیاری تاقیکردنەوە</option>
+        <option value="تۆ مامۆستایەکی زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بنەماکانی ژیری دەستکرد بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی.">🎓 مامۆستا: دروستکردنی پرسیاری تاقیکردنەوە</option>
         <option value="تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم بە کوردی سۆرانی بە ئێمۆجی و CTA.">💼 کۆمپانیا: پۆستی مارکێتینگ</option>
         <option value="پرۆمپتی جوانی بنووسە بۆ Suno AI: گۆرانیەکی کوردی خۆشی دروست بکە دەربارەی شارەکانی کوردستان.">🎵 Suno: دروستکردنی گۆرانی کوردی</option>
         <option value="تۆ مشاورەی پیشەییت. ٣ رێنمایی پراکتیکی بدە بۆ کەسێک کە دەیەوێت پیشەی تەکنەلۆجیادا دەست پێبکات بە کوردی سۆرانی.">🚀 پیشە: رێنمایی دەست پێکردن</option>
@@ -2052,7 +2037,7 @@
 
     // Simulated AI responses keyed by keywords
     const aiResponses = {
-      'مامۆستا': `باشترین ٥ پرسیاری MCQ بۆ زیرەکی دەستکرد:\n\n١. زیرەکی دەستکرد (AI) چییە؟\nئ) سیستەمی کۆمپیوتەری کە فێر دەبێت و بریار دەداتە\nب) بەرنامەی ئادییی کۆمپیوتەر\nج) ئامرازی ئینتەرنێت\n✅ وەڵامی دروست: ئ\n\n٢. پێشکەوتوترین مۆدێلی ChatGPT ئێستا کامە?\nئ) GPT-3.5\nب) GPT-4o ✅\nج) GPT-2`,
+      'مامۆستا': `باشترین ٥ پرسیاری MCQ بۆ ژیری دەستکرد:\n\n١. ژیری دەستکرد (AI) چییە؟\nئ) سیستەمی کۆمپیوتەری کە فێر دەبێت و بریار دەداتە\nب) بەرنامەی ئادییی کۆمپیوتەر\nج) ئامرازی ئینتەرنێت\n✅ وەڵامی دروست: ئ\n\n٢. پێشکەوتوترین مۆدێلی ChatGPT ئێستا کامە?\nئ) GPT-3.5\nب) GPT-4o ✅\nج) GPT-2`,
       'مارکێتینگ': `📢 بەخێربێن بۆ خزمەتگوزاریی نوێی کۆمپانیاکەمان!\n\n✨ ئێستا پێشکەشی کردین:\n🔹 خزمەتی X — باشترین کوالێتی بە کەمترین نرخ\n🔹 گەرەنتیی ١٠٠٪ رازیبوون\n🔹 گەیاندنی خێرا بۆ هەموو کوردستان\n\n📞 هەماهەنگی لە: 0750 XXX XXXX\n\n👇 کلیک بکە بۆ بینینی بەرزترین ئۆفەرەکانمان!\n#کوردستان #تەکنەلۆجیا #AI`,
       'Suno': `🎵 پرۆمپتی تایبەتت بۆ Suno AI ئامادەیە:\n\n"Create an upbeat Kurdish folk song about the beautiful cities of Kurdistan — Erbil, Sulaymaniyah, and Duhok — with traditional instruments like saz and def, medium tempo, sung by a warm male voice, in Kurdish Sorani dialect."\n\nنموونەی وەڵامی Suno:\n▶ تراکی دروستکراو: 3:24 کاتژمێر\n🎸 ئامراز: Saz, Def, Guitar\n🎤 دەنگ: Warm Male Tenor`,
       'پیشە': `🚀 ٣ رێنمایی پراکتیکی بۆ دەستپێکردن لە تەکنەلۆجیادا:\n\n١. 📚 فێربوون لە بنەما:\nدەست بکە بە Python یان JavaScript. Codecademy و freeCodeCamp بەرایی خۆیانن و کوردی پشتگیریشیان دەکەن.\n\n٢. 🤖 بەکارهێنانی AI وەک هاوکار:\nChatGPT، Claude و Gemini بەکاربهێنە بۆ شیکردنەوەی هەڵەکان و فێربوونی خێراتر — نەک تەنها وەڵامگرتن!\n\n٣. 🏗️ پرۆژەی کردەیی:\nپرۆژەیەکی کچکی دروست بکە و لە GitHub دایبمەزرێنە — ئەمەی باشترین CVی تۆیە.`,
@@ -2098,11 +2083,32 @@
       if (e.target === this) this.classList.remove('open');
     });
 
-    // Keyboard shortcut: P to open prompt tester
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'p' || e.key === 'P') {
-        if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
-          document.getElementById('promptTesterModal').classList.toggle('open');
+    // Toggle Light / Dark Theme Mode for Projectors
+    function toggleThemeMode() {
+      const body = document.body;
+      const themeIcon = document.getElementById('themeBtnIcon');
+      body.classList.toggle('light-theme');
+      if (body.classList.contains('light-theme')) {
+        if (themeIcon) themeIcon.textContent = '🌙';
+        localStorage.setItem('seminar_theme', 'light');
+      } else {
+        if (themeIcon) themeIcon.textContent = '☀️';
+        localStorage.setItem('seminar_theme', 'dark');
+      }
+    }
+
+    // Auto-restore saved theme
+    if (localStorage.getItem('seminar_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const themeIcon = document.getElementById('themeBtnIcon');
+      if (themeIcon) themeIcon.textContent = '🌙';
+    }
+    // Close dropdown menu on outside click
+    window.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        const dropdown = document.getElementById('navDropdownMenu');
+        if (dropdown && dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
         }
       }
     });
