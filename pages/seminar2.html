@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ckb" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
       align-items: center;
       gap: 16px;
     }
-    
+
     .event-info-icon {
       width: 48px;
       height: 48px;
@@ -28,19 +29,19 @@
       color: #06B6D4;
       flex-shrink: 0;
     }
-    
+
     .event-info-text h4 {
       font-size: 14px;
       color: var(--text-muted);
       margin-bottom: 4px;
     }
-    
+
     .event-info-text p {
       font-size: 16px;
       font-weight: 700;
       color: var(--text-white);
     }
-    
+
     .quote-card-large {
       background: rgba(17, 24, 39, 0.8);
       backdrop-filter: blur(16px);
@@ -50,12 +51,13 @@
       text-align: center;
       margin-bottom: 24px;
     }
-    
+
     .quote-card-large h3 {
       font-size: 34px;
       font-weight: 800;
       background: linear-gradient(135deg, #06B6D4, #A78BFA);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 0;
     }
@@ -105,7 +107,11 @@
       align-items: center;
       justify-content: center;
     }
-    .prompt-modal-overlay.open { display: flex; }
+
+    .prompt-modal-overlay.open {
+      display: flex;
+    }
+
     .prompt-modal-box {
       background: #0F172A;
       border: 1px solid rgba(6, 182, 212, 0.4);
@@ -115,12 +121,14 @@
       box-shadow: 0 0 60px rgba(6, 182, 212, 0.2);
       position: relative;
     }
+
     .prompt-modal-title {
       font-size: 20px;
       font-weight: 800;
       color: #F8FAFC;
       margin-bottom: 18px;
     }
+
     .prompt-modal-textarea {
       width: 100%;
       min-height: 100px;
@@ -136,7 +144,12 @@
       margin-bottom: 14px;
       box-sizing: border-box;
     }
-    .prompt-modal-textarea:focus { outline: none; border-color: #06B6D4; }
+
+    .prompt-modal-textarea:focus {
+      outline: none;
+      border-color: #06B6D4;
+    }
+
     .prompt-modal-response {
       background: rgba(6, 182, 212, 0.06);
       border: 1px solid rgba(6, 182, 212, 0.2);
@@ -151,6 +164,7 @@
       margin-top: 14px;
       white-space: pre-wrap;
     }
+
     .prompt-modal-close {
       position: absolute;
       top: 14px;
@@ -162,22 +176,48 @@
       cursor: pointer;
       line-height: 1;
     }
-    .prompt-modal-close:hover { color: #F8FAFC; }
+
+    .prompt-modal-close:hover {
+      color: #F8FAFC;
+    }
 
     /* Print Styles */
     @media print {
-      .presenter-header, .presenter-footer, .bg-ambient,
-      .speaker-notes-drawer, .thumbnails-sidebar,
-      .prompt-modal-overlay { display: none !important; }
-      body { background: white !important; }
-      .slides-viewport { display: block !important; overflow: visible !important; }
-      .slide { display: block !important; opacity: 1 !important;
-        page-break-after: always; min-height: 100vh;
-        background: #0F172A !important; color: white !important; }
-      .presentation-container { display: block !important; }
+
+      .presenter-header,
+      .presenter-footer,
+      .bg-ambient,
+      .speaker-notes-drawer,
+      .thumbnails-sidebar,
+      .prompt-modal-overlay {
+        display: none !important;
+      }
+
+      body {
+        background: white !important;
+      }
+
+      .slides-viewport {
+        display: block !important;
+        overflow: visible !important;
+      }
+
+      .slide {
+        display: block !important;
+        opacity: 1 !important;
+        page-break-after: always;
+        min-height: 100vh;
+        background: #0F172A !important;
+        color: white !important;
+      }
+
+      .presentation-container {
+        display: block !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Ambient Glowing Background Orbs -->
@@ -201,46 +241,89 @@
       <div class="header-controls">
         <!-- Dropdown Navigation Menu -->
         <div class="nav-dropdown" style="position: relative; display: inline-block;">
-          <button class="btn-icon" onclick="document.getElementById('navDropdownMenu').classList.toggle('show')" title="لیستی بەشەکان و ئامرازەکان">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <button class="btn-icon" onclick="document.getElementById('navDropdownMenu').classList.toggle('show')"
+            title="لیستی بەشەکان و ئامرازەکان">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
             <span>مێنیوو ☰</span>
           </button>
           <div class="dropdown-menu-box" id="navDropdownMenu">
             <a href="../index.html" class="dropdown-item">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+              </svg>
               <span>🏠 پۆرتفۆلیۆ و سەرەتا</span>
             </a>
             <a href="general.html" class="dropdown-item">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                </path>
+              </svg>
               <span>📘 سیمیناری یەکەم (گشتی)</span>
             </a>
-            <a href="ai_handbook.html" class="dropdown-item">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <a href="grade12_ai.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+              <span>🎓 خولی پۆلی ١٢ (سەوز)</span>
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
               <span>📖 کتێبی پرۆمپتەکان</span>
             </a>
             <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 4px 0;"></div>
-            <button class="dropdown-item dropdown-btn" id="toggleNotesBtn" style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            <button class="dropdown-item dropdown-btn" id="toggleNotesBtn"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
               <span>📝 تێبینییەکانی پێشکەشکار</span>
             </button>
-            <button class="dropdown-item dropdown-btn" id="toggleThumbnailsBtn" style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <button class="dropdown-item dropdown-btn" id="toggleThumbnailsBtn"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
               <span>🎴 پێشبینینی سلایدەکان</span>
             </button>
-            <button class="dropdown-item dropdown-btn" id="openPromptTesterBtn" onclick="document.getElementById('promptTesterModal').classList.add('open')" style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            <button class="dropdown-item dropdown-btn" id="openPromptTesterBtn"
+              onclick="document.getElementById('promptTesterModal').classList.add('open')"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
               <span>⚡ تاقیکەرەوەی پرۆمپت</span>
             </button>
-            <button class="dropdown-item dropdown-btn" id="printDeckBtn" onclick="window.print()" style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <button class="dropdown-item dropdown-btn" id="printDeckBtn" onclick="window.print()"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
               <span>🖨️ چاپکردنی پرێزێنتەیشن (PDF)</span>
             </button>
           </div>
         </div>
         <button class="btn-icon" id="toggleFullscreenBtn" title="پاشاندانی تەواوی شاشە (Key: F)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path>
+          </svg>
         </button>
-        <button class="btn-icon" id="toggleThemeBtn" title="گۆڕینی دۆخی ڕووناک/تاریک (Light/Dark Mode)" onclick="toggleThemeMode()">
+        <button class="btn-icon" id="toggleThemeBtn" title="گۆڕینی دۆخی ڕووناک/تاریک (Light/Dark Mode)"
+          onclick="toggleThemeMode()">
           <span id="themeBtnIcon">☀️</span>
         </button>
       </div>
@@ -250,24 +333,32 @@
     <main class="slides-viewport" id="slidesViewport">
 
       <!-- Slide 1: Welcome & Hero Banner -->
-      <section class="slide active bg-hero-art" id="slide-1" data-notes="بەخێربێن بۆ سیمیناری ژیری دەستکرد AI بە پێشکەشکاری ئەندازیار عبدالرحمن اسماعیل. ئامانجمان تێگەیشتن لە بناغەکانی AI و بەکار‌هێنانیەتی بۆ بەرزکردنەوەی پیشەکەمان.">
+      <section class="slide active bg-hero-art" id="slide-1"
+        data-notes="بەخێربێن بۆ سیمیناری ژیری دەستکرد AI بە پێشکەشکاری ئەندازیار عبدالرحمن اسماعیل. ئامانجمان تێگەیشتن لە بناغەکانی AI و بەکار‌هێنانیەتی بۆ بەرزکردنەوەی پیشەکەمان.">
         <div class="slide-content-wrapper">
           <div class="hero-wrapper">
-            <div class="animated-gradient-text" style="font-size: 28px; font-weight: 700; font-family: 'Amiri', 'Traditional Arabic', 'Vazirmatn', serif; margin-bottom: 4px; line-height: 1.4;">
+            <div class="animated-gradient-text"
+              style="font-size: 28px; font-weight: 700; font-family: 'Amiri', 'Traditional Arabic', 'Vazirmatn', serif; margin-bottom: 4px; line-height: 1.4;">
               بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
             </div>
-            <div class="animated-gradient-text" style="font-size: 20px; font-weight: 700; font-family: 'Amiri', 'Traditional Arabic', 'Vazirmatn', serif; margin-bottom: 16px;">
-              ﷺ  اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ  ﷺ
+            <div class="animated-gradient-text"
+              style="font-size: 20px; font-weight: 700; font-family: 'Amiri', 'Traditional Arabic', 'Vazirmatn', serif; margin-bottom: 16px;">
+              ﷺ اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ ﷺ
             </div>
-            <div class="hero-tag" style="background: rgba(124, 58, 237, 0.15); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            <div class="hero-tag"
+              style="background: rgba(124, 58, 237, 0.15); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
               <span>سیمیناری تایبەتی &bull; 1 / 8 / 2026</span>
             </div>
             <h1 class="hero-title">ژیری دەستکرد AI</h1>
-            <p class="hero-subtitle">«لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا»</p>
+            <p class="hero-subtitle">«لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد
+              بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا»</p>
 
             <div class="hero-presenter">
-              <img src="assets/image/agha.png" alt="ئەندازیار عبدالرحمن اسماعیل" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid #06B6D4;">
+              <img src="assets/image/agha.png" alt="ئەندازیار عبدالرحمن اسماعیل"
+                style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid #06B6D4;">
               <div class="presenter-text">
                 <div class="presenter-name">پێشکەشکار: ئەندازیار عبدالرحمن اسماعیل</div>
                 <div class="presenter-role">شارەزای ژیری دەستکرد و ئۆتۆماتیکردنی بزنس</div>
@@ -278,7 +369,8 @@
       </section>
 
       <!-- Slide 2: Presenter & Personal Quote -->
-      <section class="slide" id="slide-2" data-notes="پێشکەشکاری سیمینارەکە و وتەی سەرەکی. 'پێت دروست دەکرێت؟!!' ئاماژەیە بۆ توانای تەکنەلۆجیا و دروستکردنی کارە ئاڵۆزەکان بە AI.">
+      <section class="slide" id="slide-2"
+        data-notes="پێشکەشکاری سیمینارەکە و وتەی سەرەکی. 'پێت دروست دەکرێت؟!!' ئاماژەیە بۆ توانای تەکنەلۆجیا و دروستکردنی کارە ئاڵۆزەکان بە AI.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">پێشەکی و وتە</span>
@@ -286,25 +378,29 @@
           </div>
 
           <div class="quote-card-large">
-            <span style="color: #06B6D4; font-size: 14px; font-weight: 700; display: block; margin-bottom: 6px;">وتەی ئەندازیار عبدالرحمن</span>
+            <span style="color: #06B6D4; font-size: 14px; font-weight: 700; display: block; margin-bottom: 6px;">وتەی
+              ئەندازیار عبدالرحمن</span>
             <h3 style="font-size: 26px; font-weight: 900; color: #FFFFFF;">« پێت دروست دەکرێت؟!! »</h3>
           </div>
 
           <div class="grid-12">
             <div class="glass-card card-accent-blue" style="grid-column: span 6;">
               <h3 class="card-title">ئەندازیار عبدالرحمن اسماعیل</h3>
-              <p class="card-body">ئەندازیاری سیستەمی زانیاری، IT Manager، گەشەپێدەری وێب و ڕاهێنەری بواری ژیری دەستکرد بە زیاتر لە ٥ ساڵ ئەزموونی وانەوتنەوە.</p>
+              <p class="card-body">ئەندازیاری سیستەمی زانیاری، IT Manager، گەشەپێدەری وێب و ڕاهێنەری بواری ژیری دەستکرد
+                بە زیاتر لە ٥ ساڵ ئەزموونی وانەوتنەوە.</p>
             </div>
             <div class="glass-card card-accent-cyan" style="grid-column: span 6;">
               <h3 class="card-title">ئامانجی پێشکەشکردن</h3>
-              <p class="card-body">دابینکردنی تێگەیشتنێکی بەهێز و پراکتیکی بۆ بەشداربووان تا بتوانن ژیری دەستکرد بکەنە هاوکاری یەکەمیان لە ئیش و کارەکانیاندا.</p>
+              <p class="card-body">دابینکردنی تێگەیشتنێکی بەهێز و پراکتیکی بۆ بەشداربووان تا بتوانن ژیری دەستکرد بکەنە
+                هاوکاری یەکەمیان لە ئیش و کارەکانیاندا.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Slide 3: Seminar Summary (پوختەی سیمینار) -->
-      <section class="slide" id="slide-3" data-notes="پوختەی سیمینارەکە ئاماژە بەوە دەکات کە AI ئامرازی سەرەکی داهێنانە لە هەموو بوارەکاندا.">
+      <section class="slide" id="slide-3"
+        data-notes="پوختەی سیمینارەکە ئاماژە بەوە دەکات کە AI ئامرازی سەرەکی داهێنانە لە هەموو بوارەکاندا.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">پوختە</span>
@@ -313,7 +409,9 @@
 
           <div class="glass-card card-accent-purple" style="padding: 32px; margin-bottom: 24px;">
             <p style="font-size: 18px; line-height: 1.8; color: var(--text-white);">
-              « لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد (AI) بووەتە ئامرازێکی سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا. ئەم سیمینارە تیشک دەخاتە سەر تێگەیشتن لە بناغەکانی AI، و چۆنیەتی سوودوەرگرتن لێی بۆ بەرزکردنەوەی پیشەکەمان. »
+              « لەو سەردەمەی کە تەکنەلۆجیا بە خێراییەکی سەرسوڕهێنەر گەشە دەکات، ژیری دەستکرد (AI) بووەتە ئامرازێکی
+              سەرەکی داهێنان لە هەموو بوارەکانی ژیاندا. ئەم سیمینارە تیشک دەخاتە سەر تێگەیشتن لە بناغەکانی AI، و چۆنیەتی
+              سوودوەرگرتن لێی بۆ بەرزکردنەوەی پیشەکەمان. »
             </p>
           </div>
 
@@ -335,7 +433,8 @@
       </section>
 
       <!-- Slide 4: Topics Overview (تەوەرەکانی سیمینار) -->
-      <section class="slide" id="slide-4" data-notes="٥ تەوەرەی سەرەکی سیمینارەکە: ناساندنی AI، قۆناغەکانی گەشەکردن، کاریگەری لەسەر بازاڕی کار، بەکارهێنانی کردەیی، و ئەخلاقیات.">
+      <section class="slide" id="slide-4"
+        data-notes="٥ تەوەرەی سەرەکی سیمینارەکە: ناساندنی AI، قۆناغەکانی گەشەکردن، کاریگەری لەسەر بازاڕی کار، بەکارهێنانی کردەیی، و ئەخلاقیات.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">پێڕست</span>
@@ -373,7 +472,8 @@
       </section>
 
       <!-- Slide 5: Topic 1 - Writing Tools -->
-      <section class="slide" id="slide-5" data-notes="تەوەرەی یەکەم: ئامرازەکانی نووسین Writing بەکارهێنانی ChatGPT, Claude, DeepSeek, Qwen, Gemini و ViralSky.">
+      <section class="slide" id="slide-5"
+        data-notes="تەوەرەی یەکەم: ئامرازەکانی نووسین Writing بەکارهێنانی ChatGPT, Claude, DeepSeek, Qwen, Gemini و ViralSky.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ١ &bull; ٠١ نووسین (Writing)</span>
@@ -382,74 +482,88 @@
 
           <div class="grid-12">
             <!-- ChatGPT -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">ChatGPT</div>
                 <h3 class="card-title">نووسین و شیکاری گشتی</h3>
                 <p class="card-body">نووسینی دەق، پلان، مێشکبەکارخستن و دروستکردنی Custom GPTs.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://chatgpt.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">chatgpt.com ➔</a>
+                <a href="https://chatgpt.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">chatgpt.com ➔</a>
               </div>
             </div>
 
             <!-- Claude -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Claude</div>
                 <h3 class="card-title">PDF و نووسینی فەرمی</h3>
                 <p class="card-body">نووسینی فەرمی، خوێندنەوەی فایلی PDF ی درێژ و نووسینی زانستی.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://claude.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">claude.ai ➔</a>
+                <a href="https://claude.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">claude.ai
+                  ➔</a>
               </div>
             </div>
 
             <!-- DeepSeek -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">DeepSeek</div>
                 <h3 class="card-title">شیکاری و کۆدکردن</h3>
                 <p class="card-body">مۆدێلی نوێی زۆر بەهێز لە شیکاری زمانی ئاڵۆز، نووسین و فێربوون.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://chat.deepseek.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">deepseek.com ➔</a>
+                <a href="https://chat.deepseek.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">deepseek.com ➔</a>
               </div>
             </div>
 
             <!-- Qwen -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Qwen</div>
                 <h3 class="card-title">مۆدێلی زمانی گەورە</h3>
                 <p class="card-body">مۆدێلی ئەلیبابا بۆ تێگەیشتنی زمانەکان و نووسینی فرە-زمانی.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://chat.qwenlm.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">qwenlm.ai ➔</a>
+                <a href="https://chat.qwenlm.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">qwenlm.ai ➔</a>
               </div>
             </div>
 
             <!-- Gemini -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Gemini</div>
                 <h3 class="card-title">گووگڵ & بەڵگەنامەکان</h3>
                 <p class="card-body">ژیری دەستکردی گووگڵ بەستراوەتەوە بە Google Docs, Gmail & Drive.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://gemini.google.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">gemini.google.com ➔</a>
+                <a href="https://gemini.google.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">gemini.google.com
+                  ➔</a>
               </div>
             </div>
 
             <!-- ViralSky -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">ViralSky</div>
                 <h3 class="card-title">پۆستی ڤایرال & محتەوا</h3>
                 <p class="card-body">دروستکردنی محتەوا و پۆستی سەرنجڕاکێش بۆ سۆشیال میدیا.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://viralsky.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">viralsky.ai ➔</a>
+                <a href="https://viralsky.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">viralsky.ai ➔</a>
               </div>
             </div>
           </div>
@@ -457,7 +571,8 @@
       </section>
 
       <!-- Slide 6: Topic 1 - Design Tools -->
-      <section class="slide" id="slide-6" data-notes="تەوەرەی یەکەم: ئامرازەکانی دیزاین Design بەکارهێنانی Sky Snail, Canva, Figma, Designs AI, Stitch و Photoshop.">
+      <section class="slide" id="slide-6"
+        data-notes="تەوەرەی یەکەم: ئامرازەکانی دیزاین Design بەکارهێنانی Sky Snail, Canva, Figma, Designs AI, Stitch و Photoshop.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ١ &bull; ٠٢ دیزاین (Design)</span>
@@ -466,74 +581,88 @@
 
           <div class="grid-12">
             <!-- Sky Snail -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Sky Snail</div>
                 <h3 class="card-title">دیزاین و گرافیکی AI</h3>
                 <p class="card-body">دروستکردنی وێنە و دیزاینی سەردەمیانە بە ژیری دەستکرد.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://skysnail.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">skysnail.ai ➔</a>
+                <a href="https://skysnail.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">skysnail.ai ➔</a>
               </div>
             </div>
 
             <!-- Canva -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Canva</div>
                 <h3 class="card-title">Magic Design & پۆستەر</h3>
                 <p class="card-body">دیزاینی گرافیک، پۆستەر و پرێزێنتەیشن بە Magic Studio.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://www.canva.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">canva.com ➔</a>
+                <a href="https://www.canva.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">canva.com
+                  ➔</a>
               </div>
             </div>
 
             <!-- Figma -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Figma</div>
                 <h3 class="card-title">UI/UX & Figma AI</h3>
                 <p class="card-body">دیزاینی ناوبەست ی (UI/UX) ماڵپەڕ و ئەپ بە Figma AI.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://www.figma.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">figma.com ➔</a>
+                <a href="https://www.figma.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">figma.com ➔</a>
               </div>
             </div>
 
             <!-- Designs AI -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Designs AI</div>
                 <h3 class="card-title">لۆگۆ & براندینگ</h3>
                 <p class="card-body">دروستکردنی لۆگۆ، ڤیدیۆ، ڕەنگ و دیزاینی براند بە خێرایی.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://designs.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">designs.ai ➔</a>
+                <a href="https://designs.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">designs.ai ➔</a>
               </div>
             </div>
 
             <!-- Stitch -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Stitch</div>
                 <h3 class="card-title">قالب & فۆرماتی دیزاین</h3>
                 <p class="card-body">ئامرازی دروستکردنی دیزاین و فۆرماتی نوێ بە AI.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://stitch.design" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">stitch.design ➔</a>
+                <a href="https://stitch.design" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">stitch.design
+                  ➔</a>
               </div>
             </div>
 
             <!-- Photoshop -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Photoshop</div>
                 <h3 class="card-title">Generative Fill</h3>
                 <p class="card-body">دەستکاریکردن و دروستکردنی وێنە بە Generative Fill ی ئادۆبی.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://www.adobe.com/products/photoshop.html" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">adobe.com ➔</a>
+                <a href="https://www.adobe.com/products/photoshop.html" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">adobe.com ➔</a>
               </div>
             </div>
           </div>
@@ -541,7 +670,8 @@
       </section>
 
       <!-- Slide 7: Topic 1 - Video Tools -->
-      <section class="slide" id="slide-7" data-notes="تەوەرەی یەکەم: ئامرازەکانی ڤیدیۆ Video بەکارهێنانی Edits, CapCut, Runway, Kaiber AI و Kling AI.">
+      <section class="slide" id="slide-7"
+        data-notes="تەوەرەی یەکەم: ئامرازەکانی ڤیدیۆ Video بەکارهێنانی Edits, CapCut, Runway, Kaiber AI و Kling AI.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ١ &bull; ٠٣ ڤیدیۆ (Video)</span>
@@ -550,62 +680,74 @@
 
           <div class="grid-12">
             <!-- Edits -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Edits</div>
                 <h3 class="card-title">ئۆتۆماتیکردنی مۆنتاژ</h3>
                 <p class="card-body">ئۆتۆماتیکردنی بڕین و دەستکاریکردنی ڤیدیۆ بە ژیری دەستکرد.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://edits.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">edits.ai ➔</a>
+                <a href="https://edits.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">edits.ai ➔</a>
               </div>
             </div>
 
             <!-- CapCut -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">CapCut</div>
                 <h3 class="card-title">ژێرنووس & کاریگەرییەکان</h3>
                 <p class="card-body">ژێرنووسی ئۆتۆماتیکی، لادانی باکگراوند و کاریگەرییە ژیرەکان.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://www.capcut.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">capcut.com ➔</a>
+                <a href="https://www.capcut.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">capcut.com
+                  ➔</a>
               </div>
             </div>
 
             <!-- Runway -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Runway</div>
                 <h3 class="card-title">Gen-3 Text-to-Video</h3>
                 <p class="card-body">دروستکردنی ڤیدیۆی کوالێتی بەرز لە دەق و وێنەوە بە مۆدێلی Gen-3.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://runwayml.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">runwayml.com ➔</a>
+                <a href="https://runwayml.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">runwayml.com ➔</a>
               </div>
             </div>
 
             <!-- Kaiber AI -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Kaiber AI</div>
                 <h3 class="card-title">ئەنیمەیشن & ئارت</h3>
                 <p class="card-body">دروستکردنی ڤیدیۆی ئەنیمەیشن و ئارت لەسەر مۆسیقا و وێنەکان.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://kaiber.ai" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">kaiber.ai ➔</a>
+                <a href="https://kaiber.ai" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">kaiber.ai ➔</a>
               </div>
             </div>
 
             <!-- Kling AI -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Kling AI</div>
                 <h3 class="card-title">ڤیدیۆی فۆتۆڕیالیستیک</h3>
                 <p class="card-body">مۆدێلی دروستکردنی ڤیدیۆی فۆتۆڕیالیستیک بە کیفیت و جوڵەی زۆر سروشتی.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://klingai.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">klingai.com ➔</a>
+                <a href="https://klingai.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">klingai.com
+                  ➔</a>
               </div>
             </div>
           </div>
@@ -613,7 +755,8 @@
       </section>
 
       <!-- Slide 8: Topic 1 - Ideas Tools -->
-      <section class="slide" id="slide-8" data-notes="تەوەرەی یەکەم: ئامرازەکانی دۆزینەوەی بیرۆکە Ideas بەکارهێنانی Google Trends, Reddit, Startup, ChatGPT و Answer Socrates.">
+      <section class="slide" id="slide-8"
+        data-notes="تەوەرەی یەکەم: ئامرازەکانی دۆزینەوەی بیرۆکە Ideas بەکارهێنانی Google Trends, Reddit, Startup, ChatGPT و Answer Socrates.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ١ &bull; ٠٤ بیرۆکە (Ideas 💡)</span>
@@ -622,62 +765,74 @@
 
           <div class="grid-12">
             <!-- Google Trends -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Google Trends</div>
                 <h3 class="card-title">ترێندەکانی جیهان</h3>
                 <p class="card-body">دۆزینەوەی گەرمترین بابەتەکان و ترێندەکانی گەڕان لەسەر ئاستی جیهان.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://trends.google.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">trends.google.com ➔</a>
+                <a href="https://trends.google.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">trends.google.com ➔</a>
               </div>
             </div>
 
             <!-- Reddit -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Reddit</div>
                 <h3 class="card-title">پرسیاری ڕاستەقینەی خەڵک</h3>
                 <p class="card-body">سەرچاوەی دەولەمەندی پرسیاری خەڵک و دۆزینەوەی بیرۆکەی نوێ.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://www.reddit.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">reddit.com ➔</a>
+                <a href="https://www.reddit.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">reddit.com
+                  ➔</a>
               </div>
             </div>
 
             <!-- Startup Ideas -->
-            <div class="glass-card card-accent-cyan" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-cyan"
+              style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Startup Ideas</div>
                 <h3 class="card-title">بیرۆکەی بزنس</h3>
                 <p class="card-body">دۆزینەوەی بیرۆکەی نوێی بزنس و پڕۆژە تەکنەلۆجییەکان لە جیهاندا.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://startups.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">startups.com ➔</a>
+                <a href="https://startups.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">startups.com ➔</a>
               </div>
             </div>
 
             <!-- ChatGPT -->
-            <div class="glass-card card-accent-blue" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-blue"
+              style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">ChatGPT</div>
                 <h3 class="card-title">مێشکبەکارخستن (Brainstorming)</h3>
                 <p class="card-body">دروستکردنی سەدان بیرۆکەی نوێ و فرەبوار لە چەند چڕکەیەکدا.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://chatgpt.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content;">chatgpt.com ➔</a>
+                <a href="https://chatgpt.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content;">chatgpt.com ➔</a>
               </div>
             </div>
 
             <!-- Answer Socrates -->
-            <div class="glass-card card-accent-purple" style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="glass-card card-accent-purple"
+              style="grid-column: span 6; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <div class="card-number">Answer Socrates</div>
                 <h3 class="card-title">پرسیارەکانی گووگڵ</h3>
                 <p class="card-body">دۆزینەوەی ئەو پرسیارانەی خەڵک لە گووگڵ دەیپرسن لەسەر هەر بابەتێک.</p>
               </div>
               <div style="margin-top: 14px;">
-                <a href="https://answersocrates.com" target="_blank" class="seminar-btn" style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">answersocrates.com ➔</a>
+                <a href="https://answersocrates.com" target="_blank" class="seminar-btn"
+                  style="padding: 6px 14px; font-size: 12px; width: fit-content; background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;">answersocrates.com
+                  ➔</a>
               </div>
             </div>
           </div>
@@ -685,21 +840,28 @@
       </section>
 
       <!-- Slide: AI Apps Pyramid 2026 -->
-      <section class="slide" id="slide-pyramid-2026" data-notes="پیرامیدی باشترین ئەپەکانی ژیری دەستکرد بۆ ساڵی 2026: دابەشکاری ٦ ئاستی سەرەکی بۆ ئامرازەکان لە لووتکەوە تا بنەمای ئۆتۆماتیکردن.">
+      <section class="slide" id="slide-pyramid-2026"
+        data-notes="پیرامیدی باشترین ئەپەکانی ژیری دەستکرد بۆ ساڵی 2026: دابەشکاری ٦ ئاستی سەرەکی بۆ ئامرازەکان لە لووتکەوە تا بنەمای ئۆتۆماتیکردن.">
         <div class="slide-content-wrapper" style="max-width: 1000px;">
           <div class="slide-header" style="text-align: center; margin-bottom: 16px;">
-            <span class="slide-category" style="background: rgba(168, 85, 247, 0.2); color: #C084FC; border-color: rgba(168, 85, 247, 0.4);">پیرامیدی تەکنەلۆجیا 2026</span>
+            <span class="slide-category"
+              style="background: rgba(168, 85, 247, 0.2); color: #C084FC; border-color: rgba(168, 85, 247, 0.4);">پیرامیدی
+              تەکنەلۆجیا 2026</span>
             <h2 class="slide-title" style="font-size: 26px;">The Best AI Apps for 2026</h2>
-            <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">دابەشکردنی باشترین ئامرازەکانی AI بەپێی ئاست و پسپۆڕییەکان (لووتکە تا ژێرخان)</p>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">دابەشکردنی باشترین ئامرازەکانی AI
+              بەپێی ئاست و پسپۆڕییەکان (لووتکە تا ژێرخان)</p>
           </div>
 
           <div class="pyramid-wrapper">
             <!-- Tier 1: General Assistants -->
             <div class="pyramid-tier-container">
               <div class="pyramid-tier pyramid-tier-1">
-                <a href="https://claude.ai" target="_blank" class="pyramid-badge" style="border-color: rgba(168, 85, 247, 0.5); color: #E9D5FF;">✴️ Claude</a>
-                <a href="https://chatgpt.com" target="_blank" class="pyramid-badge" style="border-color: rgba(16, 185, 129, 0.5); color: #6EE7B7;">✳️ ChatGPT</a>
-                <a href="https://www.perplexity.ai" target="_blank" class="pyramid-badge" style="border-color: rgba(6, 182, 212, 0.5); color: #67E8F9;">🌐 Perplexity</a>
+                <a href="https://claude.ai" target="_blank" class="pyramid-badge"
+                  style="border-color: rgba(168, 85, 247, 0.5); color: #E9D5FF;">✴️ Claude</a>
+                <a href="https://chatgpt.com" target="_blank" class="pyramid-badge"
+                  style="border-color: rgba(16, 185, 129, 0.5); color: #6EE7B7;">✳️ ChatGPT</a>
+                <a href="https://www.perplexity.ai" target="_blank" class="pyramid-badge"
+                  style="border-color: rgba(6, 182, 212, 0.5); color: #67E8F9;">🌐 Perplexity</a>
               </div>
               <span class="pyramid-label">General Assistants</span>
             </div>
@@ -753,7 +915,8 @@
                 <a href="https://pika.art" target="_blank" class="pyramid-badge">🐰 Pika Labs</a>
                 <a href="https://www.figma.com" target="_blank" class="pyramid-badge">🖌️ Figma</a>
                 <a href="https://www.canva.com" target="_blank" class="pyramid-badge">✨ Canva</a>
-                <a href="https://deepmind.google/technologies/veo/" target="_blank" class="pyramid-badge">🎥 Google Veo</a>
+                <a href="https://deepmind.google/technologies/veo/" target="_blank" class="pyramid-badge">🎥 Google
+                  Veo</a>
                 <a href="https://higgsfield.ai" target="_blank" class="pyramid-badge">⚡ Higgsfield</a>
               </div>
               <span class="pyramid-label">Creativity & Media</span>
@@ -766,7 +929,8 @@
                 <a href="https://n8n.io" target="_blank" class="pyramid-badge">🔗 n8n</a>
                 <a href="https://zapier.com" target="_blank" class="pyramid-badge">⚡ Zapier</a>
                 <a href="https://lindy.ai" target="_blank" class="pyramid-badge">🤖 Lindy AI</a>
-                <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" class="pyramid-badge">✳️ Claude Code</a>
+                <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank"
+                  class="pyramid-badge">✳️ Claude Code</a>
                 <a href="https://chatbase.co" target="_blank" class="pyramid-badge">💬 Chatbase</a>
                 <a href="https://gemini.google.com" target="_blank" class="pyramid-badge">✨ Gemini</a>
                 <a href="https://www.notion.so/product/ai" target="_blank" class="pyramid-badge">📝 Notion AI</a>
@@ -781,7 +945,8 @@
       </section>
 
       <!-- Slide 6b: Prompt Engineering Comparison with Copy Buttons -->
-      <section class="slide" id="slide-6b" data-notes="ئەندازیاری پرۆمپت و نیشاندانی پرۆمپتی لاواز، ناوەند و بەهێز. دوگمەی کردنەوەی کتێبخانەی پرۆمپتەکان لێرەیە.">
+      <section class="slide" id="slide-6b"
+        data-notes="ئەندازیاری پرۆمپت و نیشاندانی پرۆمپتی لاواز، ناوەند و بەهێز. دوگمەی کردنەوەی کتێبخانەی پرۆمپتەکان لێرەیە.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ٢</span>
@@ -791,38 +956,59 @@
           <div class="comparison-container">
             <div class="comparison-card weak">
               <div class="comparison-badge">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
                 <span>پرۆمپتی لاواز (Weak Prompt)</span>
               </div>
               <div class="prompt-code-box">
                 «بابەتێکم بۆ بنووسە دەربارەی ژیری دەستکرد.»
-                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('بابەتێکم بۆ بنووسە دەربارەی ژیری دەستکرد.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت"
+                  onclick="navigator.clipboard.writeText('بابەتێکم بۆ بنووسە دەربارەی ژیری دەستکرد.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
-              <p class="card-body" style="color: #FCA5A5;">کێشە: ناڕوون و گشتییە، AI نازانێت بۆ کێ و بە چ ئاستێک دەنووسرێت.</p>
+              <p class="card-body" style="color: #FCA5A5;">کێشە: ناڕوون و گشتییە، AI نازانێت بۆ کێ و بە چ ئاستێک
+                دەنووسرێت.</p>
             </div>
 
             <div class="comparison-card strong">
               <div class="comparison-badge">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
                 <span>پرۆمپتی بەهێز (Strong Prompt)</span>
               </div>
               <div class="prompt-code-box">
-                «تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.»
-                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت" onclick="navigator.clipboard.writeText('تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                «تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی
+                سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.»
+                <button class="copy-prompt-btn" title="کۆپیکردنی پرۆمپت"
+                  onclick="navigator.clipboard.writeText('تۆ مامۆستایەکیت. کورتەیەکی ٣٠٠ وشەیی فەرمی بنووسە بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی دەربارەی سوودەکانی ژیری دەستکرد لە نووسینی ڕاپۆرتدا، بە خاڵ و سەرناو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
-              <p class="card-body" style="color: #6EE7B7;">خاڵی بەهێز: Role (مامۆستا)، Audience (خوێندکاران)، Task (کورتە)، Format (خاڵ و سەرناو)، Language (کوردی).</p>
+              <p class="card-body" style="color: #6EE7B7;">خاڵی بەهێز: Role (مامۆستا)، Audience (خوێندکاران)، Task
+                (کورتە)، Format (خاڵ و سەرناو)، Language (کوردی).</p>
             </div>
           </div>
 
           <div style="margin-top: 20px; text-align: center;">
             <button class="action-btn" id="openPromptLibraryBtn">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+              </svg>
               <span>کردنەوەی کتێبخانەی پرۆمپتەکان (Prompt Library) 🚀</span>
             </button>
           </div>
@@ -830,7 +1016,8 @@
       </section>
 
       <!-- Slide 7b: AI for Teachers (مامۆستایان & پەروەردکاران) -->
-      <section class="slide" id="slide-7b" data-notes="بەکارهێنانی AI بۆ مامۆستایان: پلانی وانە، پرسیاری تاقیکردنەوە و شیکاری ئاستی قوتابیان.">
+      <section class="slide" id="slide-7b"
+        data-notes="بەکارهێنانی AI بۆ مامۆستایان: پلانی وانە، پرسیاری تاقیکردنەوە و شیکاری ئاستی قوتابیان.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ٤ &bull; مامۆستایان</span>
@@ -856,9 +1043,14 @@
             <div class="comparison-level strong-lvl">
               <div class="level-header">🟢 پرۆمپتی بەهێز بۆ مامۆستایان</div>
               <div class="level-box">
-                «تۆ مامۆستای زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بەشی سووڕی خوێن بۆ پۆلی ١٢، بە وەڵامی ڕاست و ڕوونکردنەوەی کورت بە کوردی سۆرانی.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ مامۆستای زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بەشی سووڕی خوێن بۆ پۆلی ١٢، بە وەڵامی ڕاست و ڕوونکردنەوەی کورت بە کوردی سۆرانی.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                «تۆ مامۆستای زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بەشی سووڕی خوێن بۆ پۆلی ١٢، بە
+                وەڵامی ڕاست و ڕوونکردنەوەی کورت بە کوردی سۆرانی.»
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('تۆ مامۆستای زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بەشی سووڕی خوێن بۆ پۆلی ١٢، بە وەڵامی ڕاست و ڕوونکردنەوەی کورت بە کوردی سۆرانی.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -868,7 +1060,8 @@
       </section>
 
       <!-- Slide 8b: AI for Students (خوێندکارانی زانکۆ و پەیمانگا) -->
-      <section class="slide" id="slide-8b" data-notes="بەکارهێنانی AI بۆ خوێندکاران: کورتکردنەوەی PDF، تێگەیشتن لە چەمکە ئاڵۆزەکان.">
+      <section class="slide" id="slide-8b"
+        data-notes="بەکارهێنانی AI بۆ خوێندکاران: کورتکردنەوەی PDF، تێگەیشتن لە چەمکە ئاڵۆزەکان.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ٤ &bull; خوێندکاران</span>
@@ -878,11 +1071,13 @@
           <div class="grid-12">
             <div class="glass-card card-accent-purple" style="grid-column: span 6;">
               <h3 class="card-title">📚 کورتکردنەوەی PDF ی درێژ</h3>
-              <p class="card-body">بەستنەوەی فایلی پەڕتووک و لەسەرچاوەکان بە Claude یان NotebookLM بۆ دەرهێنانی خاڵە سەرەکییەکان.</p>
+              <p class="card-body">بەستنەوەی فایلی پەڕتووک و لەسەرچاوەکان بە Claude یان NotebookLM بۆ دەرهێنانی خاڵە
+                سەرەکییەکان.</p>
             </div>
             <div class="glass-card card-accent-cyan" style="grid-column: span 6;">
               <h3 class="card-title">🧠 ڕوونکردنەوەی چەمکە ئاڵۆزەکان</h3>
-              <p class="card-body">داواکردنی ڕوونکردنەوەی فۆرمولە و بیرۆکە ئاڵۆزەکان بە شێوازی «وەک ئەوەی بۆ تەمەنی ١٥ ساڵان ڕوونی بکەیتەوە».</p>
+              <p class="card-body">داواکردنی ڕوونکردنەوەی فۆرمولە و بیرۆکە ئاڵۆزەکان بە شێوازی «وەک ئەوەی بۆ تەمەنی ١٥
+                ساڵان ڕوونی بکەیتەوە».</p>
             </div>
           </div>
 
@@ -890,9 +1085,14 @@
             <div class="comparison-level strong-lvl">
               <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خوێندکاران</div>
               <div class="level-box">
-                «تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                «تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە
+                زمانی کوردی سادە ڕوون بکەوە.»
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -928,9 +1128,14 @@
             <div class="comparison-level strong-lvl">
               <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خاوەنکاران</div>
               <div class="level-box">
-                «تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                «تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە
+                زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).»
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -940,35 +1145,46 @@
       </section>
 
       <!-- Slide: Coffee Break (کاتی پشوو - 15 خولەک) -->
-      <section class="slide" id="slide-coffee-break" data-notes="کاتی پشوودانی ١٥ خولەکی بەشداربووان، قاوە خواردنەوە و ئەنجامدانی گفتوگۆی ئازاد (Networking).">
+      <section class="slide" id="slide-coffee-break"
+        data-notes="کاتی پشوودانی ١٥ خولەکی بەشداربووان، قاوە خواردنەوە و ئەنجامدانی گفتوگۆی ئازاد (Networking).">
         <div class="slide-content-wrapper" style="text-align: center;">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(245, 158, 11, 0.2); color: #FBBF24; border-color: rgba(245, 158, 11, 0.4);">کاتی پشوو &bull; Break</span>
+            <span class="slide-category"
+              style="background: rgba(245, 158, 11, 0.2); color: #FBBF24; border-color: rgba(245, 158, 11, 0.4);">کاتی
+              پشوو &bull; Break</span>
             <h2 class="slide-title">☕ کاتی پشوودان و قاوەخواردنەوە (١٥ خولەک)</h2>
-            <p style="color: var(--text-muted); font-size: 16px; margin-top: 4px;">Coffee Break & Networking &bull; 15 Minutes</p>
+            <p style="color: var(--text-muted); font-size: 16px; margin-top: 4px;">Coffee Break & Networking &bull; 15
+              Minutes</p>
           </div>
 
-          <div class="glass-card card-accent-purple" style="max-width: 700px; margin: 0 auto; padding: 36px; text-align: center;">
+          <div class="glass-card card-accent-purple"
+            style="max-width: 700px; margin: 0 auto; padding: 36px; text-align: center;">
             <div style="font-size: 54px; margin-bottom: 12px; filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.5));">
               ☕ 🥐
             </div>
 
-            <h3 style="font-size: 24px; color: var(--text-white); margin-bottom: 16px;">پشوویەکی کورت بۆ چالاکبوونەوە</h3>
+            <h3 style="font-size: 24px; color: var(--text-white); margin-bottom: 16px;">پشوویەکی کورت بۆ چالاکبوونەوە
+            </h3>
             <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 24px;">
-              « دەرفەتێک بۆ خواردنەوەی قاوە و چا، دروستکردنی ئاشنایەتی لەگەڵ بەشداربووانی تر، و ئامادەسازی بۆ تەوەرەکانی دواتر »
+              « دەرفەتێک بۆ خواردنەوەی قاوە و چا، دروستکردنی ئاشنایەتی لەگەڵ بەشداربووانی تر، و ئامادەسازی بۆ تەوەرەکانی
+              دواتر »
             </p>
 
             <!-- Interactive 15-Minute Countdown Timer Widget -->
-            <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(245, 158, 11, 0.3); padding: 20px 32px; border-radius: 20px; display: inline-flex; flex-direction: column; align-items: center; gap: 12px; box-shadow: 0 0 25px rgba(245, 158, 11, 0.15);">
-              <div id="coffeeTimerDisplay" style="font-size: 48px; font-weight: 900; color: #F59E0B; font-family: monospace; letter-spacing: 2px; text-shadow: 0 0 15px rgba(245, 158, 11, 0.4);">
+            <div
+              style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(245, 158, 11, 0.3); padding: 20px 32px; border-radius: 20px; display: inline-flex; flex-direction: column; align-items: center; gap: 12px; box-shadow: 0 0 25px rgba(245, 158, 11, 0.15);">
+              <div id="coffeeTimerDisplay"
+                style="font-size: 48px; font-weight: 900; color: #F59E0B; font-family: monospace; letter-spacing: 2px; text-shadow: 0 0 15px rgba(245, 158, 11, 0.4);">
                 15:00
               </div>
 
               <div style="display: flex; gap: 12px;">
-                <button class="action-btn" id="startCoffeeTimerBtn" onclick="toggleCoffeeTimer()" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34D399; padding: 8px 18px; font-size: 14px;">
+                <button class="action-btn" id="startCoffeeTimerBtn" onclick="toggleCoffeeTimer()"
+                  style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34D399; padding: 8px 18px; font-size: 14px;">
                   <span>دەستپێکردنی کاتژمێر ▶</span>
                 </button>
-                <button class="action-btn" onclick="resetCoffeeTimer()" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5; padding: 8px 18px; font-size: 14px;">
+                <button class="action-btn" onclick="resetCoffeeTimer()"
+                  style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5; padding: 8px 18px; font-size: 14px;">
                   <span>دەستپێکردنەوە 🔄</span>
                 </button>
               </div>
@@ -978,7 +1194,8 @@
       </section>
 
       <!-- Slide 10: Topic 3 - AI Impact on the Job Market -->
-      <section class="slide" id="slide-10" data-notes="کاریگەری AI لەسەر بازاڕی کار: هۆشیارکردنەوەی بەشداربووان لەسەر گۆڕانکارییەکانی کار.">
+      <section class="slide" id="slide-10"
+        data-notes="کاریگەری AI لەسەر بازاڕی کار: هۆشیارکردنەوەی بەشداربووان لەسەر گۆڕانکارییەکانی کار.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">تەوەرەی ٣</span>
@@ -988,11 +1205,13 @@
           <div class="grid-12">
             <div class="glass-card card-accent-blue" style="grid-column: span 6;">
               <h3 class="card-title">🤝 هاوکار نەک دوژمن</h3>
-              <p class="card-body">ژیری دەستکرد ئەرکە دووبارەبووەکان ئۆتۆماتیک دەکات تا مرۆڤ سەرنج بخاتە سەر داهێنان و بیرکردنەوەی ستراتیژی.</p>
+              <p class="card-body">ژیری دەستکرد ئەرکە دووبارەبووەکان ئۆتۆماتیک دەکات تا مرۆڤ سەرنج بخاتە سەر داهێنان و
+                بیرکردنەوەی ستراتیژی.</p>
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 6;">
               <h3 class="card-title">⚡ زیادبوونی خێرایی و کوالێتی</h3>
-              <p class="card-body">ئەو کارەی پێشتر ٥ کاتژمێری پێویست بوو، ئێستا بە هاوکاری AI لە ٣٠ خولەکدا بە کوالێتی بەرزتر ئەنجام دەدرێت.</p>
+              <p class="card-body">ئەو کارەی پێشتر ٥ کاتژمێری پێویست بوو، ئێستا بە هاوکاری AI لە ٣٠ خولەکدا بە کوالێتی
+                بەرزتر ئەنجام دەدرێت.</p>
             </div>
           </div>
         </div>
@@ -1024,7 +1243,8 @@
       </section>
 
       <!-- Slide: AI vs Traditional Workflow ROI Chart -->
-      <section class="slide" id="slide-roi-chart" data-notes="بەراوردکاری کاتی ڕاپەڕاندنی ئەرکەکان: شێوازی کۆن بەرامبەر بەکارهێنانی AI کە ٩٠٪ پاشەکەوت کردنی کاتی تێدایە.">
+      <section class="slide" id="slide-roi-chart"
+        data-notes="بەراوردکاری کاتی ڕاپەڕاندنی ئەرکەکان: شێوازی کۆن بەرامبەر بەکارهێنانی AI کە ٩٠٪ پاشەکەوت کردنی کاتی تێدایە.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">پاشەکەوتی کات &bull; ROI</span>
@@ -1040,7 +1260,8 @@
                   <span>شێوازی کۆن (Manual Work)</span>
                   <span style="color: #FCA5A5;">٥ کاتژمێر</span>
                 </div>
-                <div style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                <div
+                  style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
                   <div style="width: 100%; background: #EF4444; height: 100%;"></div>
                 </div>
 
@@ -1052,7 +1273,8 @@
                   <div style="width: 10%; background: #10B981; height: 100%;"></div>
                 </div>
               </div>
-              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٥٪ کەمبوونەوەی هیلاکی!</p>
+              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٥٪ کەمبوونەوەی
+                هیلاکی!</p>
             </div>
 
             <!-- Item 2 -->
@@ -1063,7 +1285,8 @@
                   <span>شێوازی کۆن (Manual Design)</span>
                   <span style="color: #FCA5A5;">٣ کاتژمێر</span>
                 </div>
-                <div style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                <div
+                  style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
                   <div style="width: 100%; background: #EF4444; height: 100%;"></div>
                 </div>
 
@@ -1075,7 +1298,8 @@
                   <div style="width: 12%; background: #10B981; height: 100%;"></div>
                 </div>
               </div>
-              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٦٪ دەستبەجێ دروستکردن!</p>
+              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٦٪ دەستبەجێ
+                دروستکردن!</p>
             </div>
 
             <!-- Item 3 -->
@@ -1086,7 +1310,8 @@
                   <span>شێوازی کۆن</span>
                   <span style="color: #FCA5A5;">٤ کاتژمێر</span>
                 </div>
-                <div style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                <div
+                  style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
                   <div style="width: 100%; background: #EF4444; height: 100%;"></div>
                 </div>
 
@@ -1098,7 +1323,8 @@
                   <div style="width: 15%; background: #10B981; height: 100%;"></div>
                 </div>
               </div>
-              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٥٪ بەرهەمداری زیاتر!</p>
+              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٥٪ بەرهەمداری
+                زیاتر!</p>
             </div>
 
             <!-- Item 4 -->
@@ -1109,7 +1335,8 @@
                   <span>شێوازی کۆن</span>
                   <span style="color: #FCA5A5;">٦ کاتژمێر</span>
                 </div>
-                <div style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                <div
+                  style="background: rgba(239, 68, 68, 0.2); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
                   <div style="width: 100%; background: #EF4444; height: 100%;"></div>
                 </div>
 
@@ -1121,17 +1348,21 @@
                   <div style="width: 18%; background: #10B981; height: 100%;"></div>
                 </div>
               </div>
-              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٤٪ کەمکردنەوەی هەڵەکان!</p>
+              <p class="card-body" style="font-size: 12px; color: var(--cyan-accent);">پاشەکەوتی کات: ٩٤٪ کەمکردنەوەی
+                هەڵەکان!</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Slide: AI Agents 2026-2030 Roadmap -->
-      <section class="slide" id="slide-ai-agents" data-notes="نەخشەی ئایندە: گۆڕان لە چاتبۆتەوە بۆ ئەیجێنتی سەربەخۆ. Manus AI، Claude Computer Use، Devin دە ڵیرەکی دەستکردی کە بە سەربەخۆی کارکان دەکەن.">
+      <section class="slide" id="slide-ai-agents"
+        data-notes="نەخشەی ئایندە: گۆڕان لە چاتبۆتەوە بۆ ئەیجێنتی سەربەخۆ. Manus AI، Claude Computer Use، Devin دە ڵیرەکی دەستکردی کە بە سەربەخۆی کارکان دەکەن.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(124, 58, 237, 0.2); color: #C084FC; border-color: rgba(124, 58, 237, 0.4);">AI Agents &bull; 2026-2030</span>
+            <span class="slide-category"
+              style="background: rgba(124, 58, 237, 0.2); color: #C084FC; border-color: rgba(124, 58, 237, 0.4);">AI
+              Agents &bull; 2026-2030</span>
             <h2 class="slide-title">🤖 ئاینده‌ی AI: لە چاتبۆتەوە بۆ ئەیجێنتی سەربەخۆ</h2>
           </div>
 
@@ -1139,28 +1370,32 @@
             <!-- Timeline -->
             <div style="grid-column: span 12; display: flex; gap: 0; align-items: stretch; margin-bottom: 12px;">
 
-              <div class="glass-card card-accent-blue" style="flex: 1; border-radius: 16px 0 0 16px; border-right: none; text-align: center; padding: 20px 12px;">
+              <div class="glass-card card-accent-blue"
+                style="flex: 1; border-radius: 16px 0 0 16px; border-right: none; text-align: center; padding: 20px 12px;">
                 <div style="font-size: 22px; margin-bottom: 8px;">💬</div>
                 <div style="font-size: 13px; font-weight: 800; color: #60A5FA; margin-bottom: 4px;">2022-2023</div>
                 <div style="font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px;">Chatbots</div>
                 <p style="font-size: 12px; color: var(--text-muted);">ChatGPT, Bard<br>وەڵامدانەوەی دەق</p>
               </div>
 
-              <div class="glass-card card-accent-purple" style="flex: 1; border-radius: 0; border-right: none; text-align: center; padding: 20px 12px;">
+              <div class="glass-card card-accent-purple"
+                style="flex: 1; border-radius: 0; border-right: none; text-align: center; padding: 20px 12px;">
                 <div style="font-size: 22px; margin-bottom: 8px;">🎨</div>
                 <div style="font-size: 13px; font-weight: 800; color: #C084FC; margin-bottom: 4px;">2024-2025</div>
                 <div style="font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px;">Multimodal AI</div>
                 <p style="font-size: 12px; color: var(--text-muted);">Gemini, GPT-4o<br>دەق + وێنە + دەنگ</p>
               </div>
 
-              <div class="glass-card card-accent-cyan" style="flex: 1; border-radius: 0; border-right: none; text-align: center; padding: 20px 12px; border: 2px solid rgba(6, 182, 212, 0.6); box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);">
+              <div class="glass-card card-accent-cyan"
+                style="flex: 1; border-radius: 0; border-right: none; text-align: center; padding: 20px 12px; border: 2px solid rgba(6, 182, 212, 0.6); box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);">
                 <div style="font-size: 22px; margin-bottom: 8px;">🤖</div>
                 <div style="font-size: 13px; font-weight: 800; color: #67E8F9; margin-bottom: 4px;">2026 — ئێستا</div>
                 <div style="font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px;">AI Agents</div>
                 <p style="font-size: 12px; color: var(--text-muted);">Manus, Devin<br>کاری سەربەخۆ</p>
               </div>
 
-              <div class="glass-card" style="flex: 1; border-radius: 0 16px 16px 0; background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.3); text-align: center; padding: 20px 12px;">
+              <div class="glass-card"
+                style="flex: 1; border-radius: 0 16px 16px 0; background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.3); text-align: center; padding: 20px 12px;">
                 <div style="font-size: 22px; margin-bottom: 8px;">🌐</div>
                 <div style="font-size: 13px; font-weight: 800; color: #FBBF24; margin-bottom: 4px;">2028-2030</div>
                 <div style="font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px;">AGI Systems</div>
@@ -1171,17 +1406,20 @@
 
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
               <h3 class="card-title">🤖 Manus AI</h3>
-              <p class="card-body">ئەیجێنتی سەربەخۆ: ماڵپەڕ دەگەڕێتەوە، کۆد دەنووسێت، داتا شیکار دەکات — بە هیچ دەستیاری مرۆڤ ناویدا.</p>
+              <p class="card-body">ئەیجێنتی سەربەخۆ: ماڵپەڕ دەگەڕێتەوە، کۆد دەنووسێت، داتا شیکار دەکات — بە هیچ دەستیاری
+                مرۆڤ ناویدا.</p>
             </div>
 
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <h3 class="card-title">💻 Devin (Cognition)</h3>
-              <p class="card-body">یەکەمین ئەیجێنتی بهای ئەندازیارانە: پڕۆژەی کامل لە سەرەتا تا کۆتایی بە سەربەخۆی دەزانێت.</p>
+              <p class="card-body">یەکەمین ئەیجێنتی بهای ئەندازیارانە: پڕۆژەی کامل لە سەرەتا تا کۆتایی بە سەربەخۆی
+                دەزانێت.</p>
             </div>
- 
+
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
               <h3 class="card-title">🖥️ Claude Computer Use</h3>
-              <p class="card-body">بکردنەوەی بەرنامەکان، کلیک کردن، نووسین و کاری لەسەر کۆمپیوتەر — وەک مرۆڤی ڕاستەوخۆ.</p>
+              <p class="card-body">بکردنەوەی بەرنامەکان، کلیک کردن، نووسین و کاری لەسەر کۆمپیوتەر — وەک مرۆڤی ڕاستەوخۆ.
+              </p>
             </div>
 
           </div>
@@ -1189,10 +1427,13 @@
       </section>
 
       <!-- Slide: 5 Privacy & Security Rules -->
-      <section class="slide" id="slide-privacy-rules" data-notes="٥ یاسای زێڕین بۆ ئاسایشی زانیاری و پاراستنی داتای کەسی لە کاتی بەکارهێنانی ئامرازەکانی AI.">
+      <section class="slide" id="slide-privacy-rules"
+        data-notes="٥ یاسای زێڕین بۆ ئاسایشی زانیاری و پاراستنی داتای کەسی لە کاتی بەکارهێنانی ئامرازەکانی AI.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.4);">ئاسایشی داتا</span>
+            <span class="slide-category"
+              style="background: rgba(239, 68, 68, 0.2); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.4);">ئاسایشی
+              داتا</span>
             <h2 class="slide-title">٥ یاسای زێڕین بۆ بەکارهێنانی ئارامی AI</h2>
           </div>
 
@@ -1204,32 +1445,39 @@
 
             <div class="glass-card card-accent-purple" style="grid-column: span 4; border-right: 4px solid #EF4444;">
               <h3 class="card-title" style="color: #FCA5A5;">٢. 💳 داتای دارایی مەنووسە</h3>
-              <p class="card-body">ژمارەی کارتی بانکی، کاتی بەسەرچوون و زانیاری هەژماری دراو بە هیچ شێوەیەک ئاپلۆد مەکە.</p>
+              <p class="card-body">ژمارەی کارتی بانکی، کاتی بەسەرچوون و زانیاری هەژماری دراو بە هیچ شێوەیەک ئاپلۆد مەکە.
+              </p>
             </div>
 
             <div class="glass-card card-accent-cyan" style="grid-column: span 4; border-right: 4px solid #F59E0B;">
               <h3 class="card-title" style="color: #FBBF24;">٣. 📄 بەڵگەنامەی کەسی</h3>
-              <p class="card-body">پاسپۆرت، ناسنامەی کەسی و زانیاری تایبەتی خۆت یان کڕیاران لە فایلەکاندا نادیار (Redact) بکە.</p>
+              <p class="card-body">پاسپۆرت، ناسنامەی کەسی و زانیاری تایبەتی خۆت یان کڕیاران لە فایلەکاندا نادیار
+                (Redact) بکە.</p>
             </div>
 
             <div class="glass-card card-accent-purple" style="grid-column: span 6; border-right: 4px solid #3B82F6;">
               <h3 class="card-title" style="color: #60A5FA;">٤. 🏢 نهێنییە بازرگانییەکانی کۆمپانیا</h3>
-              <p class="card-body">داتای دارایی ناوخۆیی یان سۆرس کۆدی تایبەت بە کۆمپانیاکان مەخەرە ناو مۆدێلە گشتییە بێبەرامبەرەکان.</p>
+              <p class="card-body">داتای دارایی ناوخۆیی یان سۆرس کۆدی تایبەت بە کۆمپانیاکان مەخەرە ناو مۆدێلە گشتییە
+                بێبەرامبەرەکان.</p>
             </div>
 
             <div class="glass-card card-accent-cyan" style="grid-column: span 6; border-right: 4px solid #10B981;">
               <h3 class="card-title" style="color: #34D399;">٥. 🔍 پشکنینی دەرئەنجامەکان (Verify)</h3>
-              <p class="card-body">متمانەی کوێرانە بە هەموو وەڵامێک مەکە؛ هەردەم ژمارەکان و سەرچاوە مێژوویی و زانستییەکان بپشکنەوە.</p>
+              <p class="card-body">متمانەی کوێرانە بە هەموو وەڵامێک مەکە؛ هەردەم ژمارەکان و سەرچاوە مێژوویی و
+                زانستییەکان بپشکنەوە.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Slide: AI Voice & Music Generation -->
-      <section class="slide" id="slide-voice-music" data-notes="ئامرازەکانی دەنگ، مۆسیقا و کلۆنکردنی دەنگ: ElevenLabs، Suno AI، Udio. بەتێگەشتن لە چۆنیەتی دروستکردنی گۆرانی و کلۆنکردنی دەنگ بە ڵەچ چۜکەیەک.">
+      <section class="slide" id="slide-voice-music"
+        data-notes="ئامرازەکانی دەنگ، مۆسیقا و کلۆنکردنی دەنگ: ElevenLabs، Suno AI، Udio. بەتێگەشتن لە چۆنیەتی دروستکردنی گۆرانی و کلۆنکردنی دەنگ بە ڵەچ چۜکەیەک.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(236, 72, 153, 0.2); color: #F9A8D4; border-color: rgba(236, 72, 153, 0.4);">AI دەنگ &bull; مۆسیقا 🎵</span>
+            <span class="slide-category"
+              style="background: rgba(236, 72, 153, 0.2); color: #F9A8D4; border-color: rgba(236, 72, 153, 0.4);">AI
+              دەنگ &bull; مۆسیقا 🎵</span>
             <h2 class="slide-title">🎵 ئامرازەکانی دەنگ، مۆسیقا و کلۆنکردنی دەنگ</h2>
           </div>
 
@@ -1238,27 +1486,35 @@
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <div style="font-size: 28px; margin-bottom: 10px;">🎙️</div>
               <h3 class="card-title">ElevenLabs</h3>
-              <p class="card-body">کلۆنکردنی دەنگی ئادەمیزاد بە تەنها ٣٠ چڕکەی دەنگ. پشتگیری لە ٢٩+ زمان، تێیدا کوردی.</p>
-              <a href="https://elevenlabs.io" target="_blank" style="color: #C084FC; font-size: 13px; font-weight: 700; text-decoration: none;">elevenlabs.io →</a>
+              <p class="card-body">کلۆنکردنی دەنگی ئادەمیزاد بە تەنها ٣٠ چڕکەی دەنگ. پشتگیری لە ٢٩+ زمان، تێیدا کوردی.
+              </p>
+              <a href="https://elevenlabs.io" target="_blank"
+                style="color: #C084FC; font-size: 13px; font-weight: 700; text-decoration: none;">elevenlabs.io →</a>
             </div>
 
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
               <div style="font-size: 28px; margin-bottom: 10px;">🎵</div>
               <h3 class="card-title">Suno AI</h3>
-              <p class="card-body">دروستکردنی گۆرانی و مۆسیقای کامل بە پرۆمپتی دەق. نموونە: «گۆرانیەکی خۆش بە ئینگلیزی دەربارەی هەولێر».</p>
-              <a href="https://suno.com" target="_blank" style="color: #60A5FA; font-size: 13px; font-weight: 700; text-decoration: none;">suno.com →</a>
+              <p class="card-body">دروستکردنی گۆرانی و مۆسیقای کامل بە پرۆمپتی دەق. نموونە: «گۆرانیەکی خۆش بە ئینگلیزی
+                دەربارەی هەولێر».</p>
+              <a href="https://suno.com" target="_blank"
+                style="color: #60A5FA; font-size: 13px; font-weight: 700; text-decoration: none;">suno.com →</a>
             </div>
 
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
               <div style="font-size: 28px; margin-bottom: 10px;">🎼</div>
               <h3 class="card-title">Udio</h3>
               <p class="card-body">ئەلترناتیڤی Suno بە کوالێتی بەرزتر لە بەشی دروستکردنی تراکی موزیکی پیشەیی.</p>
-              <a href="https://udio.com" target="_blank" style="color: #67E8F9; font-size: 13px; font-weight: 700; text-decoration: none;">udio.com →</a>
+              <a href="https://udio.com" target="_blank"
+                style="color: #67E8F9; font-size: 13px; font-weight: 700; text-decoration: none;">udio.com →</a>
             </div>
 
             <div class="glass-card card-accent-purple" style="grid-column: span 12;">
               <h3 class="card-title" style="margin-bottom: 10px;">⚡ نموونەی پرۆمپت بۆ ElevenLabs</h3>
-              <div style="background: #0F172A; border: 1px solid rgba(6,182,212,0.3); border-right: 4px solid #8B5CF6; border-radius: 10px; padding: 14px 18px; font-size: 14px; color: #E2E8F0; direction: rtl;">«دەنگەکەم کلۆن بکە و ئەم دەقە بخوێنەوە بە کوردی سۆرانی بە شێوازی فەرمی: بەخێربێن بۆ سیمیناری ژیری دەستکرد.»</div>
+              <div
+                style="background: #0F172A; border: 1px solid rgba(6,182,212,0.3); border-right: 4px solid #8B5CF6; border-radius: 10px; padding: 14px 18px; font-size: 14px; color: #E2E8F0; direction: rtl;">
+                «دەنگەکەم کلۆن بکە و ئەم دەقە بخوێنەوە بە کوردی سۆرانی بە شێوازی فەرمی: بەخێربێن بۆ سیمیناری ژیری
+                دەستکرد.»</div>
             </div>
 
           </div>
@@ -1274,17 +1530,21 @@
           </div>
 
           <div class="glass-card card-accent-purple" style="padding: 32px; text-align: center; margin-bottom: 24px;">
-            <h3 style="font-size: 24px; color: var(--text-white); margin-bottom: 12px;">🎮 کاتی تاقیکردنەوەی ڕاستەوخۆیە!</h3>
+            <h3 style="font-size: 24px; color: var(--text-white); margin-bottom: 12px;">🎮 کاتی تاقیکردنەوەی ڕاستەوخۆیە!
+            </h3>
             <p style="color: var(--text-light); max-width: 700px; margin: 0 auto 24px;">
               کلیک لە دوگمەکانی خوارەوە بکە بۆ ڕاوەستان لەسەر پرۆمپتە ڕاستەوخۆکان لەسەر شاشەکە.
             </p>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-              <button class="action-btn" onclick="openDemoModal('دێمۆی 1: کورتکردنەوەی PDF', 'تۆ توێژەرێکی زانستیت. ئەم دەقەی خوارەوە بۆ ٤ خاڵی سەرەکی کورت بکەوە بە زمانی کوردی سۆرانی، و زاراوە گرنگەکان دەستنیشان بکە.', 'دەقەکە کۆپی بکە و پەیستی بکە ناو ChatGPT یان Claude بۆ نیشاندانی تاقیکردنەوەکە.')">
+              <button class="action-btn"
+                onclick="openDemoModal('دێمۆی 1: کورتکردنەوەی PDF', 'تۆ توێژەرێکی زانستیت. ئەم دەقەی خوارەوە بۆ ٤ خاڵی سەرەکی کورت بکەوە بە زمانی کوردی سۆرانی، و زاراوە گرنگەکان دەستنیشان بکە.', 'دەقەکە کۆپی بکە و پەیستی بکە ناو ChatGPT یان Claude بۆ نیشاندانی تاقیکردنەوەکە.')">
                 <span>دێمۆی ١: کورتکردنەوەی فایلی درێژ 📄</span>
               </button>
 
-              <button class="action-btn" style="background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;" onclick="openDemoModal('دێمۆی 2: دروستکردنی پرسیاری تاقیکردنەوە', 'تۆ مامۆستای زانستیت. ٣ پرسیاری تاقیکردنەوە لەگەڵ وەڵامی دروست بپۆشە دەربارەی بنەماکانی ژیری دەستکرد.', 'نیشاندانی دروستکردنی تاقیکردنەوە بە چەند چڕکەیەک.')">
+              <button class="action-btn"
+                style="background: rgba(124, 58, 237, 0.2); border-color: rgba(124, 58, 237, 0.4); color: #C084FC;"
+                onclick="openDemoModal('دێمۆی 2: دروستکردنی پرسیاری تاقیکردنەوە', 'تۆ مامۆستای زانستیت. ٣ پرسیاری تاقیکردنەوە لەگەڵ وەڵامی دروست بپۆشە دەربارەی بنەماکانی ژیری دەستکرد.', 'نیشاندانی دروستکردنی تاقیکردنەوە بە چەند چڕکەیەک.')">
                 <span>دێمۆی ٢: دروستکردنی پرسیار ❓</span>
               </button>
             </div>
@@ -1302,26 +1562,44 @@
 
           <div class="grid-12">
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg></div>
               <h3 class="card-title">١. بەرزکردنەوەی هۆشیاری</h3>
               <p class="card-body">بەرزکردنەوەی هۆشیاری بەشداربووان دەربارەی گرنگی و بەهای ژیری دەستکرد لە ئێستادا.</p>
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path></svg></div>
+              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg></div>
               <h3 class="card-title">٢. ڕوونکردنەوەی میکانیزمەکان</h3>
-              <p class="card-body">ڕوونکردنەوەی ئەو میکانیزمانەی کە AI بۆ چارەسەرکردنی کێشە ئاڵۆزەکان بەکاریان دەهێنێت.</p>
+              <p class="card-body">ڕوونکردنەوەی ئەو میکانیزمانەی کە AI بۆ چارەسەرکردنی کێشە ئاڵۆزەکان بەکاریان دەهێنێت.
+              </p>
             </div>
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
-              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+              <div class="card-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg></div>
               <h3 class="card-title">٣. پێشکەشکردنی نەخشەڕێگا</h3>
-              <p class="card-body">پێشکەشکردنی نەخشەڕێگایەکی ڕوون بۆ ئەوانەی دەیانەوێت دەست بە فێربوونی ئەم بوارە بکەن.</p>
+              <p class="card-body">پێشکەشکردنی نەخشەڕێگایەکی ڕوون بۆ ئەوانەی دەیانەوێت دەست بە فێربوونی ئەم بوارە بکەن.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Slide 14: Target Audience (ئەم سیمینارە بۆ کێ گونجاوە) -->
-      <section class="slide" id="slide-14" data-notes="ئەم سیمینارە بۆ مامۆستایان، خوێندکارانی زانکۆ، خاوەنکاران، پسپۆڕان و ئارەزوومەندان گونجاوە.">
+      <section class="slide" id="slide-14"
+        data-notes="ئەم سیمینارە بۆ مامۆستایان، خوێندکارانی زانکۆ، خاوەنکاران، پسپۆڕان و ئارەزوومەندان گونجاوە.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">ئۆدیانس</span>
@@ -1331,11 +1609,13 @@
           <div class="grid-12">
             <div class="glass-card card-accent-blue" style="grid-column: span 6;">
               <h3 class="card-title">👨‍🏫 مامۆستایان و پەروەردکاران</h3>
-              <p class="card-body">بۆ فێربوونی ئەوەی چۆن AI بەکاربهێنن بۆ ئامادەکردنی پلانی وانەوتنەوە، دروستکردنی پرسیاری تاقیکردنەوە، و شیکردنەوەی ئاستی قوتابیان.</p>
+              <p class="card-body">بۆ فێربوونی ئەوەی چۆن AI بەکاربهێنن بۆ ئامادەکردنی پلانی وانەوتنەوە، دروستکردنی
+                پرسیاری تاقیکردنەوە، و شیکردنەوەی ئاستی قوتابیان.</p>
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 6;">
               <h3 class="card-title">🎓 خوێندکارانی زانکۆ و پەیمانگاکان</h3>
-              <p class="card-body">بەتایبەت ئەوانەی لە بەشەکانی کۆمپیوتەر، ئەندازیاری، و تەکنەلۆجیا دەخوێنن و دەیانەوێت ئاستیان بەرز بکەنەوە.</p>
+              <p class="card-body">بەتایبەت ئەوانەی لە بەشەکانی کۆمپیوتەر، ئەندازیاری، و تەکنەلۆجیا دەخوێنن و دەیانەوێت
+                ئاستیان بەرز بکەنەوە.</p>
             </div>
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
               <h3 class="card-title">💼 خاوەنکار و خاوەن پرۆژەکان</h3>
@@ -1347,25 +1627,31 @@
             </div>
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <h3 class="card-title">🎨 پسپۆڕانی بەڕێوەبردن و دیزاین</h3>
-              <p class="card-body">بۆ زانینی چۆنیەتی سوودوەرگرتن لە ئامرازەکانی AI بۆ بەرزکردنەوەی کوالێتی کارەکانیان.</p>
+              <p class="card-body">بۆ زانینی چۆنیەتی سوودوەرگرتن لە ئامرازەکانی AI بۆ بەرزکردنەوەی کوالێتی کارەکانیان.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Slide: Upcoming Intensive AI Course -->
-      <section class="slide" id="slide-upcoming-course" data-notes="ڕاگەیاندنی خولی پێشکەوتووی بەکرداری ژیری دەستکرد لەلایەن ئەندازیار عبدالرحمن اسماعیل بە ناونووسینی پێشوەختە.">
+      <section class="slide" id="slide-upcoming-course"
+        data-notes="ڕاگەیاندنی خولی پێشکەوتووی بەکرداری ژیری دەستکرد لەلایەن ئەندازیار عبدالرحمن اسماعیل بە ناونووسینی پێشوەختە.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(124, 58, 237, 0.2); color: #C084FC; border-color: rgba(124, 58, 237, 0.4);">خولی داهاتوو</span>
+            <span class="slide-category"
+              style="background: rgba(124, 58, 237, 0.2); color: #C084FC; border-color: rgba(124, 58, 237, 0.4);">خولی
+              داهاتوو</span>
             <h2 class="slide-title">🎓 خولی بەکرداریی ژیری دەستکرد (AI Masterclass)</h2>
           </div>
 
           <div class="grid-12">
             <div class="glass-card card-accent-purple" style="grid-column: span 12; padding: 28px;">
-              <h3 class="card-title" style="font-size: 22px; margin-bottom: 12px;">فێربوونی بەکرداریی ئامرازەکانی AI و ئۆتۆماتیکردنی کارەکان</h3>
+              <h3 class="card-title" style="font-size: 22px; margin-bottom: 12px;">فێربوونی بەکرداریی ئامرازەکانی AI و
+                ئۆتۆماتیکردنی کارەکان</h3>
               <p style="font-size: 16px; color: var(--text-white); line-height: 1.7;">
-                پڕۆگرامێکی ڕاهێنانی چڕی ٢ هەفتەیی لەسەر کۆمپیوتەر تا بە بەکرداری فێری هەموو ئامرازەکان، ئەندازیاری پرۆمپت، دروستکردنی ماڵپەڕ، دیزاین و ئۆتۆماتیکردنی ئیشوکارەکانت ببیت.
+                پڕۆگرامێکی ڕاهێنانی چڕی ٢ هەفتەیی لەسەر کۆمپیوتەر تا بە بەکرداری فێری هەموو ئامرازەکان، ئەندازیاری
+                پرۆمپت، دروستکردنی ماڵپەڕ، دیزاین و ئۆتۆماتیکردنی ئیشوکارەکانت ببیت.
               </p>
             </div>
 
@@ -1385,7 +1671,8 @@
             </div>
 
             <div style="grid-column: span 12; text-align: center; margin-top: 10px;">
-              <a href="https://t.me/Agha_ACE" target="_blank" class="action-btn" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34D399;">
+              <a href="https://t.me/Agha_ACE" target="_blank" class="action-btn"
+                style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34D399;">
                 <span>ناونووسینی پێشوەختە لە خولەکەدا (Early Bird Registration) ✍️</span>
               </a>
             </div>
@@ -1394,33 +1681,50 @@
       </section>
 
       <!-- Slide: Digital Certificate Preview -->
-      <section class="slide" id="slide-certificate" data-notes="بێنینی بۜوانامەی دیجیتاڵی خوڵەکە. بەشداربووان پاشانی بۜوانامەی کامڵکردنی خوڵەکەی دەبینکانی، بۆ هانی دانی ناونووسینی پێشوەختە.">
+      <section class="slide" id="slide-certificate"
+        data-notes="بێنینی بۜوانامەی دیجیتاڵی خوڵەکە. بەشداربووان پاشانی بۜوانامەی کامڵکردنی خوڵەکەی دەبینکانی، بۆ هانی دانی ناونووسینی پێشوەختە.">
         <div class="slide-content-wrapper" style="text-align: center;">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(245, 158, 11, 0.2); color: #FBBF24; border-color: rgba(245, 158, 11, 0.4);">بڕوانامەی فەرمی 🏆</span>
+            <span class="slide-category"
+              style="background: rgba(245, 158, 11, 0.2); color: #FBBF24; border-color: rgba(245, 158, 11, 0.4);">بڕوانامەی
+              فەرمی 🏆</span>
             <h2 class="slide-title">🏆 بڕوانامەی بەشداریکردن لە خولی بەکرداریی ژیری دەستکرد</h2>
           </div>
 
           <!-- Certificate Design -->
-          <div id="certificateCard" style="max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%); border: 2px solid rgba(245, 158, 11, 0.6); border-radius: 20px; padding: 36px 48px; position: relative; overflow: hidden; box-shadow: 0 0 50px rgba(245, 158, 11, 0.25);">
+          <div id="certificateCard"
+            style="max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%); border: 2px solid rgba(245, 158, 11, 0.6); border-radius: 20px; padding: 36px 48px; position: relative; overflow: hidden; box-shadow: 0 0 50px rgba(245, 158, 11, 0.25);">
             <!-- Decorative corners -->
-            <div style="position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-top: 3px solid #F59E0B; border-right: 3px solid #F59E0B; border-radius: 0 8px 0 0;"></div>
-            <div style="position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; border-top: 3px solid #F59E0B; border-left: 3px solid #F59E0B; border-radius: 8px 0 0 0;"></div>
-            <div style="position: absolute; bottom: 12px; right: 12px; width: 32px; height: 32px; border-bottom: 3px solid #F59E0B; border-right: 3px solid #F59E0B; border-radius: 0 0 8px 0;"></div>
-            <div style="position: absolute; bottom: 12px; left: 12px; width: 32px; height: 32px; border-bottom: 3px solid #F59E0B; border-left: 3px solid #F59E0B; border-radius: 0 0 0 8px;"></div>
+            <div
+              style="position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-top: 3px solid #F59E0B; border-right: 3px solid #F59E0B; border-radius: 0 8px 0 0;">
+            </div>
+            <div
+              style="position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; border-top: 3px solid #F59E0B; border-left: 3px solid #F59E0B; border-radius: 8px 0 0 0;">
+            </div>
+            <div
+              style="position: absolute; bottom: 12px; right: 12px; width: 32px; height: 32px; border-bottom: 3px solid #F59E0B; border-right: 3px solid #F59E0B; border-radius: 0 0 8px 0;">
+            </div>
+            <div
+              style="position: absolute; bottom: 12px; left: 12px; width: 32px; height: 32px; border-bottom: 3px solid #F59E0B; border-left: 3px solid #F59E0B; border-radius: 0 0 0 8px;">
+            </div>
 
             <div style="font-size: 36px; margin-bottom: 6px;">🏆</div>
-            <div style="font-size: 13px; font-weight: 700; color: #FBBF24; letter-spacing: 2px; margin-bottom: 4px;">CERTIFICATE OF COMPLETION</div>
+            <div style="font-size: 13px; font-weight: 700; color: #FBBF24; letter-spacing: 2px; margin-bottom: 4px;">
+              CERTIFICATE OF COMPLETION</div>
             <div style="font-size: 13px; color: #94A3B8; margin-bottom: 20px;">بڕوانامەی تەواوکردنی خول</div>
 
             <div style="font-size: 14px; color: #94A3B8; margin-bottom: 6px;">ئەمە پێدانراوە بە</div>
-            <input id="certNameInput" type="text" placeholder="ناوی بەشدارکەر لێرە بنووسە..." style="font-size: 26px; font-weight: 900; color: #F8FAFC; background: transparent; border: none; border-bottom: 2px dashed rgba(245,158,11,0.5); text-align: center; width: 100%; font-family: 'Vazirmatn', sans-serif; padding: 4px 0 8px; outline: none; margin-bottom: 14px;">
+            <input id="certNameInput" type="text" placeholder="ناوی بەشدارکەر لێرە بنووسە..."
+              style="font-size: 26px; font-weight: 900; color: #F8FAFC; background: transparent; border: none; border-bottom: 2px dashed rgba(245,158,11,0.5); text-align: center; width: 100%; font-family: 'Vazirmatn', sans-serif; padding: 4px 0 8px; outline: none; margin-bottom: 14px;">
 
             <div style="font-size: 14px; color: #CBD5E1; margin-bottom: 6px;">بۆ بەشداریکردن لە</div>
-            <div style="font-size: 18px; font-weight: 800; color: white; margin-bottom: 6px;">خولی بەکرداریی ژیری دەستکرد (AI Masterclass)</div>
-            <div style="font-size: 13px; color: #94A3B8; margin-bottom: 20px;">پێداراوی: ٢ هەفتە &bull; کاتژمێر: ٢٠ کاتژمێر</div>
+            <div style="font-size: 18px; font-weight: 800; color: white; margin-bottom: 6px;">خولی بەکرداریی ژیری
+              دەستکرد (AI Masterclass)</div>
+            <div style="font-size: 13px; color: #94A3B8; margin-bottom: 20px;">پێداراوی: ٢ هەفتە &bull; کاتژمێر: ٢٠
+              کاتژمێر</div>
 
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+            <div
+              style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
               <div style="text-align: center;">
                 <div style="font-size: 15px; font-weight: 800; color: #F8FAFC;">ئەندازیار عبدالرحمن اسماعیل</div>
                 <div style="font-size: 11px; color: #64748B; margin-top: 4px;">IT Manager &bull; AI Trainer</div>
@@ -1433,7 +1737,8 @@
           </div>
 
           <div style="margin-top: 16px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-            <button class="action-btn" onclick="window.print()" style="background: rgba(245,158,11,0.2); border-color: rgba(245,158,11,0.5); color: #FBBF24; padding: 10px 22px; font-size: 14px;">
+            <button class="action-btn" onclick="window.print()"
+              style="background: rgba(245,158,11,0.2); border-color: rgba(245,158,11,0.5); color: #FBBF24; padding: 10px 22px; font-size: 14px;">
               <span>🖨️ چاپ / Save as PDF</span>
             </button>
           </div>
@@ -1441,21 +1746,29 @@
       </section>
 
       <!-- Slide: Open Q&A Session -->
-      <section class="slide" id="slide-open-qa" data-notes="کاتی پرسیار و وەڵامی کراوە لەگەڵ ئامادەبووان و بەڕێوەبردنی گفتوگۆکان.">
+      <section class="slide" id="slide-open-qa"
+        data-notes="کاتی پرسیار و وەڵامی کراوە لەگەڵ ئامادەبووان و بەڕێوەبردنی گفتوگۆکان.">
         <div class="slide-content-wrapper" style="text-align: center;">
           <div class="slide-header">
-            <span class="slide-category" style="background: rgba(6, 182, 212, 0.2); color: #67E8F9; border-color: rgba(6, 182, 212, 0.4);">گفتوگۆی کراوە</span>
+            <span class="slide-category"
+              style="background: rgba(6, 182, 212, 0.2); color: #67E8F9; border-color: rgba(6, 182, 212, 0.4);">گفتوگۆی
+              کراوە</span>
             <h2 class="slide-title">❓ کاتی پرسیار و وەڵام (Open Q&A Session)</h2>
           </div>
 
           <div class="glass-card card-accent-cyan" style="max-width: 800px; margin: 0 auto; padding: 40px;">
-            <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(6, 182, 212, 0.15); border: 2px solid #06B6D4; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #06B6D4;">
-              <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
+            <div
+              style="width: 70px; height: 70px; border-radius: 50%; background: rgba(6, 182, 212, 0.15); border: 2px solid #06B6D4; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #06B6D4;">
+              <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+              </svg>
             </div>
 
-            <h3 style="font-size: 26px; color: var(--text-white); margin-bottom: 16px;">گفتوگۆی کراوە بۆ بەشداربووانی بەڕێز</h3>
+            <h3 style="font-size: 26px; color: var(--text-white); margin-bottom: 16px;">گفتوگۆی کراوە بۆ بەشداربووانی
+              بەڕێز</h3>
             <p style="font-size: 16px; color: var(--text-light); line-height: 1.8; margin-bottom: 28px;">
-              « خۆشحالین بە وەڵامدانەوەی سەرجەم پرسیارەکانتان دەربارەی ژیری دەستکرد، ئامرازەکان، پرۆمپتەکان، و ئایندەی پیشەکان »
+              « خۆشحالین بە وەڵامدانەوەی سەرجەم پرسیارەکانتان دەربارەی ژیری دەستکرد، ئامرازەکان، پرۆمپتەکان، و ئایندەی
+              پیشەکان »
             </p>
 
             <div class="grid-12">
@@ -1473,7 +1786,8 @@
       </section>
 
       <!-- Slide 15: Event Details, Date, Time & Location -->
-      <section class="slide" id="slide-15" data-notes="زانیارییە تەکنیكی و جوگرافییەکانی سیمینارەکە: بەروار 1/8/2026 کاتژمێر 6ی ئێوارە لە پەیمانگای داهاتووی ڕۆشن.">
+      <section class="slide" id="slide-15"
+        data-notes="زانیارییە تەکنیكی و جوگرافییەکانی سیمینارەکە: بەروار 1/8/2026 کاتژمێر 6ی ئێوارە لە پەیمانگای داهاتووی ڕۆشن.">
         <div class="slide-content-wrapper">
           <div class="slide-header">
             <span class="slide-category">زانیاری سیمینار</span>
@@ -1484,7 +1798,12 @@
             <div class="glass-card card-accent-blue" style="grid-column: span 4;">
               <div class="event-info-box">
                 <div class="event-info-icon">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
                 </div>
                 <div class="event-info-text">
                   <h4>ڕۆژ و بەروار</h4>
@@ -1495,8 +1814,12 @@
 
             <div class="glass-card card-accent-purple" style="grid-column: span 4;">
               <div class="event-info-box">
-                <div class="event-info-icon" style="background: rgba(124, 58, 237, 0.15); color: #8B5CF6; border-color: rgba(124, 58, 237, 0.3);">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 16 14"></polyline></svg>
+                <div class="event-info-icon"
+                  style="background: rgba(124, 58, 237, 0.15); color: #8B5CF6; border-color: rgba(124, 58, 237, 0.3);">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 16 14"></polyline>
+                  </svg>
                 </div>
                 <div class="event-info-text">
                   <h4>کاتی دەستپێکردن</h4>
@@ -1507,8 +1830,13 @@
 
             <div class="glass-card card-accent-cyan" style="grid-column: span 4;">
               <div class="event-info-box">
-                <div class="event-info-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981; border-color: rgba(16, 185, 129, 0.3);">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+                <div class="event-info-icon"
+                  style="background: rgba(16, 185, 129, 0.15); color: #10B981; border-color: rgba(16, 185, 129, 0.3);">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z">
+                    </path>
+                  </svg>
                 </div>
                 <div class="event-info-text">
                   <h4>پەیوەندی</h4>
@@ -1520,7 +1848,8 @@
             <div class="glass-card card-accent-purple" style="grid-column: span 12; padding: 28px;">
               <h3 class="card-title" style="margin-bottom: 12px;">📍 ناونیشان</h3>
               <p style="font-size: 16px; color: var(--text-white); line-height: 1.7;">
-                <strong>١. پەیمانگای داهاتووی ڕۆشن</strong> — شاری کامەرانی — منارە نزیک لەنگەی نوێ — تەنیشت قوتابخانەی هەولێر.<br>
+                <strong>١. پەیمانگای داهاتووی ڕۆشن</strong> — شاری کامەرانی — منارە نزیک لەنگەی نوێ — تەنیشت قوتابخانەی
+                هەولێر.<br>
                 <strong>٢. سەر 120 مەتری</strong> — بەرامبەر بەنزینخانەی باکوور.
               </p>
             </div>
@@ -1542,18 +1871,28 @@
             </p>
 
             <div class="social-links-container">
-              <a href="https://t.me/feature_technology" target="_blank" class="social-btn" style="border-color: #8B5CF6; color: #C084FC;">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.462-.169.584-.385.78-.593.798-.452.042-.796-.299-1.234-.586-.687-.45-1.076-.73-1.742-1.168-.77-.507-.271-.785.168-1.24.115-.119 2.111-1.936 2.15-2.101.005-.021.01-.099-.037-.14-.047-.041-.117-.027-.168-.016-.072.016-1.22.776-3.444 2.278-.326.224-.621.334-.886.328-.492-.011-1.439-.278-2.143-.507-.864-.282-1.551-.432-1.491-.912.031-.25.385-.506 1.062-.767 4.159-1.811 6.934-3.007 8.326-3.587 3.956-1.646 4.777-1.932 5.313-1.942.118-.002.382.028.553.167.144.118.184.277.203.394.019.117.043.383.024.591z"/></svg>
+              <a href="https://t.me/feature_technology" target="_blank" class="social-btn"
+                style="border-color: #8B5CF6; color: #C084FC;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.562 8.161c-.18.717-.962 4.084-1.362 5.462-.169.584-.385.78-.593.798-.452.042-.796-.299-1.234-.586-.687-.45-1.076-.73-1.742-1.168-.77-.507-.271-.785.168-1.24.115-.119 2.111-1.936 2.15-2.101.005-.021.01-.099-.037-.14-.047-.041-.117-.027-.168-.016-.072.016-1.22.776-3.444 2.278-.326.224-.621.334-.886.328-.492-.011-1.439-.278-2.143-.507-.864-.282-1.551-.432-1.491-.912.031-.25.385-.506 1.062-.767 4.159-1.811 6.934-3.007 8.326-3.587 3.956-1.646 4.777-1.932 5.313-1.942.118-.002.382.028.553.167.144.118.184.277.203.394.019.117.043.383.024.591z" />
+                </svg>
                 <span>گرووپی تێلیگرام: داهاتووی تەکنەلۆجیا</span>
               </a>
 
               <a href="tel:07504342452" class="social-btn">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z">
+                  </path>
+                </svg>
                 <span>پەیوەندی: 07504342452</span>
               </a>
 
               <a href="../index.html" class="social-btn">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                </svg>
                 <span>گەڕانەوە بۆ پۆرتفۆلیۆ</span>
               </a>
             </div>
@@ -1568,19 +1907,24 @@
       <div class="footer-progress-bar" id="progressBar" style="width: 6.25%;"></div>
       <div style="display: flex; align-items: center; gap: 8px;">
         <button class="btn-icon" id="prevSlideBtn" title="سلایدی پێشوو (Left Arrow / PageUp)">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 5l7 7-7 7"></path>
+          </svg>
           <span>پێشوو</span>
         </button>
       </div>
       <div style="text-align: center;">
-        <span>ژیری دەستکرد AI</span> &bull; 
+        <span>ژیری دەستکرد AI</span> &bull;
         <span id="currentSectionName" style="color: var(--cyan-accent);">پێشەکی</span> &bull;
-        <span>سلاید <strong id="currentSlideNum" style="color: white;">1</strong> لە <strong id="totalSlidesNum">28</strong></span>
+        <span>سلاید <strong id="currentSlideNum" style="color: white;">1</strong> لە <strong
+            id="totalSlidesNum">28</strong></span>
       </div>
       <div style="display: flex; align-items: center; gap: 8px;">
         <button class="btn-icon" id="nextSlideBtn" title="سلایدی داهاتوو (Right Arrow / Space / PageDown)">
           <span>داهاتوو</span>
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M15 19l-7-7 7-7"></path>
+          </svg>
         </button>
       </div>
     </footer>
@@ -1612,12 +1956,14 @@
   <div class="prompt-modal" id="promptModal">
     <div class="prompt-modal-content">
       <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی نموونەکانی پرۆمپت (لاواز، ناوەند، بەهێز)</h2>
+        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;">بانکی نموونەکانی پرۆمپت
+          (لاواز، ناوەند، بەهێز)</h2>
         <button class="close-modal-btn" id="closePromptModalBtn">&times;</button>
       </div>
       <div class="prompt-modal-body">
         <div class="prompt-tabs">
-          <button class="tab-btn active" data-tab="tab-slash-commands" onclick="switchTab('tab-slash-commands')">⚡ Slash Commands</button>
+          <button class="tab-btn active" data-tab="tab-slash-commands" onclick="switchTab('tab-slash-commands')">⚡ Slash
+            Commands</button>
           <button class="tab-btn" data-tab="tab-teachers" onclick="switchTab('tab-teachers')">👨‍🏫 مامۆستایان</button>
           <button class="tab-btn" data-tab="tab-students" onclick="switchTab('tab-students')">🎓 قوتابیان</button>
           <button class="tab-btn" data-tab="tab-business" onclick="switchTab('tab-business')">💼 خاوەنکاران</button>
@@ -1633,36 +1979,56 @@
               <div class="level-header">💻 01: Coding & Tech Commands</div>
               <div class="level-box">
                 «/security - پشکنینی پڕۆتۆکۆڵەکانی ئاسایش و دۆزینەوەی کەلەبەرەکان لەم کۆدەدا...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/security - پشکنینی پڕۆتۆکۆڵەکانی ئاسایش و دۆزینەوەی کەلەبەرەکان لەم کۆدەدا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/security - پشکنینی پڕۆتۆکۆڵەکانی ئاسایش و دۆزینەوەی کەلەبەرەکان لەم کۆدەدا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/debug - دۆزینەوەی سەرچاوەی هەڵە و چاککردنی کۆدەکە...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/debug - دۆزینەوەی سەرچاوەی هەڵە و چاککردنی کۆدەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/debug - دۆزینەوەی سەرچاوەی هەڵە و چاککردنی کۆدەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/redactor - نادیارکردن و سڕینەوەی زانیاری تایبەت و ئیمەیڵ لە تێکستدا...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/redactor - نادیارکردن و سڕینەوەی زانیاری تایبەت و ئیمەیڵ لە تێکستدا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/redactor - نادیارکردن و سڕینەوەی زانیاری تایبەت و ئیمەیڵ لە تێکستدا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/optimizecode - زیادکردنی خێرایی و بەرزکردنەوەی کوالێتی کۆدەکە...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/optimizecode - زیادکردنی خێرایی و بەرزکردنەوەی کوالێتی کۆدەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/optimizecode - زیادکردنی خێرایی و بەرزکردنەوەی کوالێتی کۆدەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/api - داڕشتنی دۆکیومێنتار و فۆرماتی API Endpoints...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/api - داڕشتنی دۆکیومێنتار و فۆرماتی API Endpoints.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/api - داڕشتنی دۆکیومێنتار و فۆرماتی API Endpoints.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -1674,36 +2040,56 @@
               <div class="level-header">💼 02: Career & Job Help Commands</div>
               <div class="level-box">
                 «/resume - داڕشتنی CV پێشکەوتوو بە زمانی ئینگلیزی بەپێی ستانداردەکانی ATS...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/resume - داڕشتنی CV پێشکەوتوو بە زمانی ئینگلیزی بەپێی ستانداردەکانی ATS.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/resume - داڕشتنی CV پێشکەوتوو بە زمانی ئینگلیزی بەپێی ستانداردەکانی ATS.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/interview - ئەنجامدانی تاقیکردنەوەی چاوپێکەوتنی کار لەگەڵمدا و پێدانی فیدباک...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/interview - ئەنجامدانی تاقیکردنەوەی چاوپێکەوتنی کار لەگەڵمدا و پێدانی فیدباک.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/interview - ئەنجامدانی تاقیکردنەوەی چاوپێکەوتنی کار لەگەڵمدا و پێدانی فیدباک.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/hr - ئامادەکردنی پرسیارەکانی بەشی HR و داڕشتنی وەڵامی دروست...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/hr - ئامادەکردنی پرسیارەکانی بەشی HR و داڕشتنی وەڵامی دروست.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/hr - ئامادەکردنی پرسیارەکانی بەشی HR و داڕشتنی وەڵامی دروست.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/jobsearch - دۆزینەوەی دەرفەتی کاری گونجاو لەگەڵ سیڤی و بەراوردکاری خاڵە بەهێزەکان...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/jobsearch - دۆزینەوەی دەرفەتی کاری گونجاو لەگەڵ سیڤی و بەراوردکاری خاڵە بەهێزەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/jobsearch - دۆزینەوەی دەرفەتی کاری گونجاو لەگەڵ سیڤی و بەراوردکاری خاڵە بەهێزەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/skills - شیکردنەوەی ئاستی کارامەییەکان و داڕشتنی پلانی ٦ مانگی بۆ پەرەپێدانیان...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/skills - شیکردنەوەی ئاستی کارامەییەکان و داڕشتنی پلانی ٦ مانگی بۆ پەرەپێدانیان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/skills - شیکردنەوەی ئاستی کارامەییەکان و داڕشتنی پلانی ٦ مانگی بۆ پەرەپێدانیان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -1715,29 +2101,45 @@
               <div class="level-header">✍️ 03: Content Creation Commands</div>
               <div class="level-box">
                 «/linkedin - نووسینی پۆستی فەرمی و پیشەیی بۆ لینکدین بە فۆرماتێکی سەرنجڕاکێش...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/linkedin - نووسینی پۆستی فەرمی و پیشەیی بۆ لینکدین بە فۆرماتێکی سەرنجڕاکێش.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/linkedin - نووسینی پۆستی فەرمی و پیشەیی بۆ لینکدین بە فۆرماتێکی سەرنجڕاکێش.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/script - داڕشتنی سکرێپتی ڤیدیۆی کورت (Reels / TikTok) بە Hookی بەهێز لە سەرەتادا...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/script - داڕشتنی سکرێپتی ڤیدیۆی کورت (Reels / TikTok) بە Hookی بەهێز لە سەرەتادا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/script - داڕشتنی سکرێپتی ڤیدیۆی کورت (Reels / TikTok) بە Hookی بەهێز لە سەرەتادا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/captions - دروستکردنی کەپشنی سەرنجڕاکێش بە ئێمۆجی و هاشتاگی گونجاو...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/captions - دروستکردنی کەپشنی سەرنجڕاکێش بە ئێمۆجی و هاشتاگی گونجاو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/captions - دروستکردنی کەپشنی سەرنجڕاکێش بە ئێمۆجی و هاشتاگی گونجاو.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/authority - نووسینی گوتارێکی پسپۆڕانە بۆ دروستکردنی براندی کەسی لە سۆشیال میدیا...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/authority - نووسینی گوتارێکی پسپۆڕانە بۆ دروستکردنی براندی کەسی لە سۆشیال میدیا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/authority - نووسینی گوتارێکی پسپۆڕانە بۆ دروستکردنی براندی کەسی لە سۆشیال میدیا.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -1749,29 +2151,45 @@
               <div class="level-header">⏰ 04: Productivity & Planning Commands</div>
               <div class="level-box">
                 «/plan - داڕشتنی پلانی کار و ئامانجەکانی پرۆژەکەم بە هەنگاوی کردەیی...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/plan - داڕشتنی پلانی کار و ئامانجەکانی پرۆژەکەم بە هەنگاوی کردەیی.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/plan - داڕشتنی پلانی کار و ئامانجەکانی پرۆژەکەم بە هەنگاوی کردەیی.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/weekly - داڕشتنی خشتەی کاری هەفتانە و دابەشکردنی ئەرکەکان...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/weekly - داڕشتنی خشتەی کاری هەفتانە و دابەشکردنی ئەرکەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/weekly - داڕشتنی خشتەی کاری هەفتانە و دابەشکردنی ئەرکەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/automate - دیاریکردنی پرۆسەی کارکردن و دروستکردنی فەرمانی ئۆتۆماتیکردنی AI...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/automate - دیاریکردنی پرۆسەی کارکردن و دروستکردنی فەرمانی ئۆتۆماتیکردنی AI.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/automate - دیاریکردنی پرۆسەی کارکردن و دروستکردنی فەرمانی ئۆتۆماتیکردنی AI.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/timeblock - دابەشکردنی کاتژمێرەکانی ڕۆژ بۆ زیادکردنی بەرهەمداری...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/timeblock - دابەشکردنی کاتژمێرەکانی ڕۆژ بۆ زیادکردنی بەرهەمداری.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/timeblock - دابەشکردنی کاتژمێرەکانی ڕۆژ بۆ زیادکردنی بەرهەمداری.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
@@ -1783,154 +2201,218 @@
               <div class="level-header">📚 05: Learning & Education Commands</div>
               <div class="level-box">
                 «/learn - فێرکردنی چەمکێکی ئاڵۆز لە سەرەتاوە بە زمانێکی سادە...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/learn - فێرکردنی چەمکێکی ئاڵۆز لە سەرەتاوە بە زمانێکی سادە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/learn - فێرکردنی چەمکێکی ئاڵۆز لە سەرەتاوە بە زمانێکی سادە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/summary - کورتکردنەوەی بەڵگەنامە و توێژینەوەی درێژ بۆ خاڵە سەرەکییەکان...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/summary - کورتکردنەوەی بەڵگەنامە و توێژینەوەی درێژ بۆ خاڵە سەرەکییەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/summary - کورتکردنەوەی بەڵگەنامە و توێژینەوەی درێژ بۆ خاڵە سەرەکییەکان.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/notes - دەرهێنانی تێبینییە گرنگەکانی کۆبوونەوە و وانەکان بە خاڵ...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/notes - دەرهێنانی تێبینییە گرنگەکانی کۆبوونەوە و وانەکان بە خاڵ.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/notes - دەرهێنانی تێبینییە گرنگەکانی کۆبوونەوە و وانەکان بە خاڵ.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/resources - دۆزینەوەی باشترین کتێب، توێژینەوە و سەرچاوەی فێربوون...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/resources - دۆزینەوەی باشترین کتێب، توێژینەوە و سەرچاوەی فێربوون.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/resources - دۆزینەوەی باشترین کتێب، توێژینەوە و سەرچاوەی فێربوون.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/quiz - دروستکردنی تاقیکردنەوەی ۱۰ پرسیاری بە وەڵامی ڕاستەوە بۆ هەڵسەنگاندن...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/quiz - دروستکردنی تاقیکردنەوەی ۱۰ پرسیاری بە وەڵامی ڕاستەوە بۆ هەڵسەنگاندن.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/quiz - دروستکردنی تاقیکردنەوەی ۱۰ پرسیاری بە وەڵامی ڕاستەوە بۆ هەڵسەنگاندن.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/mistakes - دەستنیشانکردنی هەڵە باوەکانی ئەم بوارە و ڕێگاکانی خۆپاراستن...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/mistakes - دەستنیشانکردنی هەڵە باوەکانی ئەم بوارە و ڕێگاکانی خۆپاراستن.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/mistakes - دەستنیشانکردنی هەڵە باوەکانی ئەم بوارە و ڕێگاکانی خۆپاراستن.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
               <div class="level-box">
                 «/examples - پێدانی ٥ نموونەی ڕاستەقینەی عەمەلی بۆ تێگەیشتنی زیاتر...»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('/examples - پێدانی ٥ نموونەی ڕاستەقینەی عەمەلی بۆ تێگەیشتنی زیاتر.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="copy-prompt-btn"
+                  onclick="navigator.clipboard.writeText('/examples - پێدانی ٥ نموونەی ڕاستەقینەی عەمەلی بۆ تێگەیشتنی زیاتر.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                   <span>کۆپی</span>
                 </button>
               </div>
-              <div class="level-desc">فەرمانەکانی /learn, /summary, /notes, /resources, /quiz, /mistakes, /examples</div>
+              <div class="level-desc">فەرمانەکانی /learn, /summary, /notes, /resources, /quiz, /mistakes, /examples
+              </div>
             </div>
 
           </div>
         </div>
-          <div class="prompt-comparison">
-            <div class="comparison-level weak-lvl">
-              <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
-              <div class="level-box">
-                «پلانی وانەیەکم بۆ بنووسە.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('پلانی وانەیەکم بۆ بنووسە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>کۆپی</span>
-                </button>
-              </div>
-              <div class="level-desc">کێشە: دیار نییە بۆ چ بابەتێک، چ تەمەنێک و بە چ فۆرماتێکە.</div>
+        <div class="prompt-comparison">
+          <div class="comparison-level weak-lvl">
+            <div class="level-header">🔴 پرۆمپتی لاواز (Weak Prompt)</div>
+            <div class="level-box">
+              «پلانی وانەیەکم بۆ بنووسە.»
+              <button class="copy-prompt-btn"
+                onclick="navigator.clipboard.writeText('پلانی وانەیەکم بۆ بنووسە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>کۆپی</span>
+              </button>
             </div>
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی بەهێز (Strong Prompt)</div>
-              <div class="level-box">
-                «تۆ مامۆستای زیندەوەرزانیت. پلانی ٤٥ خولەکی وانەی سووڕی خوێن بنووسە بۆ پۆلی ١٢ بە زمانی کوردی، بە ڕاهێنانی پراکتیکی، پرسیاری تاقیکردنەوە و کورتەی وانەکە.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ مامۆستای زیندەوەرزانیت. پلانی ٤٥ خولەکی وانەی سووڕی خوێن بنووسە بۆ پۆلی ١٢ بە زمانی کوردی، بە ڕاهێنانی پراکتیکی، پرسیاری تاقیکردنەوە و کورتەی وانەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>کۆپی</span>
-                </button>
-              </div>
-              <div class="level-desc">خاڵی بەهێز: پسپۆڕی دیاریکراوە، کات و بەشی پۆل و فۆرماتەکە ڕوونە.</div>
+            <div class="level-desc">کێشە: دیار نییە بۆ چ بابەتێک، چ تەمەنێک و بە چ فۆرماتێکە.</div>
+          </div>
+          <div class="comparison-level strong-lvl">
+            <div class="level-header">🟢 پرۆمپتی بەهێز (Strong Prompt)</div>
+            <div class="level-box">
+              «تۆ مامۆستای زیندەوەرزانیت. پلانی ٤٥ خولەکی وانەی سووڕی خوێن بنووسە بۆ پۆلی ١٢ بە زمانی کوردی، بە ڕاهێنانی
+              پراکتیکی، پرسیاری تاقیکردنەوە و کورتەی وانەکە.»
+              <button class="copy-prompt-btn"
+                onclick="navigator.clipboard.writeText('تۆ مامۆستای زیندەوەرزانیت. پلانی ٤٥ خولەکی وانەی سووڕی خوێن بنووسە بۆ پۆلی ١٢ بە زمانی کوردی، بە ڕاهێنانی پراکتیکی، پرسیاری تاقیکردنەوە و کورتەی وانەکە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>کۆپی</span>
+              </button>
+            </div>
+            <div class="level-desc">خاڵی بەهێز: پسپۆڕی دیاریکراوە، کات و بەشی پۆل و فۆرماتەکە ڕوونە.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: STUDENTS -->
+      <div class="tab-content" id="tab-students">
+        <div class="prompt-comparison">
+          <div class="comparison-level strong-lvl">
+            <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خوێندکاران</div>
+            <div class="level-box">
+              «تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە
+              زمانی کوردی سادە ڕوون بکەوە.»
+              <button class="copy-prompt-btn"
+                onclick="navigator.clipboard.writeText('تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>کۆپی</span>
+              </button>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- TAB 2: STUDENTS -->
-        <div class="tab-content" id="tab-students">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خوێندکاران</div>
-              <div class="level-box">
-                «تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ مامۆستای زانکۆیت. ئەم توێژینەوەیەی بەردەستت بۆ کورت بکەوە بۆ ٣ خاڵی سەرەکی، و ٥ زاراوەی تەکنیكیی بە زمانی کوردی سادە ڕوون بکەوە.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>کۆپی</span>
-                </button>
-              </div>
+      <!-- TAB 3: BUSINESS -->
+      <div class="tab-content" id="tab-business">
+        <div class="prompt-comparison">
+          <div class="comparison-level strong-lvl">
+            <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خاوەنکاران</div>
+            <div class="level-box">
+              «تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە
+              زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).»
+              <button class="copy-prompt-btn"
+                onclick="navigator.clipboard.writeText('تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>کۆپی</span>
+              </button>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- TAB 3: BUSINESS -->
-        <div class="tab-content" id="tab-business">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی بەهێز بۆ خاوەنکاران</div>
-              <div class="level-box">
-                «تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم، بە زمانی کوردی سۆرانی، بەکار‌هێنانی ئێمۆجی و دەستنیشانکردنی ڕێنمایی کڕین (CTA).'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>کۆپی</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 4: CODING -->
-        <div class="tab-content" id="tab-coding">
-          <div class="prompt-comparison">
-            <div class="comparison-level strong-lvl">
-              <div class="level-header">🟢 پرۆمپتی بەهێز بۆ کۆد و IT</div>
-              <div class="level-box">
-                «تۆ گەشەپێدەری فۆڵ ستایت. فەنکشنێکی JavaScript بنووسە بۆ فلتەرکردنی لۆگەکانی سیستەم بەپێی بەروار، بە تێبینی کۆد و هەڵسەنگاندنی ئاسایش.»
-                <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText('تۆ گەشەپێدەری فۆڵ ستایت. فەنکشنێکی JavaScript بنووسە بۆ فلتەرکردنی لۆگەکانی سیستەم بەپێی بەروار، بە تێبینی کۆد و هەڵسەنگاندنی ئاسایش.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>کۆپی</span>
-                </button>
-              </div>
+      <!-- TAB 4: CODING -->
+      <div class="tab-content" id="tab-coding">
+        <div class="prompt-comparison">
+          <div class="comparison-level strong-lvl">
+            <div class="level-header">🟢 پرۆمپتی بەهێز بۆ کۆد و IT</div>
+            <div class="level-box">
+              «تۆ گەشەپێدەری فۆڵ ستایت. فەنکشنێکی JavaScript بنووسە بۆ فلتەرکردنی لۆگەکانی سیستەم بەپێی بەروار، بە
+              تێبینی کۆد و هەڵسەنگاندنی ئاسایش.»
+              <button class="copy-prompt-btn"
+                onclick="navigator.clipboard.writeText('تۆ گەشەپێدەری فۆڵ ستایت. فەنکشنێکی JavaScript بنووسە بۆ فلتەرکردنی لۆگەکانی سیستەم بەپێی بەروار، بە تێبینی کۆد و هەڵسەنگاندنی ئاسایش.'); this.classList.add('copied'); setTimeout(()=>this.classList.remove('copied'), 2000);">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>کۆپی</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
   <!-- DYNAMIC DEMO MODAL -->
   <div class="prompt-modal" id="demoPromptModal">
     <div class="prompt-modal-content">
       <div class="prompt-modal-header">
-        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;" id="demoModalTitle">پرۆمپتی دێمۆی ڕاستەوخۆ</h2>
+        <h2 style="font-size: 20px; color: var(--text-white); margin: 0; font-weight: 700;" id="demoModalTitle">پرۆمپتی
+          دێمۆی ڕاستەوخۆ</h2>
         <button class="close-modal-btn" id="closeDemoPromptModalBtn">&times;</button>
       </div>
       <div class="prompt-modal-body">
         <div class="prompt-comparison" style="margin-top: 0;">
-          <div class="comparison-level strong-lvl" style="border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0;">
-            <div class="level-header" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);">🟢 پرۆمپتی پێشنیارکراو بۆ دێمۆ</div>
-            <div class="level-box" id="demoModalPrompt" style="user-select: all; cursor: pointer; background: rgba(0, 0, 0, 0.3); font-family: monospace; font-size: 15px; direction: ltr; text-align: left; padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 12px;" title="کلیک بکە بۆ کۆپیکردن">...</div>
+          <div class="comparison-level strong-lvl"
+            style="border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0;">
+            <div class="level-header" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);">🟢 پرۆمپتی
+              پێشنیارکراو بۆ دێمۆ</div>
+            <div class="level-box" id="demoModalPrompt"
+              style="user-select: all; cursor: pointer; background: rgba(0, 0, 0, 0.3); font-family: monospace; font-size: 15px; direction: ltr; text-align: left; padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 12px;"
+              title="کلیک بکە بۆ کۆپیکردن">...</div>
             <div style="display: flex; justify-content: flex-end; margin-bottom: 12px; margin-top: -4px;">
-              <button class="action-btn" id="copyDemoPromptBtn" style="padding: 6px 14px; font-size: 12px; height: 32px;">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="action-btn" id="copyDemoPromptBtn"
+                style="padding: 6px 14px; font-size: 12px; height: 32px;">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
                 <span>کۆپیکردنی پرۆمپتەکە</span>
               </button>
             </div>
-            <div class="level-desc" id="demoModalDesc" style="font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); text-align: right; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">...</div>
+            <div class="level-desc" id="demoModalDesc"
+              style="font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); text-align: right; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
+              ...</div>
           </div>
         </div>
       </div>
@@ -1942,10 +2424,10 @@
     function switchTab(tabId) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-      
+
       const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
       if (activeBtn) activeBtn.classList.add('active');
-      
+
       const targetTab = document.getElementById(tabId);
       if (targetTab) targetTab.classList.add('active');
     }
@@ -2008,21 +2490,33 @@
   <!-- Live Prompt Tester Modal -->
   <div class="prompt-modal-overlay" id="promptTesterModal">
     <div class="prompt-modal-box">
-      <button class="prompt-modal-close" onclick="document.getElementById('promptTesterModal').classList.remove('open')">✕</button>
+      <button class="prompt-modal-close"
+        onclick="document.getElementById('promptTesterModal').classList.remove('open')">✕</button>
       <div class="prompt-modal-title">⚡ تاقیکەرەوەی پرۆمپتی زیندوو (Live Prompt Tester)</div>
-      <p style="color: #94A3B8; font-size: 13px; margin-bottom: 16px; direction: rtl;">پرۆمپتەکەت بنووسە و دوگمەکە بکە — وەڵامی AI بە شێوازی تایپکراوی ئۆتۆماتیک دەردەکەوێت!</p>
+      <p style="color: #94A3B8; font-size: 13px; margin-bottom: 16px; direction: rtl;">پرۆمپتەکەت بنووسە و دوگمەکە بکە —
+        وەڵامی AI بە شێوازی تایپکراوی ئۆتۆماتیک دەردەکەوێت!</p>
 
-      <select id="promptScenario" style="width: 100%; background: #1E293B; color: #F8FAFC; border: 1px solid rgba(6,182,212,0.3); border-radius: 10px; padding: 10px 14px; font-family: 'Vazirmatn', sans-serif; font-size: 14px; margin-bottom: 12px; direction: rtl; outline: none;">
+      <select id="promptScenario"
+        style="width: 100%; background: #1E293B; color: #F8FAFC; border: 1px solid rgba(6,182,212,0.3); border-radius: 10px; padding: 10px 14px; font-family: 'Vazirmatn', sans-serif; font-size: 14px; margin-bottom: 12px; direction: rtl; outline: none;">
         <option value="">📝 یان لە ئەم پرۆمپتانە هەڵبژێرە (نموونەکان)...</option>
-        <option value="تۆ مامۆستایەکی زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بنەماکانی ژیری دەستکرد بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی.">🎓 مامۆستا: دروستکردنی پرسیاری تاقیکردنەوە</option>
-        <option value="تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم بە کوردی سۆرانی بە ئێمۆجی و CTA.">💼 کۆمپانیا: پۆستی مارکێتینگ</option>
-        <option value="پرۆمپتی جوانی بنووسە بۆ Suno AI: گۆرانیەکی کوردی خۆشی دروست بکە دەربارەی شارەکانی کوردستان.">🎵 Suno: دروستکردنی گۆرانی کوردی</option>
-        <option value="تۆ مشاورەی پیشەییت. ٣ رێنمایی پراکتیکی بدە بۆ کەسێک کە دەیەوێت پیشەی تەکنەلۆجیادا دەست پێبکات بە کوردی سۆرانی.">🚀 پیشە: رێنمایی دەست پێکردن</option>
+        <option
+          value="تۆ مامۆستایەکی زیندەوەرزانیت. ٥ پرسیاری هەڵبژاردن (MCQ) دروستبکە لەسەر بنەماکانی ژیری دەستکرد بۆ خوێندکارانی زانکۆ بە کوردی سۆرانی.">
+          🎓 مامۆستا: دروستکردنی پرسیاری تاقیکردنەوە</option>
+        <option
+          value="تۆ پسپۆڕی مارکێتینگیت. پۆستێکی فەیسبووکی فەرمی بنووسە بۆ ڕاگەیاندنی خزمەتگوزاریی نوێی کۆمپانیاکەم بە کوردی سۆرانی بە ئێمۆجی و CTA.">
+          💼 کۆمپانیا: پۆستی مارکێتینگ</option>
+        <option value="پرۆمپتی جوانی بنووسە بۆ Suno AI: گۆرانیەکی کوردی خۆشی دروست بکە دەربارەی شارەکانی کوردستان.">🎵
+          Suno: دروستکردنی گۆرانی کوردی</option>
+        <option
+          value="تۆ مشاورەی پیشەییت. ٣ رێنمایی پراکتیکی بدە بۆ کەسێک کە دەیەوێت پیشەی تەکنەلۆجیادا دەست پێبکات بە کوردی سۆرانی.">
+          🚀 پیشە: رێنمایی دەست پێکردن</option>
       </select>
 
-      <textarea class="prompt-modal-textarea" id="promptTesterInput" placeholder="پرۆمپتەکەت لێرە بنووسە... یان لەلایەی سەرەوە هەڵبژێرە"></textarea>
+      <textarea class="prompt-modal-textarea" id="promptTesterInput"
+        placeholder="پرۆمپتەکەت لێرە بنووسە... یان لەلایەی سەرەوە هەڵبژێرە"></textarea>
 
-      <button class="action-btn" id="runPromptBtn" onclick="runPromptSimulation()" style="width: 100%; justify-content: center; font-size: 15px; padding: 12px;">
+      <button class="action-btn" id="runPromptBtn" onclick="runPromptSimulation()"
+        style="width: 100%; justify-content: center; font-size: 15px; padding: 12px;">
         <span>🤖 شبیەسازی وەڵامی AI (Simulate Response)</span>
       </button>
 
@@ -2032,7 +2526,7 @@
 
   <script>
     // Populate textarea from scenario select
-    document.getElementById('promptScenario').addEventListener('change', function() {
+    document.getElementById('promptScenario').addEventListener('change', function () {
       if (this.value) document.getElementById('promptTesterInput').value = this.value;
     });
 
@@ -2080,7 +2574,7 @@
     }
 
     // Close modal on overlay click
-    document.getElementById('promptTesterModal').addEventListener('click', function(e) {
+    document.getElementById('promptTesterModal').addEventListener('click', function (e) {
       if (e.target === this) this.classList.remove('open');
     });
 
@@ -2112,7 +2606,7 @@
       });
     });
 
-    window.addEventListener('click', function(e) {
+    window.addEventListener('click', function (e) {
       if (!e.target.closest('.nav-dropdown')) {
         const dropdown = document.getElementById('navDropdownMenu');
         if (dropdown && dropdown.classList.contains('show')) {
@@ -2122,4 +2616,5 @@
     });
   </script>
 </body>
+
 </html>

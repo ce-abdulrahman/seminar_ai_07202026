@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خولی ژیری دەستکرد (AI) بۆ قوتابیانی پۆلی ١٢ | ئەندازیار عبدالرحمن اسماعیل</title>
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <style>
+    /* Emerald/Green-themed customizations for Grade 12 focus */
+    :root {
+      --accent-glow: rgba(16, 185, 129, 0.35);
+      --accent-color: #10B981;
+      --accent-gradient: linear-gradient(135deg, #34D399, #10B981, #059669);
+    }
+
+    .brand-badge .dot {
+      background: #10B981 !important;
+      box-shadow: 0 0 10px #10B981 !important;
+    }
+
+    .hero-quote-text {
+      background: linear-gradient(135deg, #FFFFFF, #10B981, #34D399) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    .btn-icon:hover,
+    .dropdown-item:hover {
+      color: #10B981 !important;
+      border-color: #10B981 !important;
+    }
+
+    .slide-accent-text {
+      color: #10B981;
+      font-weight: 700;
+    }
+
+    /* Info card styling */
+    .info-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .info-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: var(--radius-m);
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      border-color: #10B981;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+    }
+
+    .info-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="bg-ambient">
+    <div class="ambient-orb orb-1" style="background: rgba(16, 185, 129, 0.2);"></div>
+    <div class="ambient-orb orb-2" style="background: rgba(4, 120, 87, 0.15);"></div>
+    <div class="ambient-orb orb-3" style="background: rgba(6, 182, 212, 0.15);"></div>
+  </div>
+
+  <div class="presentation-container">
+    <!-- Header Bar -->
+    <header class="presenter-header">
+      <div class="brand-badge">
+        <span class="dot"></span>
+        <span>ژیری دەستکرد (AI) &bull; بۆ پۆلی ١٢</span>
+      </div>
+      <div class="header-center-quote" style="text-align: center;">
+        <span style="color: #10B981; font-size: 11px; display: block;">وتەی ئەندازیار عبدالرحمن</span>
+        <span style="font-weight: 800;">« پێت دروست دەکرێت؟!! »</span>
+      </div>
+      <div class="header-controls">
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" style="position: relative; display: inline-block;">
+          <button class="btn-icon" onclick="document.getElementById('navDropdownMenu').classList.toggle('show')"
+            title="لیستی بەشەکان و ئامرازەکان">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <span>مێنیوو ☰</span>
+          </button>
+          <div class="dropdown-menu-box" id="navDropdownMenu">
+            <a href="../index.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+              </svg>
+              <span>🏠 پۆرتفۆلیۆ و سەرەتا</span>
+            </a>
+            <a href="general.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                </path>
+              </svg>
+              <span>📘 سیمیناری یەکەم (گشتی)</span>
+            </a>
+            <a href="seminar2.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+              <span>💜 سیمیناری دووەم</span>
+            </a>
+            <a href="grade12_ai.html" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+              <span>🎓 خولی پۆلی ١٢ (سەوز)</span>
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+              <span>📖 کتێبی پرۆمپتەکان</span>
+            </a>
+            <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 4px 0;"></div>
+            <button class="dropdown-item dropdown-btn" id="toggleNotesBtn"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+              <span>📝 تێبینییەکانی پێشکەشکار</span>
+            </button>
+            <button class="dropdown-item dropdown-btn" id="toggleThumbnailsBtn"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>🎴 پێشبینینی سلایدەکان</span>
+            </button>
+            <button class="dropdown-item dropdown-btn" id="openPromptTesterBtn"
+              onclick="document.getElementById('promptTesterModal').classList.add('open')"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+              <span>⚡ تاقیکەرەوەی پرۆمپت</span>
+            </button>
+            <button class="dropdown-item dropdown-btn" id="printDeckBtn" onclick="window.print()"
+              style="background: none; border: none; width: 100%; text-align: right; cursor: pointer;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>🖨️ چاپکردنی پرێزێنتەیشن (PDF)</span>
+            </button>
+          </div>
+        </div>
+        <button class="btn-icon" id="toggleFullscreenBtn" title="پاشاندانی ته‌واوی شاشه‌ (Key: F)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"></path>
+          </svg>
+        </button>
+        <button class="btn-icon" id="toggleThemeBtn" title="گۆڕینی دۆخی ڕووناک/تاریک (Light/Dark Mode)"
+          onclick="toggleThemeMode()">
+          <span id="themeBtnIcon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Slide Viewport -->
+    <main class="slides-viewport" id="slidesViewport">
+
+      <!-- SLIDE 1: Title -->
+      <section class="slide active" id="slide-1"
+        data-notes="بەخێربێن بۆ خولی تایبەتی ژیری دەستکرد بۆ قوتابیانی پۆلی ١٢. لەم کۆرسەدا فێر دەبین چۆن AI بە شێوەیەکی زیرەک، کاریگەر و بەردەوام بەکاربهێنین بۆ سەرکەوتن لەم قۆناغەدا.">
+        <div class="slide-content-wrapper" style="text-align: center;">
+          <span class="slide-category">پۆلی ١٢ &bull; دەستپێک</span>
+          <h1 class="slide-title" style="font-size: 42px; line-height: 1.3;">خولی ژیری دەستکرد (AI)<br>بۆ قوتابیانی پۆلی
+            ١٢</h1>
+          <p style="font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 16px auto 32px;">
+            ئامانج: فێربوونی بەکارهێنانی AI بە شێوەیەکی دروست، بەرپرسانە و کاریگەر بۆ بەرزکردنەوەی ئاستی زانستی و
+            ڕێکخستنی کات.
+          </p>
+          <div
+            style="background: rgba(16, 185, 129, 0.1); border: 1px dashed #10B981; padding: 14px 28px; border-radius: 50px; display: inline-block; font-size: 16px; font-weight: 700; color: #10B981;">
+            رێنمایی و پێشکەشکردنی: ئەندازیار عبدالرحمن اسماعیل
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: AI چییە؟ -->
+      <section class="slide" id="slide-2"
+        data-notes="ژیری دەستکرد ئامرازێکی یارمەتیدەرە، بەڵام جێگرەوەی بیرکردنەوە و لێکدانەوەی خۆت نییە. پێویستە توانا و سنوورەکانی بە باشی بزانیت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">١. AI چییە؟ چی دەتوانێت بکات و چی ناتوانێت؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">🟢 تواناکانی AI</div>
+              <ul class="info-card-desc" style="padding-right: 18px; list-style-type: disc;">
+                <li>پوختەکردنی دەق و بابەتە درێژەکان لە چەند چرکەیەکدا.</li>
+                <li>ڕوونکردنەوەی هاوکێشە بیرکاری و فیزیکییە ئاڵۆزەکان بە چەندین شێوازی جیاواز.</li>
+                <li>داڕشتنی پلانی خوێندنی ڕۆژانە بەگوێرەی خشتەکەت.</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">🔴 سنوورەکانی AI</div>
+              <ul class="info-card-desc" style="padding-right: 18px; list-style-type: disc;">
+                <li>هەندێک جار زانیاریی ناڕاست بە متمانەوە دروست دەکات (Hallucination).</li>
+                <li>هیچ تێگەیشتنێکی ڕاستەقینە یان هەستی نییە.</li>
+                <li>ناتوانێت لەجیاتی تۆ بچێتە هۆڵی تاقیکردنەوە؛ دەبێت تۆ فێرببیت!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: چۆن پرۆمپت بنووسین؟ -->
+      <section class="slide" id="slide-3"
+        data-notes="فۆرمولەی زێڕین بۆ نووسینی پرۆمپت: دیاریکردنی ڕۆڵ + ئەرک + فۆرماتی وەڵامدانەوە. ئەمە زۆربەی وەڵامە هەڵەکان ناهێڵێت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٢. چۆن پرۆمپتی دروست بنووسین بۆ وەرگرتنی باشترین وەڵام?</h2>
+          <p style="font-size: 15px; margin-bottom: 20px;">
+            باشیی وەڵامەکەی وەردەگریت بەندە بە باشیی ئەو پرسیار یان پرۆمپتەی کە ئاڕاستەی دەکەیت.
+          </p>
+          <div class="info-card" style="border-right: 4px solid #10B981;">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 8px;">قالب و فۆرمولەی زێڕینی پرۆمپتی خوێندن:
+            </div>
+            <div
+              style="font-family: monospace; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; font-size: 14px; direction: ltr; text-align: left;">
+              "Act as an expert [Subject] teacher. Explain [Topic Name] to a 12th-grade student using simple analogies
+              and list 3 common exam questions with answers."
+            </div>
+            <div style="font-size: 13px; color: var(--text-muted); margin-top: 10px; line-height: 1.6;">
+              <strong>نموونە بە کوردی:</strong> «تۆ مامۆستایەکی لێهاتووی زیندەوەرزانیت. بە شێوەیەکی زۆر سادە و بە
+              بەکارهێنانی هاوشێوەکردنی ڕۆژانە شیکردنەوە بۆ سیستمە کارەباییەکەی دڵ بکە.»
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: پشتڕاستکردنەوەی وەڵامەکان -->
+      <section class="slide" id="slide-4"
+        data-notes="هەمیشە دەستەواژەی گرنگ یان بەڵگە لە وەڵامی AI بخوازە. بۆ بەڵگەی زانستی دەتوانیت بەرنامەی وەک Consensus یان Perplexity بەکاربهێنیت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٣. چۆن وەڵامی AI پشتڕاست بکەینەوە و سەرچاوە بدۆزینەوە؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">🔍 بەراوردکردن لەگەڵ سەرچاوەکان</div>
+              <p class="info-card-desc">
+                وەڵامەکانی AI لە بارەی هاوکێشەکان و زانیارییەکانی زیندەوەرزانی و کیمیا بەراورد بکە لەگەڵ پەڕتووکی فەرمی
+                قوتابخانە.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">📖 داواکردنی بەڵگە و دەستەواژە</div>
+              <p class="info-card-desc">
+                لە پرۆمپتەکەتدا بنووسە: «بەڵگە و لاپەڕەی پەڕتووکەکەم یان سەرچاوەی باوەڕپێکراو بنووسە بۆ ئەو وەڵامەی کە
+                دابینت کردووە.»
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: یادگەی AI -->
+      <section class="slide" id="slide-5"
+        data-notes="بەکارهێنانی تایبەتمەندی یادگە لە ChatGPT یارمەتی دەدات ڕێڕەوی خوێندنت بەردەوام بمێنێت بێ ئەوەی هەموو جار پێویست بکات لە سفرەوە دەست پێ بکەیت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٤. چۆن AI ئامانج، پڕۆژە و زانیارییەکانتی لەبیر بمێنێت؟</h2>
+          <p style="margin-bottom: 20px;">
+            دەتوانیت سوود لە تایبەتمەندی <strong>Memory (یادگە)</strong>ی مۆدێلەکانی ژیری دەستکرد وەربگریت بۆ دروستکردنی
+            فایلی کەسی خوێندکار:
+          </p>
+          <div class="info-card"
+            style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2);">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 8px;">پرۆمپت بۆ جێگیرکردنی یادگە:</div>
+            <p style="font-size: 14px; line-height: 1.7;">
+              «لە یادگەتدا پاشەکەوتی بکە کە من قوتابی پۆلی ١٢ی زانستیم لە کوردستان، خشتەی تاقیکردنەوەکانم بەم شێوەیەیە
+              [بنووسە...] و دەمەوێت هاوکارم بیت بۆ داڕشتنی باشترین شێوازی خوێندن بەگوێرەی خشتەکەم.»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Schedule بۆ بەردەوامبوون -->
+      <section class="slide" id="slide-6" data-notes="ڕێکخستنی خشتە و کات بە هاوکاری ژیری دەستکرد.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٥. چۆن لە Schedule بۆ بیرخستنەوە سوود وەربگرین؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">📅 خشتەسازی و پلان</div>
+              <p class="info-card-desc">
+                داوا لە AI بکە کە بۆ ماوەی یەک مانگ پلانێکی ڕۆژانەت بۆ دابنێت بە شێوەی کاتژمێری دیاریکراو و لەگەڵ فیدباک
+                و کاتی پشوو.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">⏰ بیرخستنەوەی کاتی خوێندن</div>
+              <p class="info-card-desc">
+                نووسینی خشتەی خوێندن لەسەر Google Calendar یان ئامرازی Schedule بۆ بیرخستنەوەی کاتە گرنگەکان.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: NotebookLM چییە؟ -->
+      <section class="slide" id="slide-7"
+        data-notes="NotebookLM بە یەکێک لە باشترین ئامرازەکانی کۆمپانیا گوگل دادەنرێت بۆ قوتابیان چونکە بە فەرمی تەنها لەسەر ئەو سەرچاوانە کار دەکات کە خۆت پێی دەدەیت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٦. NotebookLM چییە و لە کوێدا باشترین سوودی هەیە؟</h2>
+          <p style="font-size: 15px; margin-bottom: 25px;">
+            ئامرازێکی زیرەکی کۆمپانیای <strong>Google</strong>ـە کە ڕێگەت پێدەدات فایلی PDF، پەڕتووک، یان نۆتەکانی خۆت
+            داخڵ بکەیت و لەسەر بنەمای ئەوان وەڵام بداتەوە.
+          </p>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">💡 دروستکردنی پۆدکاستی دەنگی</div>
+              <p class="info-card-desc">
+                دەتوانێت تێکستی پەڕتووکەکەت بگۆڕێت بۆ دیالۆگ و قسەکردنی دوو کەسی پسپۆڕ بە زمانی ئینگلیزی بۆ فێربوونی
+                خێرا.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">🚫 نەهێشتنی زانیاری ناڕاست</div>
+              <p class="info-card-desc">
+                وەڵامەکانی تەنیا لەناو چوارچێوەی فایلی داخڵکراودا دەبن، ئەمەش ڕێگری دەکات لە دروستکردنی زانیاری هەڵە لە
+                دەرەوەی پەڕتووکەکە.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: ڕێکخستنی نۆتەکانمان -->
+      <section class="slide" id="slide-8"
+        data-notes="نۆتی ڕێکخراو و تێکستی ئامادەکراو کلیلی سوودوەرگرتنن لە مۆدێلەکانی AI بۆ تاقیکردنەوەکان.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ١ &bull; بنەماکانی AI</span>
+          <h2 class="slide-title">٧. چۆن نۆتەکانمان ڕێکبخەین کە AI باشتر یارمەتیمان بدات؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">🗂️ بەش بەش کردنی بابەتەکان</div>
+              <p class="info-card-desc">
+                سەرەتا وانەکان بە فۆرماتی کوردی سادە بنووسە یان وێنەیان بگرە و داوا بکە بەپێی بەندەکان و تەوەری سەرەکی
+                پۆلێن بکرێن.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">📝 بەکارهێنانی Markdown</div>
+              <p class="info-card-desc">
+                بەکارهێنانی سەر دێڕ و خاڵەکان (Bullets) وا دەکات AI خێراتر لە پەیوەندی نێوان بابەتە سەرەکی و لاوەکییەکان
+                تێبگات.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: AI لە خوێندنی ڕۆژانەدا -->
+      <section class="slide" id="slide-9"
+        data-notes="پێویستە وەک هاوکار و یارمەتیدەرێکی هەمیشەیی سەیری ژیری دەستکرد بکرێت لە کاتی خوێندنی بابەتە زانستییەکان.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">٨. چۆن AI یارمەتیمان بدات لە خوێندنی ڕۆژانە؟</h2>
+          <p style="margin-bottom: 20px;">
+            شێوازە کردارییەکان بۆ بەکارهێنانی ڕۆژانە:
+          </p>
+          <ul style="line-height: 1.9; padding-right: 20px; font-size: 15px;">
+            <li><strong>شیکردنەوەی خێرا:</strong> «ئەم بیرۆکەیەم بۆ ڕوون بکەرەوە وەک ئەوەی تەمەنم ١٢ ساڵ بێت.»</li>
+            <li><strong>دروستکردنی پرسیار:</strong> «لەسەر بنەمای ئەم بەشەی زیندەوەرزانی، ٥ پرسیاری وزاری دروست بکە.»
+            </li>
+            <li><strong>تەکنیکی فێربوون:</strong> یارمەتیدانت لە دۆزینەوەی خاڵە لاوازەکانت لە کیمیا و فیزیا بە
+              تاقیکردنەوەی خێرا.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: پوختەکردنی ڤیدیۆ و دەنگەکان -->
+      <section class="slide" id="slide-10"
+        data-notes="بەکارهێنانی ئامرازەکانی وەک YouTube Summary with ChatGPT دەتوانێت کاتێکی زۆرت بۆ بگەڕێنێتەوە.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">٩. چۆن ڤیدیۆ، وانە و دەنگەکان پوختە بکاتەوە؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">🎥 پوختەکردنی یوتیوب</div>
+              <p class="info-card-desc">
+                پێشکەشکردنی لینک یان تێکستی ڤیدیۆی وانەکان بە AI بۆ ئەوەی خاڵە گرنگەکانت لە چەند چرکەیەکدا پێبدات.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">🎙️ تۆمارە دەنگییەکان</div>
+              <p class="info-card-desc">
+                گۆڕینی دەنگی وانەی مامۆستا لە ناو پۆلدا بۆ تێکستی نووسراو بە ئامرازی وەک Whisper یان مۆدێلە دەنگییەکان.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: خوێندنەوەی کتێب و PDF -->
+      <section class="slide" id="slide-11"
+        data-notes="داخڵکردنی فایلی PDF یان وێنەی لاپەڕەی کتێب بۆ وەرگرتنی کورتکراوەی خێرا و ڕوونکردنەوەی وێنە و خشتەکان.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١٠. چۆن کتێب، PDF و نۆتەکان بخوێنێتەوە و ڕوونبکاتەوە؟</h2>
+          <p style="margin-bottom: 20px;">
+            مۆدێلە پێشکەوتووەکان (Multimodal) دەتوانن وێنە و فایل شیبکەنەوە:
+          </p>
+          <div class="info-card" style="border-right: 4px solid #10B981;">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 8px;">پرۆمپت بۆ شیکردنەوەی وێنەی پەڕتووک:</div>
+            <p style="font-size: 14px; line-height: 1.7;">
+              «من وێنەی ئەم بەشەی پەڕتووکەکەم گرتووە. تکایە پۆلێنێکی خێرام بۆ بکە بۆ هەموو پێناسە و چەمکە گرنگەکان و پێم
+              بڵێ کام خاڵانە شیاوی پرسیاری وزاریین.»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: دروستکردنی پلانی خوێندن -->
+      <section class="slide" id="slide-12"
+        data-notes="پلانی خوێندن دەبێت لۆژیکی بێت و کاتی پشوو و چاوپیاخشاندنەوەی تێدا جێگیر بێت.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١١. چۆن پلانی خوێندن و ئامادەکاری تاقیکردنەوە دروست بکات؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">📅 پلانی بەڕێوەبردن</div>
+              <p class="info-card-desc">
+                دابەشکردنی لاپەڕەکانی بابەتێک (بۆ نموونە فیزیا) بەگوێرەی ژمارەی ڕۆژەکانی تاقیکردنەوە.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">🔄 بەدواداچوون و لێکدانەوە</div>
+              <p class="info-card-desc">
+                پێداچوونەوە بەو بەشانەی کە قوتابی کێشەی تێدا هەیە و داڕشتنەوەی خشتەی نوێ بەپێی ئاستی فێربوون.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: Deep Work و AI -->
+      <section class="slide" id="slide-13"
+        data-notes="Deep Work یان خوێندنی قووڵ بەبێ نامە و سۆشیال میدیا و بە سەرنجی تەواو بەدەست دێت. AI دەبێت یارمەتیدەرت بێت لە لابردنی بەربەستەکان نەک دروستکردنی سەرنجپڕشکردن.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١٢. Deep Work چییە و چۆن لەگەڵ AI بەکاریبهێنین؟</h2>
+          <p style="font-size: 15px; margin-bottom: 20px;">
+            <strong>Deep Work:</strong> خوێندن لەسەر بابەتێک بە زۆرترین ئاستی تەرکیز بە بێ هیچ سەرنجپەرشبوونێک.
+          </p>
+          <div class="info-card">
+            <div class="info-card-title">⚡ چۆن AI بەکاربهێنین بۆ Deep Work؟</div>
+            <ul class="info-card-desc" style="padding-right: 18px; list-style-type: decimal; line-height: 1.8;">
+              <li>پێش دەستپێکردنی خوێندنی قووڵ، هەموو پرسیارە قورسەکانت لە AI بپرسە بۆ ئەوەی لە کاتی خوێندندا نەوەستیت.
+              </li>
+              <li>داوا بکە بابەتەکانت بۆ ئاسان بکاتەوە بۆ ئەوەی مێشکت کەمتر هیلاک بێت لە کاتی تەرکیزکردندا.</li>
+              <li>بەکارهێنانی کاتژمێری Pomodoro (٢٥ خولەک خوێندن، ٥ خولەک پشوو).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: ڕێکخستنی کات لەگەڵ AI -->
+      <section class="slide" id="slide-14"
+        data-notes="ڕێگریکردن لە کات بەفیڕۆدان بە دانانی خشتەی پێشبینیکراو و ئاگادارکردنەوەی ڕۆژانە.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١٣. چۆن AI کێشەی ڕێکخستنی کات چارەسەر بکات؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">⏳ دواخستنی کارەکان (Procrastination)</div>
+              <p class="info-card-desc">
+                داوا لە AI بکە بابەتێکی قورس بۆ پارچەی بچووک دابەش بکات کە جێبەجێکردنی ئاسان بێت بۆ ئەوەی دەستپێکردنی
+                بۆت قورس نەبێت.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">📈 پێوانەکردنی پێشکەوتن</div>
+              <p class="info-card-desc">
+                یارمەتیدانت لە تۆمارکردنی کاتەکانی خوێندن و شیکردنەوەی ئەوەی کە کام بابەت کاتی زیاتری دەوێت.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: چارەسەری کێشەکانی پۆلی ١٢ -->
+      <section class="slide" id="slide-15" data-notes="دروستکردنی چارەسەری زانستی بۆ تێگەیشتن لە چەمکەکان.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١٤. چۆن AI لە چارەسەری کێشەکانی خوێندنی پۆلی ١٢ یارمەتیدەر بێت؟</h2>
+          <div class="info-card"
+            style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2);">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 8px;">بەکارهێنانی AI بۆ تێگەیشتن نەک لەبەرکردنی
+              کوێرانە:</div>
+            <p style="font-size: 14px; line-height: 1.8;">
+              کاتێک لە بیرۆکەیەکی زانستی ناگەیت، داوا لە AI بکە: <br>
+              «هاوشێوەیەکی ڕۆژانە یان سادە (Analogy) بەکاربهێنە بۆ ڕوونکردنەوەی فۆتۆسینتێسس (رۆشنەپێکهاتن) بۆ مێشکی من.»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: باشترین ڕێگا بۆ پێداچوونەوە -->
+      <section class="slide" id="slide-16"
+        data-notes="تاقیکردنەوەی خۆت باشترین ڕێگایە بۆ دڵنیابوونەوە لەوەی بابەتەکەت بە باشی لە مێشکدا جێگیر بووە.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٢ &bull; AI بۆ خوێندن</span>
+          <h2 class="slide-title">١٥. باشترین شێوازی بەکارهێنانی AI بۆ ئامادەکاری تاقیکردنەوە</h2>
+          <p style="margin-bottom: 20px;">
+            تەکنیکی <strong>Active Recall (بیرکەوتنەوەی چالاک)</strong> و <strong>Spaced Repetition</strong>:
+          </p>
+          <ul style="line-height: 1.9; padding-right: 20px; font-size: 15px;">
+            <li>داوا لە AI بکە Flashcards (کارتی یادگە) بۆ بابەتەکان دروست بکات.</li>
+            <li>داوا بکە وەک ممتحن (تاقیکەرەوە) ڕەفتار بکات و یەک بە یەک پرسیارت لێ بکات و نمرەت بداتێ بەپێی وەڵامەکانت.
+            </li>
+            <li>دۆزینەوەی ئەو بەشانەی کە لە وەڵامدانەوەیاندا دوودڵ بوویت.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: باوەڕکردن بە وەڵامەکانی AI -->
+      <section class="slide" id="slide-17"
+        data-notes="ژیری دەستکرد شتەکان دروست دەکات بەپێی ئەگەری زمانەوانی، نەک ڕاستی حەتمی. هەمیشە وەڵامەکانت لەگەڵ سەرچاوە فەرمییەکان بەراورد بکە.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٣ &bull; هۆشیاری و پاراستن</span>
+          <h2 class="slide-title">١٦. تا چەند باوەڕ بە وەڵامەکانی AI بکەین؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card" style="border-top: 4px solid #EF4444;">
+              <div class="info-card-title">⚠️ مەترسی هەڵەکردن (Hallucination)</div>
+              <p class="info-card-desc">
+                کۆمپیوتەرەکان دەتوانن بە زمانێکی پاراو و متمانەبەخۆوە وەڵامی هەڵە بنووسن. نابێت متمانەی ١٠٠٪ـی
+                کوێرانەیان پێ بکەیت.
+              </p>
+            </div>
+            <div class="info-card" style="border-top: 4px solid #10B981;">
+              <div class="info-card-title">✅ بەراوردکردنی زانستی</div>
+              <p class="info-card-desc">
+                بۆ تاقیکردنەوەی فەرمی وزاری پۆلی ١٢، هەمیشە پەڕتووکی وەزارەت سەرچاوەی یەکەم و کۆتاییە.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: دۆزینەوەی سەرچاوەی باوەڕپێکراو -->
+      <section class="slide" id="slide-18"
+        data-notes="پرسیارکردن دەربارەی سەرچاوەی وەڵامەکان و داواکردنی فۆرماتی ئەکادیمی.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٣ &bull; هۆشیاری و پاراستن</span>
+          <h2 class="slide-title">١٧. فێربوونی دۆزینەوەی سەرچاوەی باوەڕپێکراو و بەڵگە</h2>
+          <p style="margin-bottom: 20px;">
+            چۆن AI ناچار بکەین کە سەرچاوەی فەرمیمان پێبدات؟
+          </p>
+          <div class="info-card">
+            <ul style="line-height: 1.8; padding-right: 18px; font-size: 14px;">
+              <li>بەکارهێنانی مۆدێلی وەک Perplexity AI کە لەگەڵ گەڕانی سەر ئینتەرنێتدا سەرچاوەکان دەستنیشان دەکات.</li>
+              <li>پرۆمپتکردن بە شێوازی: «تەنیا سەرچاوە زانستییە باوەڕپێکراوەکان بەستەری لاپەڕەی پەڕتووکەکە یان
+                توێژینەوەکە دەستنیشان بکە.»</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: ناسینی فرت و فێڵەکانی AI -->
+      <section class="slide" id="slide-19" data-notes="هۆشیاربوون لە بەکارهێنانی کۆپی پەیست و تەمبەڵی مێشک.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٣ &bull; هۆشیاری و پاراستن</span>
+          <h2 class="slide-title">١٨. ناسینی فرت و فێڵ، هەڵە و سنوورەکانی AI</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">⚠️ تەڵەی تەمبەڵی (Lazy Mind Trap)</div>
+              <p class="info-card-desc">
+                ئەگەر هەموو پرسیارەکانت تەنها کۆپی پەیست بکەیت، مێشکت فێری بیرکردنەوە و چارەسەری کێشە نابێت.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">🛑 نەپارێزراوی زانیاری کەسی</div>
+              <p class="info-card-desc">
+                سەرجەم زانیارییە هەستیارەکانت، کۆدی پاسپۆرت یان تێکستی کەسیت مەخەرە ناو چاتی گشتی AI چونکە بۆ ڕاهێنان
+                بەکاردێنەوە.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 20: بەڕێوەبردنی ژیان لەگەڵ AI -->
+      <section class="slide" id="slide-20"
+        data-notes="داڕشتنی بودجە و دابەشکردنی بودجەی خوێندن بە یارمەتی پرۆمپتی لۆژیکی.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٣ &bull; هۆشیاری و پاراستن</span>
+          <h2 class="slide-title">١٩. چۆن AI لە کێشەی دارایی و بەڕێوەبردنی ژیاندا سوودبەخش بێت؟</h2>
+          <div class="info-card" style="border-right: 4px solid #10B981;">
+            <div style="font-weight: 700; color: #10B981; margin-bottom: 8px;">پرۆمپت بۆ پلانی بەڕێوەبردنی بودجەی
+              قوتابی:</div>
+            <p style="font-size: 14px; line-height: 1.7;">
+              «من قوتابیم و دەمەوێت بڕی [بڕی پارەکە] دابەش بکەم بۆ کڕینی کتێب، مەلزەمە، و خەرجی ڕۆژانەم بۆ ئەم مانگە.
+              خشتەیەکی سادەم بۆ دروست بکە بەگوێرەی کارە لەپێشینەکانم.»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 21: کەمکردنەوەی بێزاربوون و عادەتی باش -->
+      <section class="slide" id="slide-21"
+        data-notes="تەندروستی دەروونی و پاڵنەری هەمیشەیی کلیلی مانەوەیە لە لوتکەدا لە ماوەی پۆلی ١٢.">
+        <div class="slide-content-wrapper">
+          <span class="slide-category">تەوەری ٣ &bull; هۆشیاری و پاراستن</span>
+          <h2 class="slide-title">٢٠. چۆن AI یارمەتیدەر بێت لە کەمکردنەوەی بێزاربوون و زیادکردنی پاڵنەر؟</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <div class="info-card-title">🧠 پشتگیری دەروونی و هاندەر</div>
+              <p class="info-card-desc">
+                داوا لە AI بکە وەک هاوڕێیەکی هاندەر قسەت لەگەڵ بکات لەو ڕۆژانەی کە خەمباریت یان پاڵنەرت نییە بۆ خوێندن.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-title">📅 بنیاتنانی عادەتی نوێ</div>
+              <p class="info-card-desc">
+                داڕشتنی خشتەی عادەتە باشەکانی وەک خەوی ڕێکخراو، خواردنەوەی ئاو، و وەرزش لە پاڵ خوێندندا.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 22: کۆتایی خول و ڕێنماییەکان -->
+      <section class="slide" id="slide-22" data-notes="هەمیشە مێشکت لەپێش ژیری دەستکردەوە دابنێ. کۆتایی خولەکە.">
+        <div class="slide-content-wrapper" style="text-align: center;">
+          <span class="slide-category">کۆتایی خولەکە</span>
+          <h2 class="slide-title" style="color: #10B981;">ڕێنماییە زێڕینەکانی کۆتایی خول</h2>
+          <div style="max-width: 700px; margin: 0 auto; text-align: right; line-height: 1.9; font-size: 15px;">
+            <p>💡 <strong>AI ڕاوێژکارێکی زیرەکە، نەک بڕیاردەری ژیانت.</strong></p>
+            <p>💡 <strong>هەمیشە وەڵامەکان پشتڕاست بکەرەوە و باوەڕی کوێرانە مەهێنە.</strong></p>
+            <p>💡 <strong>AI دەبێت یارمەتیدەرت بێت لە تێگەیشتن، نەک لەجیاتی تۆ بیر بکاتەوە.</strong></p>
+            <p>💡 <strong>ئامانجی سەرەکی: بەکارهێنانی AI بۆ بەهێزکردنی مێشک، نەک بۆ تەمبەڵی!</strong></p>
+          </div>
+          <div style="margin-top: 30px;">
+            <a href="../index.html" class="seminar-btn"
+              style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34D399; margin: 0 auto; display: inline-flex;">
+              <span>گەڕانەوە بۆ پۆرتفۆلیۆ</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Navigation Footer Controls -->
+    <footer class="presenter-footer">
+      <div class="footer-left">
+        <button class="btn-icon" id="prevSlideBtn" title="سلایدی پێشوو (Key: Left/Up)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 5l7 7-7 7M5 12h11"></path>
+          </svg>
+        </button>
+        <span class="slide-counter">
+          <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">22</span>
+        </span>
+        <button class="btn-icon" id="nextSlideBtn" title="سلایدی داهاتوو (Key: Right/Down/Space)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M15 19l-7-7 7-7M19 12H5"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="footer-center">
+        <span class="section-indicator" id="currentSectionName">ژیری دەستکرد بۆ پۆلی ١٢</span>
+      </div>
+      <div class="footer-right">
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Speaker Notes Drawer -->
+  <div class="speaker-notes-drawer" id="speakerNotesDrawer">
+    <div class="notes-header">
+      <h3>📝 تێبینییەکانی پێشکەشکار</h3>
+      <button class="close-notes-btn" id="closeNotesBtn">✕</button>
+    </div>
+    <div class="notes-content" id="notesTextContainer">
+      بەخێربێن بۆ کۆرسەکە.
+    </div>
+  </div>
+
+  <!-- Thumbnails Grid Overlay -->
+  <div class="thumbnails-overlay" id="thumbnailsOverlay">
+    <div class="thumbnails-container">
+      <div class="thumbnails-header">
+        <h3>🎴 پێشبینینی سلایدەکان</h3>
+        <button class="close-thumbnails-btn" id="closeThumbnailsBtn">✕</button>
+      </div>
+      <div class="thumbnails-grid" id="thumbnailsGrid"></div>
+    </div>
+  </div>
+
+  <!-- Live Prompt Tester Modal -->
+  <div class="prompt-modal-overlay" id="promptTesterModal">
+    <div class="prompt-modal-box">
+      <button class="prompt-modal-close"
+        onclick="document.getElementById('promptTesterModal').classList.remove('open')">✕</button>
+      <div class="prompt-modal-title">⚡ تاقیکەرەوەی پرۆمپتی زیندوو (Live Prompt Tester)</div>
+      <p style="color: #94A3B8; font-size: 13px; margin-bottom: 16px; direction: rtl;">پرۆمپتەکەت بنووسە و دوگمەکە بکە —
+        وەڵامی AI بە شێوازی تایپکراوی ئۆتۆماتیک دەردەکەوێت!</p>
+
+      <select id="promptScenario"
+        style="width: 100%; background: #1E293B; color: #F8FAFC; border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 10px 14px; font-family: 'Vazirmatn', sans-serif; font-size: 14px; margin-bottom: 12px; direction: rtl; outline: none;">
+        <option value="">📝 یان لە ئەم پرۆمپتانە هەڵبژێرە (نموونەکان)...</option>
+        <option
+          value="تۆ مامۆستایەکی زیندەوەرزانیت. پێناسەیەکی سادەم بۆ بکە بۆ مایتۆکۆندری بە هاوشێوەی کارگەی کارەبایی.">🧬
+          زیندەوەرزانی: مایتۆکۆندری</option>
+        <option value="چۆن پرۆمپتێک بنووسم کە یارمەتیم بدات پلانێکی خوێندنی یەک هەفتەیی بۆ بیرکاری پۆلی ١٢ دابنێم؟">📅
+          بیرکاری: پلانی هەفتەیی</option>
+        <option value="تۆ هاوکارێکی هاندەریت. دەقێکی کورت بنووسە بۆ هاندانم چونکە زۆر هیلاکم لە خوێندن و پاڵنەرم نییە.">
+          🧠 دەروونی: هاندانی خوێندن</option>
+      </select>
+
+      <textarea class="prompt-modal-textarea" id="promptTesterInput"
+        placeholder="پرۆمپتەکەت لێرە بنووسە... یان لەلایەی سەرەوە هەڵبژێرە"></textarea>
+
+      <button class="action-btn" id="runPromptBtn" onclick="runPromptSimulation()"
+        style="width: 100%; justify-content: center; font-size: 15px; padding: 12px; background: #10B981;">
+        <span>🤖 شبیەسازی وەڵامی AI (Simulate Response)</span>
+      </button>
+
+      <div class="prompt-modal-response" id="promptTesterResponse"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    // Populate textarea from scenario select
+    document.getElementById('promptScenario').addEventListener('change', function () {
+      if (this.value) document.getElementById('promptTesterInput').value = this.value;
+    });
+
+    // Simulated AI responses keyed by keywords
+    const aiResponses = {
+      'مایتۆکۆندری': `🧬 مایتۆکۆندری چییە؟\n\nبۆ ئەوەی زۆر بە سادەیی تێبگەیت:\nمایتۆکۆندری وەک "کارگەی بەرهەمهێنانی کارەبا (Power Plant)" وایە لە ناو خانەکانی لەشدا. ئەو خۆراکەی دەیخۆیت دەگۆڕێت بۆ جۆرە وزەیەک بە ناوی ATP کە خانەکان بۆ کارکردن سوودی لێ دەبینن.`,
+      'پلان': `📅 پرۆمپت بۆ پلانی خوێندنی بیرکاری:\n\n«تۆ ڕاوێژکارێکی زیرەکی خوێندنی. پلانێکی خوێندنی یەک هەفتەییم بۆ دابنێ بۆ پێداچوونەوەی بەندی یەکەمی بیرکاری پۆلی ١٢. ڕۆژانە تەنها ٢ کاتژمێرم هەیە و دەمەوێت کاتی پشوو و چارەسەری پرسیاری وزاریشی تێدابێت.»`,
+      'هاندانی': `🧠 پەیامێکی گەرم بۆ تۆ:\n\nقبوڵە کە هیلاک بوویت، پۆلی ١٢ پڕۆسەیەکی کاتییە و تێدەپەڕێت. هەموو چرکەیەکی ماندووبوونت نێزیکت دەکاتەوە لەو ئامانج و خەونەی کە هەتە. بڕوات بە خۆت هەبێت، تۆ دەتوانیت و پێت دروست دەکرێت! 🌟`,
+      'default': `🤖 وەڵامی ژیری دەستکرد:\n\nئەم پرۆمپتە زۆر نایابە. بۆ ئەوەی باشترین سوود وەربگریت، هەوڵبدە بە دیاریکردنی:\n1. بابەتەکەت (بیرکاری، زیندەوەرزانی...)\n2. چی وەڵامێک فۆرمات دەگریت (خاڵ، کارت، کورتکراوە)\n3. زمان (کوردی یان ئینگلیزی)`
+    };
+
+    function runPromptSimulation() {
+      const input = document.getElementById('promptTesterInput').value.trim();
+      const responseEl = document.getElementById('promptTesterResponse');
+      const btn = document.getElementById('runPromptBtn');
+
+      if (!input) {
+        responseEl.style.display = 'block';
+        responseEl.textContent = '⚠️ تکایە پرۆمپتێک بنووسە پێش ئەوەی دوگمەکە بکەیت.';
+        return;
+      }
+
+      let response = aiResponses['default'];
+      for (const [key, val] of Object.entries(aiResponses)) {
+        if (key !== 'default' && input.includes(key)) { response = val; break; }
+      }
+
+      responseEl.style.display = 'block';
+      responseEl.textContent = '';
+      btn.disabled = true;
+      btn.querySelector('span').textContent = '⏳ AI دەنووسێت...';
+
+      let i = 0;
+      const interval = setInterval(() => {
+        responseEl.textContent += response[i];
+        i++;
+        if (i >= response.length) {
+          clearInterval(interval);
+          btn.disabled = false;
+          btn.querySelector('span').textContent = '🤖 شبیەسازی وەڵامی AI (Simulate Response)';
+        }
+      }, 18);
+    }
+
+    // Close modal on overlay click
+    document.getElementById('promptTesterModal').addEventListener('click', function (e) {
+      if (e.target === this) this.classList.remove('open');
+    });
+
+    // Toggle Light / Dark Theme Mode for Projectors
+    function toggleThemeMode() {
+      const body = document.body;
+      const themeIcon = document.getElementById('themeBtnIcon');
+      body.classList.toggle('light-theme');
+      if (body.classList.contains('light-theme')) {
+        if (themeIcon) themeIcon.textContent = '🌙';
+        localStorage.setItem('seminar_theme', 'light');
+      } else {
+        if (themeIcon) themeIcon.textContent = '☀️';
+        localStorage.setItem('seminar_theme', 'dark');
+      }
+    }
+
+    // Auto-restore saved theme
+    if (localStorage.getItem('seminar_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const themeIcon = document.getElementById('themeBtnIcon');
+      if (themeIcon) themeIcon.textContent = '🌙';
+    }
+
+    // Close dropdown menu on outside click or button action
+    document.querySelectorAll('.dropdown-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dropdown = document.getElementById('navDropdownMenu');
+        if (dropdown) dropdown.classList.remove('show');
+      });
+    });
+
+    window.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        const dropdown = document.getElementById('navDropdownMenu');
+        if (dropdown && dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
