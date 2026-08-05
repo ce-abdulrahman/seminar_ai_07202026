@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سیمیناری ئۆنلاین ژیری دەستکرد (AI) | ئەندازیار عبدالرحمن اسماعیل</title>
+  <meta name="description" content="فێری دەبین کەوا ئێمە ژیری بەکاربێنین، نەوەک ژیری دەستکرد ئێمە بەکاربێنین. سیمینارێکی تایبەت بۆ قوتابیانی پۆلی ١٢">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #04081A; --navy-mid: #0A0F24; --navy-card: #0D1530; --navy-light: #111B3A;
+      --blue: #06B6D4; --blue-light: #38BDF8; --purple: #7C3AED; --purple-light: #A78BFA;
+      --gold: #F59E0B; --white: #F8FAFC; --muted: #94A3B8; --green: #10B981;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Vazirmatn", sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; line-height: 1.7; }
+    .bg-ambient { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.5; animation: orbFloat 12s ease-in-out infinite; }
+    .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(124,58,237,0.4), transparent); top: -200px; right: -100px; }
+    .orb-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(6,182,212,0.3), transparent); bottom: 10%; left: -150px; animation-delay: -5s; }
+    .orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(245,158,11,0.2), transparent); top: 50%; right: 30%; animation-delay: -9s; }
+    @keyframes orbFloat { 0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-40px) scale(1.05)} }
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(4,8,26,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(6,182,212,0.2); padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 800; } .brand span { color: var(--blue); }
+    .header-cta { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; border-radius: 50px; padding: 10px 28px; font-family: "Vazirmatn",sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+    .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(124,58,237,0.4); }
+    .hero { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px 24px; background: radial-gradient(ellipse at top, rgba(124,58,237,0.25) 0%, transparent 60%), radial-gradient(ellipse at bottom left, rgba(6,182,212,0.15) 0%, transparent 60%); }
+    .hero-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.35); border-radius: 50px; padding: 6px 20px; margin-bottom: 28px; font-size: 13px; font-weight: 700; color: var(--gold); animation: fadeInDown 0.8s ease; }
+    .hero-label::before { content: "✦"; }
+    .hero-title { font-size: clamp(52px,10vw,96px); font-weight: 900; line-height: 1.1; background: linear-gradient(135deg,#FFFFFF 0%,#06B6D4 40%,#A78BFA 80%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; animation: fadeInDown 0.9s ease 0.1s both; }
+    .hero-subtitle-label { font-size: clamp(16px,3vw,22px); color: var(--gold); font-weight: 700; margin-bottom: 20px; animation: fadeInDown 0.9s ease 0.15s both; }
+    .hero-quote { max-width: 680px; margin: 0 auto 40px; background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.25); border-radius: 16px; padding: 20px 32px; font-size: clamp(16px,2.5vw,20px); color: var(--muted); line-height: 1.9; animation: fadeInUp 1s ease 0.3s both; }
+    .hero-quote strong { color: var(--white); }
+    .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 48px; animation: fadeInUp 1s ease 0.4s both; }
+    .badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 8px 20px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeInUp 1s ease 0.5s both; }
+    .btn-primary { background: linear-gradient(135deg, var(--purple), var(--blue)); color: white; border: none; border-radius: 50px; padding: 16px 40px; font-family: "Vazirmatn",sans-serif; font-size: 16px; font-weight: 800; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(124,58,237,0.35); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(124,58,237,0.5); }
+    .btn-outline { background: transparent; border: 1.5px solid rgba(6,182,212,0.5); color: var(--blue); border-radius: 50px; padding: 16px 36px; font-family: "Vazirmatn",sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .btn-outline:hover { background: rgba(6,182,212,0.1); transform: translateY(-3px); }
+    .scroll-hint { margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; animation: bounce 2.5s infinite; }
+    section { position: relative; z-index: 1; padding: 100px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--blue); margin-bottom: 16px; }
+    .section-title { font-size: clamp(28px,5vw,46px); font-weight: 900; margin-bottom: 16px; background: linear-gradient(135deg,#FFFFFF,#A78BFA); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-desc { color: var(--muted); font-size: 16px; max-width: 600px; margin-bottom: 60px; }
+    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 24px; }
+    .topic-card { background: var(--navy-card); border: 1px solid rgba(124,58,237,0.2); border-radius: 24px; padding: 36px 30px; transition: all 0.35s; position: relative; overflow: hidden; }
+    .topic-card:hover { transform: translateY(-6px); border-color: rgba(124,58,237,0.5); box-shadow: 0 20px 50px rgba(124,58,237,0.15); }
+    .topic-num { font-size: 64px; font-weight: 900; line-height: 1; background: linear-gradient(135deg,rgba(124,58,237,0.3),rgba(6,182,212,0.3)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+    .topic-icon-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .topic-icon-box { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+    .topic-name { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 1px; }
+    .topic-title { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .topic-desc { color: var(--muted); font-size: 14px; line-height: 1.8; margin-bottom: 24px; }
+    .topic-points { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .topic-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #CBD5E1; }
+    .topic-points li::before { content: "✦"; color: var(--blue); font-size: 10px; margin-top: 5px; flex-shrink: 0; }
+    .info-strip { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; margin-top: 60px; }
+    .info-box { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 20px; display: flex; align-items: center; gap: 16px; transition: all 0.3s; }
+    .info-box:hover { border-color: rgba(6,182,212,0.3); }
+    .info-box-icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .info-box-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+    .info-box-value { font-size: 16px; font-weight: 800; color: var(--white); }
+    .quote-section { background: linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.1)); border-top: 1px solid rgba(124,58,237,0.2); border-bottom: 1px solid rgba(124,58,237,0.2); text-align: center; padding: 80px 24px; position: relative; z-index: 1; }
+    .big-quote { font-size: clamp(22px,4vw,40px); font-weight: 800; line-height: 1.5; max-width: 800px; margin: 0 auto; color: var(--white); }
+    .big-quote em { color: var(--blue); font-style: normal; }
+    .audience-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 16px; }
+    .audience-card { background: var(--navy-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 18px; padding: 28px 20px; text-align: center; transition: all 0.3s; }
+    .audience-card:hover { border-color: rgba(245,158,11,0.4); transform: translateY(-4px); }
+    .audience-emoji { font-size: 36px; margin-bottom: 12px; }
+    .audience-name { font-size: 15px; font-weight: 700; color: var(--white); }
+    .audience-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .cta-section { text-align: center; padding: 100px 24px; background: radial-gradient(ellipse at center,rgba(124,58,237,0.2) 0%,transparent 65%); position: relative; z-index: 1; }
+    .cta-title { font-size: clamp(28px,6vw,56px); font-weight: 900; margin-bottom: 16px; }
+    .cta-desc { color: var(--muted); font-size: 17px; margin-bottom: 40px; }
+    .phone-number { font-size: clamp(28px,6vw,52px); font-weight: 900; background: linear-gradient(135deg,var(--gold),#FCD34D); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; direction: ltr; display: inline-block; margin: 24px 0; }
+    .contact-methods { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
+    .contact-btn { display: inline-flex; align-items: center; gap: 12px; padding: 14px 32px; border-radius: 50px; font-family: "Vazirmatn",sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.3s; }
+    .contact-btn.telegram { background: rgba(39,173,220,0.15); border: 1.5px solid rgba(39,173,220,0.4); color: #29ADDC; }
+    .contact-btn.telegram:hover { background: rgba(39,173,220,0.25); transform: translateY(-3px); }
+    .contact-btn.phone { background: rgba(16,185,129,0.15); border: 1.5px solid rgba(16,185,129,0.4); color: var(--green); }
+    .contact-btn.phone:hover { background: rgba(16,185,129,0.25); transform: translateY(-3px); }
+    footer { position: relative; z-index: 1; background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 24px; text-align: center; color: var(--muted); font-size: 13px; }
+    .sticky-cta { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 200; background: linear-gradient(135deg,#7C3AED,#06B6D4); color: white; border: none; border-radius: 50px; padding: 14px 36px; font-family: "Vazirmatn",sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 40px rgba(124,58,237,0.5); transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; animation: stickyPop 0.5s ease 2s both; }
+    .sticky-cta:hover { transform: translateX(-50%) translateY(-3px); box-shadow: 0 15px 50px rgba(124,58,237,0.6); }
+    .divider { height: 1px; background: linear-gradient(90deg,transparent,rgba(124,58,237,0.3),transparent); margin: 0 auto; max-width: 800px; position: relative; z-index: 1; }
+    @keyframes stickyPop { from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)} }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)} }
+    @keyframes bounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)} }
+    @media(max-width:600px){.site-header{padding:12px 16px}section{padding:60px 16px}}
+  </style>
+</head>
+<body>
+  <div class="bg-ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">ئەندازیار <span>عبدالرحمن</span></div>
+    <a href="#contact" class="header-cta">📞 تۆمارکردن</a>
+  </header>
+
+  <a href="#contact" class="sticky-cta">
+    <span>📲</span> بەخۆڕایی تۆمار بکە
+  </a>
+
+  <section class="hero">
+    <div class="hero-label">سیمیناری ئۆنلاین</div>
+    <div class="hero-subtitle-label">— بەخۆڕایی —</div>
+    <h1 class="hero-title">ژیری دەستکرد</h1>
+    <div class="hero-quote">
+      <strong>«فێری دەبین کەوا ئێمە ژیری بەکاربێنین،</strong><br>
+      نەوەک ژیری دەستکرد ئێمە بەکاربێنین»
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><span>📅</span> ٦/٨/٢٠٢٦ — پێنجشەممە</div>
+      <div class="badge"><span>🕔</span> کاتژمێر ٥:٠٠ ی عەسر</div>
+      <div class="badge"><span>💻</span> ئۆنلاین / Telegram</div>
+      <div class="badge"><span>🎓</span> بۆ قوتابیانی پۆلی ١٢</div>
+      <div class="badge"><span>🆓</span> بەخۆڕایی</div>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn-primary">📲 ئێستا تۆمار بکە</a>
+      <a href="#topics" class="btn-outline">📖 زیاتر بزانە</a>
+    </div>
+    <div class="scroll-hint">
+      <span>بەرەو خوارەوە سکرۆڵ بکە</span>
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="topics">
+    <div class="container">
+      <div class="section-label">ناوەڕۆکی سیمینارەکە</div>
+      <h2 class="section-title">٣ تەوەری سەرەکی</h2>
+      <p class="section-desc">سیمینارەکە بە شێوازی ئاسان و کاریگەر داڕێژراوە تا هەموو بەشداربووان بتوانن هەمان ڕۆژ بەکاریبێنن.</p>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="topic-num">01</div>
+          <div class="topic-icon-row">
+            <div class="topic-icon-box" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25)">🧠</div>
+            <div><div class="topic-name">تەوەری یەکەم</div></div>
+          </div>
+          <div class="topic-title">بنەماکانی AI و بەکارهێنانی دروست</div>
+          <div class="topic-desc">فێربوونی بنەماکانی کارکردنی AI و شێوازەکانی بەکارهێنانی دروست و کاریگەر</div>
+          <ul class="topic-points">
+            <li>AI چییە؟ چی دەتوانێت بکات و چی ناتوانێت؟</li>
+            <li>چۆن پرۆمپتی دروست بنووسین بۆ وەرگرتنی باشترین وەڵام؟</li>
+            <li>چۆن وەڵامی AI پشتڕاست بکەینەوە و سەرچاوەی باوەڕپێکراو بدۆزینەوە؟</li>
+            <li>چۆن AI ئامانج، پرۆژە و زانیارییە گرنگەکانت لەبیر بمێنێت؟</li>
+            <li>چۆن لە Schedule ی ChatGPT بیرخستنەوەی ئۆتۆماتیک بەکار بهێنیت؟</li>
+            <li>NotebookLM چییە و چۆن بەکاریبێنین؟</li>
+            <li>چۆن نۆتەکانمان ڕێکبخەین کە AI باشتر یارمەتیمان بدات؟</li>
+          </ul>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">02</div>
+          <div class="topic-icon-row">
+            <div class="topic-icon-box" style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.25)">🎓</div>
+            <div><div class="topic-name">تەوەری دووەم</div></div>
+          </div>
+          <div class="topic-title">AI بۆ خوێندن و سەرکەوتنی پۆلی ١٢</div>
+          <div class="topic-desc">ئامادەکاری پێشکەوتوو، خوێندنی کاریگەر و سەرکەوتن لە پۆلی ١٢</div>
+          <ul class="topic-points">
+            <li>خوێندنی رۆژانە: پلانی رۆژانە دروست بکە و لە AI یارمەتی بخواز</li>
+            <li>پوختەکردنەوەی ڤیدیۆ: ڤیدیۆی خوێندنی دریژ لە AI پوختە بکە</li>
+            <li>PDF و کتێب: پوختە و روونکردنەوەی PDF و کتێبەکان بە AI</li>
+            <li>پلانی هەفتانە و مانگانە لە AI بنووسە</li>
+            <li>Deep Work: AI یارمەتیت بدات لە فۆکەسکردن و پرۆندقتف بون</li>
+            <li>ڕێکخستنی کات و کارکردن بە شێوازی باش</li>
+            <li>ئامادەکاری تاقیکردنەوە و چارەسەری کێشەکانی پۆلی ١٢</li>
+          </ul>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">03</div>
+          <div class="topic-icon-row">
+            <div class="topic-icon-box" style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25)">🛡️</div>
+            <div><div class="topic-name">تەوەری سێیەم</div></div>
+          </div>
+          <div class="topic-title">هۆشیاری، پاراستن و بەکارهێنانی بەرپرسانە</div>
+          <div class="topic-desc">بەکارهێنانی درست، بەرپرسانە و ئەتیکانەی AI لە ژیانی ڕۆژانەدا</div>
+          <ul class="topic-points">
+            <li>پاراستن و تایبەتمەندی: زانیاری هەستیار مەخەرە ناو AI</li>
+            <li>سەرچاوەی باوەڕپێکراو: تەنها زانیاری لە سەرچاوەی باوەڕپێکراو بەکاربهێنە</li>
+            <li>AI هەڵە دەکات، سنوورە هەیە — بیرکردنەوەی خۆت بەکاربهێنە</li>
+            <li>فۆکس و پالایێنەر: AI یارمەتت بدات لە فۆکەسکردن</li>
+            <li>دارایی و پلاندانان: AI بۆ پلاندانانی مالی و پاشخەوری</li>
+          </ul>
+        </div>
+      </div>
+      <div class="info-strip">
+        <div class="info-box"><div class="info-box-icon">📅</div><div><div class="info-box-label">بەروار</div><div class="info-box-value">٦ / ٨ / ٢٠٢٦</div></div></div>
+        <div class="info-box"><div class="info-box-icon">🕔</div><div><div class="info-box-label">کاتژمێری سیمینار</div><div class="info-box-value">٥:٠٠ ی عەسر</div></div></div>
+        <div class="info-box"><div class="info-box-icon">📱</div><div><div class="info-box-label">شێوازی بەشداری</div><div class="info-box-value">ئۆنلاین (Telegram)</div></div></div>
+        <div class="info-box"><div class="info-box-icon">👥</div><div><div class="info-box-label">بۆ کێ</div><div class="info-box-value">قوتابیانی پۆلی ١٢</div></div></div>
+        <div class="info-box"><div class="info-box-icon">🏆</div><div><div class="info-box-label">ئامانج</div><div class="info-box-value">بەکارهێنانی AI بەرپرسانە</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <div class="quote-section">
+    <div class="big-quote">« <em>AI</em> ڕاوێژکارێکی زیرەکە،<br>نەک بڕیاردەری ژیانت »</div>
+    <p style="color:var(--muted);margin-top:20px;font-size:14px;">— ئەندازیار عبدالرحمن اسماعیل</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-label">بۆ کێ؟</div>
+      <h2 class="section-title">تەنها بۆ قوتابیانی پۆلی ١٢ ئامادەیی</h2>
+      <p class="section-desc">ئەم سیمینارە بە تایبەتی بۆ قوتابیانی قۆناغی ١٢ داڕێژراوە — ئەوانەی دەیانەوێت AI بکەنە ئامرازی سەرکەوتن لە تاقیکردنەوەکانیاندا.</p>
+      <div class="audience-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div class="audience-card" style="border-color:rgba(245,158,11,0.3)">
+          <div class="audience-emoji">📚</div>
+          <div class="audience-name">قوتابیانی پۆلی ١٢</div>
+          <div class="audience-sub">سەرکەوتن لە تاقیکردنەوەی کۆتایی</div>
+        </div>
+        <div class="audience-card" style="border-color:rgba(245,158,11,0.3)">
+          <div class="audience-emoji">🎯</div>
+          <div class="audience-name">قوتابیانی ئامادەیی</div>
+          <div class="audience-sub">ئامادەکاری بۆ پرسیارە وەزارەتییەکان</div>
+        </div>
+        <div class="audience-card" style="border-color:rgba(245,158,11,0.3)">
+          <div class="audience-emoji">🧠</div>
+          <div class="audience-name">خوێندنی کاریگەر</div>
+          <div class="audience-sub">فێربوونی ئەوەی چۆن بە ژیری بیربکاتەوە</div>
+        </div>
+        <div class="audience-card" style="border-color:rgba(245,158,11,0.3)">
+          <div class="audience-emoji">⏱️</div>
+          <div class="audience-name">ڕێکخستنی کات</div>
+          <div class="audience-sub">باشترین بەکارهێنانی کاتی خوێندن</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="section-label" style="text-align:center">تۆمارکردن</div>
+      <h2 class="cta-title" style="background:linear-gradient(135deg,#FFFFFF,#F59E0B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">ئێستا بەشداری بکە!</h2>
+      <p class="cta-desc">بۆ زانیاری زیاتر یان بەژداری کردنی پەیوەندی بکەن</p>
+      <div class="phone-number" dir="ltr">07504342452</div>
+
+      <!-- QR Code Section -->
+      <div style="margin: 40px auto; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <p style="color: var(--muted); font-size: 14px; margin-bottom: 4px;">📲 یان QR کۆدەکە بسکانە بۆ جۆین بوونی گرووپی تەلەگرام</p>
+        <div style="background: white; border-radius: 24px; padding: 16px; box-shadow: 0 0 60px rgba(124,58,237,0.4), 0 0 30px rgba(6,182,212,0.25); display: inline-block; position: relative;">
+          <img src="../assets/image/qr-group.png" alt="QR کۆدی گرووپی تەلەگرام" style="width: 220px; height: 220px; display: block; border-radius: 12px; object-fit: contain;">
+        </div>
+        <a href="https://t.me/FEATURE_TECHNOLOGY" target="_blank" style="color: #29ADDC; font-size: 16px; font-weight: 800; text-decoration: none; letter-spacing: 1px; direction: ltr;">@FEATURE_TECHNOLOGY</a>
+        <a href="https://t.me/FEATURE_TECHNOLOGY" target="_blank"
+          style="background: linear-gradient(135deg, rgba(39,173,220,0.2), rgba(124,58,237,0.2)); border: 1.5px solid rgba(39,173,220,0.5); color: #29ADDC; border-radius: 50px; padding: 12px 32px; font-family: 'Vazirmatn',sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
+          ئێستا جۆین بە گرووپەکە
+        </a>
+      </div>
+      <div class="contact-methods">
+        <a href="https://t.me/07504342452" target="_blank" class="contact-btn telegram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
+          Telegram دا پەیوەندی بکە
+        </a>
+        <a href="tel:07504342452" class="contact-btn phone">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-.73a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          پەیوەندی بە تەلەفۆن
+        </a>
+      </div>
+      <p style="margin-top:40px;color:var(--muted);font-size:13px">وتارخوێن: ئەندازیار عبدالرحمن اسماعیل | شارەزای ژیری دەستکرد و ئۆتۆماتیکردنی بزنس</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© ٢٠٢٦ ئەندازیار عبدالرحمن اسماعیل &middot; سیمیناری ئۆنلاین ژیری دەستکرد (AI)</p>
+  </footer>
+</body>
+</html>
